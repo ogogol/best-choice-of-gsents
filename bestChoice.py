@@ -24,7 +24,8 @@ def wodrsRightOrder (maxSent, sent):
     if msl - sl > 0:
         exWds, misWds, wrWds, rWds = (sentsDifference(maxSent, sent, 0))
         for key in misWds.keys():
-            sentWds.insert(key,'')
+            if key < len(sentWds) - 1:
+                sentWds.insert(key,'')
 
     return sentWds
 
@@ -91,7 +92,7 @@ def googleSentenceCorrection(oSent, gSent, wds): #gTrSent,
                             googleSentenceWords[i] = w
                             ok = 1
                     if ok == 0:
-                        w = get_close_matches(originalSentenceWords[i], wdLst, 1, 0.2)
+                        w = get_close_matches(originalSentenceWords[i], wdLst, 1, 0.2)#getClosePhoneMatches(originalSentenceWords[i], wdLst, 1, 0.2)
                         if len(w) > 0:
                             googleSentenceWords[i] = w[0]
 
@@ -105,9 +106,10 @@ def googleSentenceCorrection(oSent, gSent, wds): #gTrSent,
     return googleSentenceWords
 
 
-originalSentence = "what are you talking about"
-googleSentence = "that you are walking about"
-sents = ["what you", "you are talking ", "that is you are walking about"]
+originalSentence = "but in any case I'd rather be seasick than dead "
+googleSentence = "but in any case I'd rather be sick than that "
+sents = readSents("4.txt")
+
 
 words = wordsList(sents)
 bSent = bChoice(originalSentence, googleSentence, sents) # выбираем лучшее предложение из последних

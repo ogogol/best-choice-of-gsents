@@ -95,6 +95,16 @@ def sentsDifference(orSent, comSent, phone = 0):
 	return exWds, misWds, wrWds, rWds
 
 
+def getClosePhoneMatches (w, lst, n, cutoff = 0.2):
+	phoneLst = {}
+	for i, pl in enumerate(lst):
+		phoneLst[phoneticWord(pl)] = i
+	pLst = [phone for phone in phoneLst.keys()]
+	wds = get_close_matches(phoneticWord(w), pLst, n, cutoff)
+	wd = lst[phoneLst.get(wds[0])]
+	return wd
+
+
 def readSents(file):
     f = open (file, 'r')
     l = [line for line in f]

@@ -56,9 +56,9 @@ def googleSentenceCorrection(oSent, gSent, wds):
     return googleSentWords
 
 
-originalSentence = "what are you talking about"
-googleSentence = "that you are walking about"
-sents = ["hat your", "that you are talking about", "at you are walking about"]
+originalSentence = "but in any case I'd rather be seasick than dead "
+googleSentence = "but in any case I'd rather be sick than that "
+sents = readSents("4.txt")
 
 #sents = readSents("3.txt")
 
