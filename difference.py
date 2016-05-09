@@ -1,6 +1,5 @@
 import re
 import numpy as np
-import nltk
 from difflib import *
 
 def levenshtein(source, target):
@@ -41,69 +40,55 @@ def levenshtein(source, target):
     return previous_row[-1]
 
 
-
-pattern1 = re.compile(r'[+-]\s{2,7}|\s{3,7}')
-pattern2 = re.compile(r'\- \w')
-pattern3 = re.compile(r'\s+')
+patternWordsSplit = re.compile(r'[+-]\s{2,7}|\s{3,7}')
+patternMinusLetter = re.compile(r'\- \w')
+patternSpace = re.compile(r'\s+')
 w = re.compile(r'\w')
 p = re.compile(r'\+')
 m = re.compile(r'-')
 
-def sentsDifference(orSent, comSent, phone = 0):
-	d = Differ()
-	if phone:
-		diff = ''.join(d.compare(phoneticSent(orSent).lower(), phoneticSent(comSent).lower()))
-		s = phoneticSent(comSent).lower().split()
-	else:
-		diff = ''.join(d.compare(orSent.lower(), comSent.lower()))
-		s = pattern3.split(comSent.lower())
+def sentsDifference(orSent, comSent):
+        exWds = {}
+        misWds = {}
+        wrWds = {}
+        rWds = {}
 
-	exWds = {}
-	misWds = {}
-	wrWds = {}
-	rWds = {}
-	diff1 = pattern1.split(diff)
-	for i in range(len(diff1)):
-		wd = ''.join(w.findall(diff1[i]))
-		plus = ''.join(p.findall(diff1[i]))
-		minus = ''.join(m.findall(diff1[i]))
-		if len(wd) <= len(plus):
-			exWds[i]= [wd,i-len(misWds)]
-		elif len(plus)>0:
-			wrW = ''.join(w.findall(pattern2.sub('', diff1[i])))
-			wrWds[i]= [wrW,i-len(misWds)]
-		elif len(wd) <= len(minus):
-			misWds[i]= (wd)
-		elif len(minus)>0 and len(plus) == 0:
-			wrW = ''.join(w.findall(pattern2.sub('', diff1[i])))
-			wrWds[i]= [wrW,i-len(misWds)]
-		else:
-			rWds[i]= [wd,i-len(misWds)]
+        d = Differ()
 
-	delItems =[]
+        diff = ''.join(d.compare(orSent.lower(), comSent.lower()))
+        s = patternSpace.split(comSent.lower())
 
-	for key, value in wrWds.items():
-		if len(s) > value[1]:
-			if s[value[1]] != wrWds[key][0] and wrWds.get(key+1) != None:
-				if s.count(wrWds.get(key+1)[0]) == 0 and s[value[1]] == wrWds[key][0] + wrWds[key+1][0]:
-					wrWds[key][0] = wrWds[key][0] + wrWds[key+1][0]
-					delItems.append(key+1)
+        diff1 = patternWordsSplit.split(diff)
+        for i in range(len(diff1)):
+                wd = ''.join(w.findall(diff1[i]))
+                plus = ''.join(p.findall(diff1[i]))
+                minus = ''.join(m.findall(diff1[i]))
+                if len(wd) <= len(plus):
+                        exWds[i]= [wd,i-len(misWds)]
+                elif len(plus)>0:
+                        wrW = ''.join(w.findall(patternMinusLetter.sub('', diff1[i])))
+                        wrWds[i]= [wrW,i-len(misWds)]
+                elif len(wd) <= len(minus):
+                        misWds[i]= (wd)
+                elif len(minus)>0 and len(plus) == 0:
+                        wrW = ''.join(w.findall(patternMinusLetter.sub('', diff1[i])))
+                        wrWds[i]= [wrW,i-len(misWds)]
+                else:
+                        rWds[i]= [wd,i-len(misWds)]
 
-	for i in range(len(delItems)):
-		del wrWds[delItems[i]]
+        delItems =[]
 
-	return exWds, misWds, wrWds, rWds
+        for key, value in wrWds.items():
+                if len(s) > value[1]:
+                        if s[value[1]] != wrWds[key][0] and wrWds.get(key+1) != None:
+                                if s.count(wrWds.get(key+1)[0]) == 0 and s[value[1]] == wrWds[key][0] + wrWds[key+1][0]:
+                                        wrWds[key][0] = wrWds[key][0] + wrWds[key+1][0]
+                                        delItems.append(key+1)
 
+        for i in range(len(delItems)):
+                del wrWds[delItems[i]]
 
-def getClosePhoneMatches (w, lst, n, cutoff = 0.2):
-	phoneLst = {}
-	for i, pl in enumerate(lst):
-		phoneLst[phoneticWord(pl)] = i
-	pLst = [phone for phone in phoneLst.keys()]
-	wds = get_close_matches(phoneticWord(w), pLst, n, cutoff)
-	wd = lst[phoneLst.get(wds[0])]
-	return wd
-
+        return exWds, misWds, wrWds, rWds
 
 def readSents(file):
     f = open (file, 'r')
@@ -127,29 +112,4 @@ def readSents(file):
             phs.append(phrase)
 
     return phs
-
-
-arpabet = nltk.corpus.cmudict.dict()
-arpabetWds = nltk.corpus.cmudict.words()
-
-def phoneticSent(sent):
-	wds =[]
-	for word in sent.lower().split():
-		if arpabetWds.count(word) > 0:
-			wds.append(''.join(arpabet[word][0]))
-		else:
-			wds.append(word)
-			#print (word, "it's an exception")
-
-	return ' '.join(wds)
-
-def phoneticWord(word):
-	w = word.lower()
-	if arpabetWds.count(w) > 0:
-		phWd = ''.join(arpabet[w][0])
-	else:
-		phWd = w
-		#print (word, "it's an exception")
-
-	return phWd
 
