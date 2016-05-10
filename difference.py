@@ -40,76 +40,83 @@ def levenshtein(source, target):
     return previous_row[-1]
 
 
-patternWordsSplit = re.compile(r'[+-]\s{2,7}|\s{3,7}')
-patternMinusLetter = re.compile(r'\- \w')
+
+patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
+patternMinusSpaceLetter = re.compile(r'\- \w')
 patternSpace = re.compile(r'\s+')
-w = re.compile(r'\w')
-p = re.compile(r'\+')
-m = re.compile(r'-')
+patternLetter = re.compile(r'\w')
+patternPlus = re.compile(r'\+')
+patternMinus = re.compile(r'-')
+
+def separatedComparedWords(comparedWords):
+    '''
+    разделяет список сравненых слов на 4 типа, и выдает четыре словаря:
+    :param comparedWords: список сравниваемых слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
+    :return: excessWds, missedWds, wrongWds, rightWds
+    лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
+    '''
+    excessWds = {}
+    missedWds = {}
+    wrongWds = {}
+    rightWds = {}
+    for i, cW in enumerate(comparedWords):
+        wd = ''.join(patternLetter.findall(cW))
+        plus = ''.join(patternPlus.findall(cW))
+        minus = ''.join(patternMinus.findall(cW))
+        if len(wd) <= len(plus):
+            excessWds[i] = [wd, i-len(missedWds), i-len(missedWds)]
+        elif len(plus)>0:
+            wrW = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
+            wrongWds[i] = [wrW, i-len(missedWds), i-len(excessWds)]
+        elif len(wd) <= len(minus):
+            missedWds[i] = [wd, i-len(excessWds), i-len(excessWds)]
+        elif len(minus)>0 and len(plus) == 0:
+            wrW = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
+            wrongWds[i] = [wrW, i-len(missedWds), i-len(excessWds)]
+        else:
+            rightWds[i] = [wd, i-len(missedWds), i-len(excessWds)]
+
+    return excessWds, missedWds, wrongWds, rightWds
+
+def correctedWrongAndMissWordsList(missedWds, wrongWds, orSentWords, comSentWords):
+    '''
+    сравнивает слова из списка неправильных слов со словами из сравниваемого предложения и корректирует список,
+    в случае если слово из предожения оказалось разорванным на два слова типа tumi -> tu mi
+    :return: скорректированный wrongWds
+    '''
+    delItems =[]
+    for key, value in wrongWds.items():
+        if len(comSentWords) > value[1]:
+            if comSentWords[value[1]] != wrongWds[key][0] and wrongWds.get(key+1) != None:
+                if comSentWords.count(wrongWds.get(key+1)[0]) == 0 \
+                        and comSentWords[value[1]] == wrongWds[key][0] + wrongWds[key+1][0]:
+                    wrongWds[key][0] = wrongWds[key][0] + wrongWds[key+1][0]
+                    i = wrongWds[key+1][2]
+                    missedWds[key+1] = [orSentWords [i], i, i]
+                    delItems.append(key+1)
+
+    for i in delItems:
+        del wrongWds[i]
+
+    return missedWds, wrongWds
 
 def sentsDifference(orSent, comSent):
-        exWds = {}
-        misWds = {}
-        wrWds = {}
-        rWds = {}
+    '''
+    сравнивает два предложения, оригинальное и сравниваемое, и выдает четыре словаря:
+    :param orSent: оригинальное предложение
+    :param comSent: сравниваемое
+    :return: excessWds, missedWds, wrongWds, rightWds
+    лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
+    '''
 
-        d = Differ()
+    d = Differ()
+    diff = ''.join(d.compare(orSent.lower(), comSent.lower()))#строка сравнения предложений типа: + m- b- u- t-  - i- n-  - a- n  y
+    orSentWords = patternSpace.split(orSent.lower())
+    comSentWords = patternSpace.split(comSent.lower())
+    comparedWords = patternSentSplitWords.split(diff)#массив слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
 
-        diff = ''.join(d.compare(orSent.lower(), comSent.lower()))
-        s = patternSpace.split(comSent.lower())
+    excessWds, missedWds, wrongWds, rightWds = separatedComparedWords(comparedWords)
+    missedWds, wrongWds = correctedWrongAndMissWordsList(missedWds, wrongWds, orSentWords, comSentWords)
 
-        diff1 = patternWordsSplit.split(diff)
-        for i in range(len(diff1)):
-                wd = ''.join(w.findall(diff1[i]))
-                plus = ''.join(p.findall(diff1[i]))
-                minus = ''.join(m.findall(diff1[i]))
-                if len(wd) <= len(plus):
-                        exWds[i]= [wd,i-len(misWds)]
-                elif len(plus)>0:
-                        wrW = ''.join(w.findall(patternMinusLetter.sub('', diff1[i])))
-                        wrWds[i]= [wrW,i-len(misWds)]
-                elif len(wd) <= len(minus):
-                        misWds[i]= (wd)
-                elif len(minus)>0 and len(plus) == 0:
-                        wrW = ''.join(w.findall(patternMinusLetter.sub('', diff1[i])))
-                        wrWds[i]= [wrW,i-len(misWds)]
-                else:
-                        rWds[i]= [wd,i-len(misWds)]
-
-        delItems =[]
-
-        for key, value in wrWds.items():
-                if len(s) > value[1]:
-                        if s[value[1]] != wrWds[key][0] and wrWds.get(key+1) != None:
-                                if s.count(wrWds.get(key+1)[0]) == 0 and s[value[1]] == wrWds[key][0] + wrWds[key+1][0]:
-                                        wrWds[key][0] = wrWds[key][0] + wrWds[key+1][0]
-                                        delItems.append(key+1)
-
-        for i in range(len(delItems)):
-                del wrWds[delItems[i]]
-
-        return exWds, misWds, wrWds, rWds
-
-def readSents(file):
-    f = open (file, 'r')
-    l = [line for line in f]
-    f.close()
-
-    phs = []
-    for i in range(len(l)):
-        cntPhrases = l[i].count("transcript: ")
-        st = 0
-        en = len(l[i])-1
-        phrase = ''
-        for j in range(cntPhrases):
-            stFhr = l[i].index("transcript: ", st, en) + 13
-            enFhr = l[i].index('"__proto__:', st, en)
-            phrase += l[i] [stFhr:enFhr]
-            st = enFhr + 13
-
-        phrase = phrase
-        if phrase != '':
-            phs.append(phrase)
-
-    return phs
+    return excessWds, missedWds, wrongWds, rightWds
 
