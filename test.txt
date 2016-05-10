@@ -1,0 +1,49 @@
+﻿
+Peter Hobbs came here this morning
+Peter hopes came here this morning
+["Peter", "Pizza Hut", "Peter helps", "pizza shops in", "Peter Hobbs game", "Peter helps games", "Peter Hobbs game he", "Peter Hobbs game here", "Peter Hobbs game here", "Peter Hobbs game here this", "Peter Hobbs game here this", "Peter Hobbs game here this", "Peter helps came here this morning", "Peter Hobbs game here this morn", "Peter helps came here this morning", "Peter hopes came here this morning"]
+Peter Hobbs came here this morning
+Peter Hobbs came here this morning
+Peter Hobbs came here this morn
+["the", "the morning", "this morn"]
+Peter Hobbs came here this morning
+Peter Hobbs came here this morning
+Peter Hobbs came here this morn
+["this", "in the morning", "the morn"]
+Peter Hobbs came here this morning
+he is very angry with you about that letter
+he is very angry with you about that later
+["he is very angry with you about that letter", "he is very angry with you about that letter", "he is very angry with you about that later"]
+he is very angry with you about that letter
+you never talk to me
+you never talk Tumi
+["you", "you know", "you never", "you never", "you never", "you never how", "you never talk", "you never talk", "you never talk to", "you never talk to me", "you never talk Tumi"]
+you never talk to me
+you never talk to me
+you never talk Tumi
+["to me", "Tumi"]
+you never talk to me
+Jackie Stood at the window
+Jackie Stewart at the window
+['yeah", "Jack", "Jackie", "Yankees", "jackets", "Jackass 2", "Jackie's Store", "Jackie Stewart", "Jackie Stewart at", "Jackie Stewart at the", "Jackie Stewart at the way", "Jackie Stewart at the Wynn", "Jackie Stewart at the wind", "Jackie stood at the window", "JackieJackie", "Jackie Stewart at the window"]
+Jackie stood at the window
+what are you talking about
+that you are walking about
+["that you", "what you are talking about", "that you are walking about"]
+what you are talking about
+Albert came in and went at once to Molly
+my dad came in and went at 1 tomorrow
+["Albert came in and went", "Albert came in and went out", "Albert came in and went and", "Albert came in and went at 1", "Albert came in and went at once", "Albert came in and went at once to", "Albert came in and went at once to", "Albert came in and went at once to my", "Albert came in and went at once to my", "Albert came in and went at once tomorrow", "my dad came in and went at 1 tomorrow"]
+Albert came in and went at once to my
+she's much worse now Albert said
+she's much worse now Albertson said
+["she's much worse now Albertson so", "she's much worse now Albertson set", "she's much worse now Albertson said"]
+she's much worse now Albertson said
+Albert stopped eating and looked at Molly
+Hobbit stop eating and look at Molly
+["all the", "Albert", "Hobbit", "Hobbit Stow", "Hobbit stop", "Hobbit stop", "Hobbit stop it", "Hobbit stop Ed", "Hobbit stop eating", "Hobbit stop eating", "Hobbit stop eating and", "Hobbit stop eating an aloe", "Hobbit stop eating antelope", "Hobbit stop eating and look at", "Hobbit stop eating and look at the", "Hobbit stop eating and look at my", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Molly"]
+Albert stop eating and look at Molly
+but in any case I'd rather be seasick than dead
+but in any case I'd rather be sick than that
+["my", "mud", "Matty", "Martin", "McKinney", "not in any", "but in any case", "but in any case", "but in any case I", "but in any case I'd", "but in any case I do", "but in any case I draw", "but in any case I'd rather", "but in any case I'd rather be", "but in any case I'd rather be", "but in any case I'd rather be here", "but in any case I'd rather be to see", "but in any case I'd rather be to see", "but in any case I'd rather be seasick", "but in any case I'd rather be seasick the", "but in any case I'd rather be sick than", "but in any case I'd rather be sick than the", "but in any case I'd rather be sick than that", "but in any case I'd rather be sick than that"]
+but in any case I'd rather be seasick than the
