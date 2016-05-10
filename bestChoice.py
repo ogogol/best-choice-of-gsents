@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from difference import *
 from difflib import *
 
@@ -22,7 +23,7 @@ def wodrsRightOrder (maxSent, sent):
     sentWds = sent.split()
 
     if msl - sl > 0:
-        exWds, misWds, wrWds, rWds = (sentsDifference(maxSent, sent, 0))
+        exWds, misWds, wrWds, rWds = sentsDifference(maxSent, sent)
         for key in misWds.keys():
             if key < len(sentWds) - 1:
                 sentWds.insert(key,'')
@@ -92,7 +93,7 @@ def googleSentenceCorrection(oSent, gSent, wds): #gTrSent,
                             googleSentenceWords[i] = w
                             ok = 1
                     if ok == 0:
-                        w = get_close_matches(originalSentenceWords[i], wdLst, 1, 0.2)#getClosePhoneMatches(originalSentenceWords[i], wdLst, 1, 0.2)
+                        w = get_close_matches(originalSentenceWords[i], wdLst, 1, 0.2)
                         if len(w) > 0:
                             googleSentenceWords[i] = w[0]
 
@@ -112,8 +113,10 @@ sents = readSents("4.txt")
 
 
 words = wordsList(sents)
+print "Words %s " % words
 bSent = bChoice(originalSentence, googleSentence, sents) # выбираем лучшее предложение из последних
 googleSentenceWords = googleSentenceCorrection(originalSentence, bSent, words)
 
-print (words)
-print (" Оригинальное -", originalSentence, "\n", "Выдал гугл   -", googleSentence, "\n", "Итоговое     -", ' '.join(googleSentenceWords))
+print "Оригинальное - %s" % originalSentence
+print "Выдал гугл   - %s" % googleSentence
+print "Итоговое     - %s" % ' '.join(googleSentenceWords)
