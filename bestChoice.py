@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from difference import *
-from difflib import *
+from difflib import get_close_matches
 
 def suitableWordsList (wd, wds):
     '''
     поиск слов по неправиьному слову и составление списка слов, стоящих в том же месте, где и неправильное слово
-    :param wd:
-    :param wds:
-    :return:
+    :param wd: string
+    :param wds: list
+    :return: suitedWords list
     '''
     suitedWords = []
     for ws in wds:
@@ -23,13 +23,13 @@ def wodrsRightOrder (maxSent, sent):
     '''
     коррекция порядка слов в предложении
     сравнение предложения по отношению к самому длинному и вставка одного '' вместо пропущенного слова
-    :param maxSent:
-    :param sent:
-    :return:
+    :param maxSent: string
+    :param sent: string
+    :return: sentWds: list
     '''
-    msl = len(maxSent)
-    sl = len(sent)
     sentWds = sent.split()
+    msl = len(maxSent.split())
+    sl = len(sentWds)
 
     if msl - sl > 0:
         exWds, misWds, wrWds, rWds = sentsDifference(maxSent, sent)
@@ -44,8 +44,8 @@ def wordsList(sents):
     '''
     создаем и наполняем двумерный список слов на основе самого длинного предожения
     типа [['Peter'], ['Hobbs', 'hopes'], ['game', 'same', 'came'], ['here'], ['this'], ['mon', 'morning']]
-    :param sents:
-    :return:
+    :param sents: list
+    :return: words: list список упорядоченных слов, words_l те же слова но в нижнем регистре
     '''
     # выбираем самое длинное предложение из предложенных гуглом и все предложения разбиваем на слова
     sl = 0
@@ -65,7 +65,7 @@ def wordsList(sents):
 
     # наполняем двумерный список всех слов с учетом их порядка
     for i, s in enumerate(sents):
-        m = min(len(wd[i]) + 2, l)
+        m = min(len(wd[i]) + 1, l)
         mS = ' '.join(maxLenSent[0:m])
         wd[i] = wodrsRightOrder (mS, s)
         for j, value in enumerate(wd[i]):
@@ -81,7 +81,7 @@ def getSimilarSent(orSent, gSent, sents):
     n = int(len(sents)/4)
     s = sents[::-1]
     for i in range(n):
-        if levenshtein(orSent, s[i]) > levenshtein(orSent, s[i+1]):
+        if levenshtein(orSent, bestSent) > levenshtein(orSent, s[i+1]):
             bestSent = s[i+1]
 
     return bestSent
@@ -90,61 +90,55 @@ def getSimilarSent(orSent, gSent, sents):
 def missedAndWrongWordsCorrection(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
     '''
     находит пропущенные и неправильные слова и корректирует
-    :param wordsDict:
-    :param wds:
-    :param originalSentenceWords:
-    :param googleSentenceWords:
-    :return: googleSentenceWords
+    :param wordsDict: dictionary
+    :param wds: list
+    :param originalSentenceWords: string
+    :param googleSentenceWords: string
+    :return: googleSentenceWords list
     '''
     for value in wordsDict.values():
-        isWordChange = 0
         wdLst = suitableWordsList(value[0], wds)
-        for w in wdLst:
-            if originalSentenceWords[value[2]].lower() == w.lower():
-                isWordChange = 1
+        if value[2] < len(originalSentenceWords):
+            w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
+            if len(w) > 0:
                 if value[1] < len(googleSentenceWords):
-                    googleSentenceWords[value[1]] = w
+                    googleSentenceWords[value[1]] = w[0]
                 else:
-                    googleSentenceWords.append(w)
-
-        if isWordChange == 0:
-            if len(wds) >= value[2]:
-                w = get_close_matches(value[0], wds[value[2]], 1, cutoff)
-                #print("Варианты %s" % w)
-                if len(w) > 0:
-                    if value[1] < len(googleSentenceWords):
-                        googleSentenceWords[value[1]] = w[0]
-                    else:
-                        googleSentenceWords.append(w[0])
+                    googleSentenceWords.append(w[0])
 
     return googleSentenceWords
 
-def googleSentenceCorrection(oSent, gSent, wds, cutoff = 0.65):
+def googleSentenceCorrection(oSent, gSent, wds, cutoff = 0.4):
     '''
     проверка предложения и замена неправильных слов на правильные
-    :param oSent: оригинальное предложение
-    :param gSent: лучшее предложение для сравнения от гугла
-    :param wds: список упорядоченных слов всех фраз от гугла
-    :param cutoff: порог отсечения подобия слов, используется если не найдено ни одного 100% подходящего
-    :return: googleSentenceWords - скорректированное предложение
+    :param oSent: string оригинальное предложение
+    :param gSent: string лучшее предложение для сравнения от гугла
+    :param wds: list список упорядоченных слов всех фраз от гугла
+    :param cutoff: num порог отсечения подобия слов, используется если не найдено ни одного 100% подходящего
+    :return: googleSentenceWords - string скорректированное предложение
     '''
     originalSentenceWords = oSent.split()
     googleSentenceWords = gSent.split()
 
     exWds, misWds, wrWds, rWds = sentsDifference(oSent, gSent)
-    #print(misWds)
     googleSentenceWords = missedAndWrongWordsCorrection(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
-    googleSentenceWords = missedAndWrongWordsCorrection(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/3)
+    googleSentenceWords = missedAndWrongWordsCorrection(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
 
     return ' '.join(googleSentenceWords)
 
 
 def googleSentensBestChoice(originalSentence, lineSentence, sents):
+    #------------------------- надо убрать
+    if originalSentence.lower() == lineSentence.lower():
+        googleSentenceWords = lineSentence
+        return googleSentenceWords
+    #------------------------- надо убрать
+
     words = wordsList(sents)
     similarSent = getSimilarSent(originalSentence, lineSentence, sents) # выбираем лучшее предложение из последних
     googleSentenceWords = googleSentenceCorrection(originalSentence, similarSent, words)
 
-    #print("Words %s" % words )
+    #print("Words %s" % words)
     #print("Сравниваемое - %s" % similarSent)
 
     return googleSentenceWords
@@ -155,7 +149,7 @@ from read_sents import readTest
 originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
 
 for i, orS in enumerate(originalSentences):
-    gSeBeCh= googleSentensBestChoice(orS, lineSentences[i], sentss[i])
+    gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
     if rightAnswers[i] == gSeBeCh:
         print(i, "OK")
     else:

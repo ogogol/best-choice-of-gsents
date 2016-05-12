@@ -23,12 +23,13 @@ def readSents(file):
     return phs
 
 import re
+patternComma = re.compile(r'\b([,\.]) ')
 patternSent = re.compile(r'.+')
 patternSents = re.compile(r'"([\w\d\s\']+?)"')
 
 def readTest(file):
     f = open (file, 'r')
-    line = [line for line in f]
+    line = [patternComma.sub(' ',line) for line in f]
     f.close()
     originalSentences = []
     lineSentences = []
@@ -42,4 +43,12 @@ def readTest(file):
         rightAnswers.append(patternSent.match(line[i+3]).group())
 
     return originalSentences, lineSentences, sentss, rightAnswers
+
+#originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
+#print (originalSentences)
+#print (lineSentences)
+#print (sentss)
+
+#from difflib import get_close_matches
+#print(get_close_matches('ill', ['no', 'El'], 1, 0.4))
 
