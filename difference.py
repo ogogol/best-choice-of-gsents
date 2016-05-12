@@ -1,6 +1,6 @@
 import re
 import numpy as np
-from difflib import *
+from difflib import Differ
 
 def levenshtein(source, target):
     if len(source) < len(target):
@@ -51,8 +51,8 @@ patternMinus = re.compile(r'-')
 def separatedComparedWords(comparedWords):
     '''
     разделяет список сравненых слов на 4 типа, и выдает четыре словаря:
-    :param comparedWords: список сравниваемых слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
-    :return: excessWds, missedWds, wrongWds, rightWds
+    :param comparedWords: list список сравниваемых слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
+    :return: excessWds, missedWds, wrongWds, rightWds - dictionaries
     лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
     '''
     excessWds = {}
@@ -103,9 +103,9 @@ def correctedWrongAndMissWordsList(missedWds, wrongWds, orSentWords, comSentWord
 def sentsDifference(orSent, comSent):
     '''
     сравнивает два предложения, оригинальное и сравниваемое, и выдает четыре словаря:
-    :param orSent: оригинальное предложение
-    :param comSent: сравниваемое
-    :return: excessWds, missedWds, wrongWds, rightWds
+    :param orSent: string оригинальное предложение
+    :param comSent: string сравниваемое
+    :return: excessWds, missedWds, wrongWds, rightWds - dictionaries
     лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
     '''
 
