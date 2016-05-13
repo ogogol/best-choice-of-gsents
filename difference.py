@@ -58,7 +58,7 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords):
             sent_num, isWd = getWordOrder(sent_count, lts + wrW, comSentWords)
             or_W = ''.join(patternLetter.findall(patternPlusSpaceLetter.sub('', cW)))
             orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
-            if isOrWd != True:
+            if not isOrWd:
                 or_W = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
                 orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
 
@@ -128,32 +128,43 @@ def getSentsDifference(orSent, comSent):
 
     return excessWds, missedWds, wrongWds, rightWds
 
+def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
+    isWds = False
+    start = max([0, n-cutoff])
+    end = min(n+cutoff, len(comSentWds), len(orSentWds))
+    for i in range(start, end):
+        if comSentWds[n] == orSentWds[i]:
+            isWds = True
+    for i in range(start, end):
+        if comSentWds[n+1] == orSentWds[i]:
+            isWds = True
+
+    return isWds
+
+
 from jellyfish import jaro_winkler as jaro
 from jellyfish import levenshtein_distance as levenshtein
-def isSumma2WordsTheBest(baseWord, word1, word2):
-    isTheBest = False
-    levenshtein_2words = levenshtein(baseWord, word1+word2)
-    if levenshtein_2words < levenshtein(baseWord, word1) and levenshtein_2words < levenshtein(baseWord, word2):
-        isTheBest = True
 
-    return isTheBest
+def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
+    jaro_2words = jaro(baseWord, word1+word2)
+    if jaro_2words > jaro(baseWord, word1) and jaro_2words > jaro(baseWord, word2):
+        comSentWds[n] += comSentWds[n+1]
+        del comSentWds[n+1]
+
+    return comSentWds
 
 def joinCorrectSentWordsList(orSentWords, comSentWords):
     sentLen = len(comSentWords)
+    orSentLen = len(orSentWords)
     count = 1
-    if len(orSentWords) < sentLen:
-        for i, val in enumerate(orSentWords):
-            if i < sentLen - count:
-                if isSumma2WordsTheBest(val, comSentWords[i], comSentWords[i+1]):
-                    comSentWords[i] += comSentWords[i+1]
-                    del comSentWords[i+1]
+    for i, val in enumerate(orSentWords):
+        if i < sentLen - count:
+            if i < orSentLen - 1:
+                if not isTheSameWords(i, orSentWords, comSentWords):
+                    comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
                     count += 1
-    else:
-        for i, val in enumerate(comSentWords):
-            if i < sentLen - count:
-                if isSumma2WordsTheBest(orSentWords[i], val, comSentWords[i+1]):
-                    comSentWords[i] += comSentWords[i+1]
-                    del comSentWords[i+1]
-                    count += 1
+            else:
+                comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
+                count += 1
 
     return comSentWords

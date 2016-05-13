@@ -1,0 +1,305 @@
+Words [['Peter', 'Pizza', 'pizza'], ['hopes', 'Hut', 'helps', 'shops', 'Hobbs'], ['came', 'in', 'game', 'games'], ['here', 'he'], ['this'], ['morning', 'morn']]
+Оригинальное - Peter Hobbs came here this morning
+В строке     - Peter hopes came here this morning
+Сравниваемое - Peter hopes came here this morning
+Итоговое     - Peter Hobbs came here this morning
+0. OK, Нач. Л-штэйн - 3, Итоговый - 0
+
+Words [['this', 'the'], ['morn', 'morning']]
+Оригинальное - Peter Hobbs came here this morning
+В строке     - Peter Hobbs came here this morn
+Сравниваемое - Peter Hobbs came here this morn
+Итоговое     - Peter Hobbs came here this morning
+1. OK, Нач. Л-штэйн - 3, Итоговый - 0
+
+Words [['in', ''], ['the', 'this'], ['morning', 'morn']]
+Оригинальное - Peter Hobbs came here this morning
+В строке     - Peter Hobbs came here this morn
+Сравниваемое - Peter Hobbs came here this morn
+Итоговое     - Peter Hobbs came here this morning
+2. OK, Нач. Л-штэйн - 3, Итоговый - 0
+
+Words [['he'], ['is'], ['very'], ['angry'], ['with'], ['you'], ['about'], ['that'], ['later', 'letter']]
+Оригинальное - he is very angry with you about that letter
+В строке     - he is very angry with you about that later
+Сравниваемое - he is very angry with you about that later
+Итоговое     - he is very angry with you about that letter
+3. OK, Нач. Л-штэйн - 2, Итоговый - 0
+
+Words [['you'], ['never', 'know'], ['talk', 'how'], ['to', 'Tumi'], ['me']]
+Оригинальное - you never talk to me
+В строке     - you never talk Tumi
+Сравниваемое - you never talk to me
+Итоговое     - you never talk to me
+4. OK, Нач. Л-штэйн - 4, Итоговый - 0
+
+Words [['to', 'Tumi'], ['me']]
+Оригинальное - you never talk to me
+В строке     - you never talk Tumi
+Сравниваемое - you never talk Tumi
+Итоговое     - you never talk to me
+5. OK, Нач. Л-штэйн - 4, Итоговый - 0
+
+Words [['Jackie', 'Jack', 'Yankees', 'jackets', 'Jackass', '', 'JackieJackie'], ['Stewart', '2', "Jackie's", 'stood'], ['at', 'Store'], ['the'], ['window', 'way', 'Wynn', 'wind']]
+Оригинальное - Jackie Stood at the window
+В строке     - Jackie Stewart at the window
+Сравниваемое - Jackie stood at the window
+Итоговое     - Jackie stood at the window
+6. OK, Нач. Л-штэйн - 5, Итоговый - 1
+
+Words [['that', 'what'], ['you'], ['are'], ['walking', 'talking'], ['about']]
+Оригинальное - what are you talking about
+В строке     - that you are walking about
+Сравниваемое - that you are walking about
+Итоговое     - what you are talking about
+7. OK, Нач. Л-штэйн - 8, Итоговый - 6
+
+Words [['my', '', 'Albert'], ['dad', 'Albert', 'came'], ['came', 'in'], ['in', 'and'], ['and', 'went'], ['went', 'at'], ['at', 'out', 'and', 'once'], ['1', 'once', 'to'], ['tomorrow', 'to', 'my']]
+Оригинальное - Albert came in and went at once to Molly
+В строке     - my dad came in and went at 1 tomorrow
+Сравниваемое - Albert came in and went at once to my
+Итоговое     - Albert came in and went at once to my
+8. OK, Нач. Л-штэйн - 16, Итоговый - 4
+
+Words [["she's"], ['much'], ['worse'], ['now'], ['Albertson'], ['said', 'so', 'set']]
+Оригинальное - she's much worse now Albert said
+В строке     - she's much worse now Albertson said
+Сравниваемое - she's much worse now Albertson said
+Итоговое     - she's much worse now Albertson said
+9. OK, Нач. Л-штэйн - 3, Итоговый - 3
+
+Words [['Hobbit', 'allthe', 'Albert'], ['stop', 'Stow'], ['eating', 'it', 'Ed'], ['and', 'an', 'antelope'], ['look', 'aloe'], ['at'], ['Molly', 'the', 'my', 'Miley']]
+Оригинальное - Albert stopped eating and looked at Molly
+В строке     - Hobbit stop eating and look at Molly
+Сравниваемое - Hobbit stop eating and look at Molly
+Итоговое     - Albert stop eating and look at Molly
+10. OK, Нач. Л-штэйн - 9, Итоговый - 5
+
+Words [['but', 'my', 'mud', 'Matty', 'Martin', 'McKinney', 'not'], ['in'], ['any'], ['case'], ["I'd", ''], ['rather', 'I'], ['be', 'do', 'draw'], ['sick', '', 'to', 'seasick'], ['than', 'here', 'see', 'the'], ['that', 'the']]
+Оригинальное - but in any case I'd rather be seasick than dead
+В строке     - but in any case I'd rather be sick than that
+Сравниваемое - but in any case I'd rather be sick than that
+Итоговое     - but in any case I'd rather be seasick than that
+11. OK, Нач. Л-штэйн - 6, Итоговый - 3
+
+Words [['we', 'he'], ['were', 'will', 'wants', 'want'], ['sitting', 'see', 'it', 'City'], ['in'], ['my'], ['room'], ['and'], ['we'], ['were', 'will'], ['smoking', 'so', 'slow', 'smoke'], ['and', 'a'], ['talking', 'to', 'talk'], ['about'], ['how'], ['bad', 'about'], ['we'], ['were'], ['no', 'El'], ['I', "I'm"], ['mean', 'in'], ['of', 'the', 'if'], ['course', 'car']]
+Оригинальное - We were sitting in my room and we were smoking and talking about how bad we were ill I mean of course
+В строке     - we were sitting in my room and we were smoking and talking about how bad we were no I mean of course
+Сравниваемое - we were sitting in my room and we were smoking and talking about how bad we were no I mean of course
+Итоговое     - we were sitting in my room and we were smoking and talking about how bad we were El I mean of course
+12. OK, Нач. Л-штэйн - 4, Итоговый - 3
+
+Words [['after', ''], ['the', 'how'], ['coffee', 'call'], ['and'], ['sandwiches', 'send', 'sandwich'], ['inspector', 'in', 'instead', 'inspect'], ['Walsh', 'will'], ['cold', 'call'], ['Kroger', 'girl', 'girls', 'world', 'girlgirl'], ['Jackson', 'girl', 'clock', 'your', 'Oxon'], ['Roger', 'clocks', 'Raw'], ['Watson', 'call', 'Clark', 'klotz', 'Clarkson', ''], ['203', 'Clarkson', '', 'm203', 'M'], ['Clarkson', '', 'until', 'clock', 'clocks'], ['to', '202', 'twenty'], ['the', 'do', "he's"], ['office', 'Earth', 'other']]
+Оригинальное - after the coffee and sandwiches inspector Walsh called Roger Clarkson to the office
+В строке     - after the coffee and sandwiches inspector Walsh cold Roger Clarkson to the office
+Сравниваемое - after the coffee and sandwiches inspector Walsh cold Roger Clarkson to the office
+Итоговое     - after the coffee and sandwiches inspector Walsh call Roger Clarkson to the office
+13. OK, Нач. Л-штэйн - 3, Итоговый - 2
+
+Words [['10', '', 'Dean', 'then', 'being'], ['stepto', 'the', 'beans', 'beastie', 'step', 'stepped', 'stick', 'Step2'], ['begin', 'to', 'up', 'be', 'big'], ['at', 'again', 'a'], ['once', 'at', '1']]
+Оригинальное - the inspector began at once
+В строке     - 10 step to begin at once
+Сравниваемое - then step to begin at once
+Итоговое     - then stepto begin at once
+14. OK, Нач. Л-штэйн - 10, Итоговый - 7
+
+Words [['the', 'Vince', 'things', 'VinceGill', 'being'], ['inspector', 'to', 'stupid'], ['again', '', 'did'], ['at', 'the'], ['once', '1']]
+Оригинальное - the inspector began at once
+В строке     - the inspector again at once
+Сравниваемое - the inspector again at once
+Итоговое     - the inspector again at once
+15. OK, Нач. Л-штэйн - 3, Итоговый - 3
+
+Words [['but', '', 'what', 'let'], ['mr', 'my', 'me', 'miss'], ['Briggs', 'B', 'Bray', 'Brigg'], ['wanted', 'one', 'want'], ['have', '', 'how'], ['they', 'to', 'the', 'big'], ['gotten', 'guy', 'are', 'garden'], ['to'], ['you', 'your'], ['know'], ['for', 'who', 'call', 'okay', 'forecast'], ['his'], ['phone']]
+Оригинальное - but mr Briggs wanted half the garden too you know for his farm
+В строке     - but mr Briggs wanted have they gotten to you know for his phone
+Сравниваемое - but mr Briggs wanted have they gotten to you know for his phone
+Итоговое     - but mr Briggs wanted have the garden to you know for his phone
+16. OK, Нач. Л-штэйн - 12, Итоговый - 8
+
+Words [['inspector', 'in', '', 'inspe', 'insta', 'inspect', 'Inspector'], ['Walsh', "it's", 'will', 'Lewis', 'those', 'wasThe'], ['who', 'to', ''], ['watched', 'were', 'are', 'watch', 'Watch'], ['her', 'the', 'Rome', 'Roger', 'trailer'], ['for', 'roads'], ['me', 'are']]
+Оригинальное - inspector Walsh watched roger for a minute
+В строке     - inspector Walsh who watched her for me
+Сравниваемое - inspector Walsh who watched her for me
+Итоговое     - inspector Walsh who watched Roger for me
+17. OK, Нач. Л-штэйн - 13, Итоговый - 11
+
+Words [['inspector', 'in', 'East', 'insta', 'instep', 'inspect'], ['Walsh', 'will', 'wolf'], ['watch', 'why', 'what'], ['charger', 'the', 'Roger'], ['for', 'road', 'roads'], ['a', 'are', 'an', ''], ['minute', 'me']]
+Оригинальное - inspector Walsh watched roger for a minute
+В строке     - inspector Walsh watch charger for a minute
+Сравниваемое - inspector Walsh watch charger for a minute
+Итоговое     - inspector Walsh watch Roger for a minute
+18. OK, Нач. Л-штэйн - 5, Итоговый - 3
+
+Words [['I', 'ice'], ['see'], ['we', ''], ['found', "we've"], ['the'], ['empty', 'a', 'end'], ['bottle', 'by', 'but'], ['of'], ['sleeping', 'glue', 'sleep', 'flipping', 'triple'], ['tablets', 'the', 'tap', 'tablet'], ['mr', '', 'Miss'], ['Clarkson', 'new', '', 'clocks'], ['In', "o'clock", 'in', 'and', 'India', 'Indian', 'Indians'], ['TheArms', 'the'], ['Room']]
+Оригинальное - I see We found the empty bottle of sleeping tablets mr Clarkson in Diane's room
+В строке     - I see we found the empty bottle of sleeping tablets mr Clarkson In The Arms Room
+Сравниваемое - I see we found the empty bottle of sleeping tablets mr Clarkson In The Arms Room
+Итоговое     - I see we found the empty bottle of sleeping tablets mr Clarkson In TheArms Room
+19. OK, Нач. Л-штэйн - 10, Итоговый - 9
+
+Words [['I', 'Rogers', 'Joseph', 'images'], ['love', '', 'A', 'of', 'a', 'heard'], ['your', "don't", 'you', '', 'ASA'], ['face', 'faces', 'city', ''], ['I', 'again', 'and', 'did'], ['did', '', 'not'], ['not', 'you', 'change'], ['change', 'know']]
+Оригинальное - Roger's face did not change
+В строке     - Joseph ASA did not change
+Сравниваемое - Joseph ASA did not change
+Итоговое     - Rogers face did not change
+20. OK, Нач. Л-штэйн - 9, Итоговый - 1
+
+Words [['Leon', 'the', 'theyare', 'Beyond', 'when'], ['did', 'getting', 'Indiana'], ['not'], ['kill'], ['my'], ['mother'], ['I', 'and'], ['know'], ['that', 'the']]
+Оригинальное - Diane did not kill my mother I know that 
+В строке     - Leon did not kill my mother I know that
+Сравниваемое - Leon did not kill my mother I know that
+Итоговое     - Leon did not kill my mother I know that
+21. OK, Нач. Л-штэйн - 5, Итоговый - 5
+
+Words [['what', 'why', 'White', 'white'], ['was'], ['Project', 'Roger'], ['clocksand', 'la', 'Glass', 'clocks', "o'clock", 'Clarkson', 'clucksand'], ['Afraid', 'so', 'Ave']]
+Оригинальное - why was Roger Clarkson afraid
+В строке     - what was Project clocks and Afraid
+Сравниваемое - white was Roger clucks and Afraid
+Итоговое     - why was Roger Clarkson Afraid
+22. OK, Нач. Л-штэйн - 14, Итоговый - 1
+
+Words [['he', 'you', 'can', 'Hilo'], ['looked'], ['at'], ['Sutton', 'so', 'some', 'Soldier', 'surgeon', "sodon't"], ['Foster', 'for']]
+Оригинальное - He looked at sergeant Foster
+В строке     - he looked at Sutton Foster
+Сравниваемое - he looked at Sutton Foster
+Итоговое     - he looked at surgeon Foster
+23. OK, Нач. Л-штэйн - 8, Итоговый - 4
+
+Words [['he', 'Heat', 'Hilo'], ['looked', 'look'], ['at'], ['Susan', '', 'soon', 'surgeon'], ['Foster', 'the', 'for']]
+Оригинальное - He looked at sergeant Foster
+В строке     - he looked at 7:40
+Сравниваемое - he looked at Susan Foster
+Итоговое     - he looked at surgeon Foster
+24. OK, Нач. Л-штэйн - 16, Итоговый - 4
+
+Words [['he', '', 'can', 'Hilo', 'cat'], ['looked', 'key', 'look'], ['at', ''], ['the', 'it', 'episode', 'episodes', 'a', 'thesurgeon', 'asurgent', 'asurgeon'], ['sergeant', 'soldier', ''], ['Forrester', 'for', 'first']]
+Оригинальное - He looked at sergeant Foster
+В строке     - he looked at the sergeant Forrester
+Сравниваемое - he looked at a sergeant for
+Итоговое     - he looked at a sergeant Forrester
+25. OK, Нач. Л-штэйн - 8, Итоговый - 6
+
+Words [['Sergeant', 'so', 'search', 'Soulja', 'surgeon', 'sergeant'], ['Preston', 'for', 'First', 'Foster', 'PrestonRoad'], ['wrote', 'in'], ['it'], ['down'], ['yes', 'yesterday'], ['inspector', 'and']]
+Оригинальное - Sergeant Foster wrote it down yes inspector
+В строке     - Sergeant Preston wrote it down yes inspector
+Сравниваемое - Sergeant Preston wrote it down yes inspector
+Итоговое     - Sergeant Foster wrote it down yes inspector
+26. OK, Нач. Л-штэйн - 5, Итоговый - 0
+
+Words [['a', ''], ['good'], ['day'], ['for', 'to'], ['tennis', 'the', '10', 'twenty'], ["sodon't", 'so', 'soon', 'do', 'children']]
+Оригинальное - a good day for tennis sergeant
+В строке     - a good day for tennis children
+Сравниваемое - a good day for tennis so don't
+Итоговое     - a good day for tennis sodon't
+27. OK, Нач. Л-штэйн - 8, Итоговый - 6
+
+Words [['a', "I'm"], ['good'], ['day'], ['for'], ['Dennis', '10', 'can', 'tennis'], ['Sargent', 'you', 'so', 'Soldier', 'children']]
+Оригинальное - a good day for tennis sergeant
+В строке     - a good day for Dennis Sargent
+Сравниваемое - a good day for Dennis Sargent
+Итоговое     - a good day for tennis Sargent
+28. OK, Нач. Л-штэйн - 4, Итоговый - 3
+
+Words [['searchand', 'so', 'search', 'Soldier', 'surgeon', 'searching', 'Sergeant', 'Sutton', 'searchandPasta'], ['Pasta', 'for', 'First', 'Foster', '', 'Loft'], ['Loft', 'Love']]
+Оригинальное - Sergeant Foster laughed
+В строке     - Sutton Foster Loft
+Сравниваемое - Sutton Foster Loft
+Итоговое     - Sergeant Foster Loft
+29. OK, Нач. Л-штэйн - 13, Итоговый - 7
+
+Words [['chick', 'she', 'JetBlue'], ['look', 'looked'], ['at'], ['thesurgeon', 'this', 'the'], ['Foster', 'Sun', '', 'surgeon', 'urgent', 'for'], ['and', 'soda'], ['smiled', 'some', 'smile']]
+Оригинальное - She looked at sergeant Foster and smiled
+В строке     - chick look at the surgeon Foster & Smith
+Сравниваемое - chick look at the surgeon Foster and smiled
+Итоговое     - she looked at thesurgeon Foster and smiled
+30. OK, Нач. Л-штэйн - 20, Итоговый - 7
+
+Words [['Sergeant', '', 'search', 'Soldier', 'surgeon', 'sergeant'], ["Foster's", 'so', 'for', 'First', 'Foster', 'fastest'], ['face', '', 'space', 'Facebook', 'Space', 'Freeze'], ['whento', 'way', 'when', '', 'Ventura', 'whenthe'], ['read', 'Center', 'red']]
+Оригинальное - Sergeant Foster's face went red
+В строке     - Sergeant Foster's face when to read
+Сравниваемое - Sergeant Foster's face when to read
+Итоговое     - Sergeant Foster's face whento red
+31. OK, Нач. Л-штэйн - 4, Итоговый - 2
+
+Words [['children', 'so', 'search', 'surgeon', "children's", 'searchingfor', '', 'Sutton'], ['Foster', "children's"], ['Freeze', 'first', ''], ['Ventura', 'Freeze', 'when', 'want']]
+Оригинальное - Sergeant Foster's face went red
+В строке     - children Foster Freeze Ventura
+Сравниваемое - children Foster Freeze Ventura
+Итоговое     - surgeon Foster Freeze when
+32. OK, Нач. Л-штэйн - 18, Итоговый - 16
+
+Words [['Sergeant', 'so', 'search', 'social', 'surgeon', 'surgent', 'searching'], ['Forrester', 'for', 'Forest', 'Foster'], ['face', 'Face', 'Freeze'], ['went', 'when', 'winter', 'Ventura', 'with'], ['red']]
+Оригинальное - Sergeant Foster's face went red
+В строке     - Sergeant Forrester face went red
+Сравниваемое - Sergeant Forrester face went red
+Итоговое     - Sergeant Foster face went red
+33. OK, Нач. Л-штэйн - 5, Итоговый - 2
+
+Words [['yes', 'you'], ['a', 'I', "I've", 'if', 'at', 'of'], ['fast', 'I', 'thought', 'first', ''], ['and', 'Austin'], ['exciting', 'the', 'text', 'Texas'], ['player', 'play'], ['is', '', 'hissurgeon', "it'surgent", 'Insurgent'], ['Sergeant', "it's", 'so', 'such', 'sucha', ''], ['Forrester', 'for', 'Fort', 'poster']]
+Оригинальное - yes a fast and exciting player is Sergeant Foster
+В строке     - yes a fast and exciting player Insurgent poster
+Сравниваемое - yes a fast and exciting player is Sergeant Forrester
+Итоговое     - yes a fast and exciting player is Sergeant poster
+34. OK, Нач. Л-штэйн - 7, Итоговый - 1
+
+Words [['yes'], ['have', '', 'I', 'at'], ['fun', "I've", 'saw', 'thought', 'first'], ['and'], ['exciting', 'excite'], ['player', 'play'], ['is', 'his'], ['Sergeant', 'so', 'such', 'Soulja', 'surgeon'], ['Forrester', 'for']]
+Оригинальное - yes a fast and exciting player is Sergeant Foster
+В строке     - yes have fun and exciting player is Sergeant Forrester
+Сравниваемое - yes have fun and exciting player is Sergeant Forrester
+Итоговое     - yes at first and exciting player is Sergeant Forrester
+35. OK, Нач. Л-штэйн - 9, Итоговый - 6
+
+Words [['is', 'yes', 'ES', 'yesat'], ['fast', 'file', 'first', 'just'], ['and', 'send'], ['exciting', 'I', 'text'], ['player', 'play'], ['is', 'insurgent'], ['Sergeant', 'so', 'Serge', 'Soulja', 'surgeon'], ['Forrester', 'for', 'First']]
+Оригинальное - yes a fast and exciting player is Sergeant Foster
+В строке     - is fast and exciting player is Sergeant Forrester
+Сравниваемое - is fast and exciting player is Sergeant Forrester
+Итоговое     - yes fast and exciting player is Sergeant Forrester
+36. OK, Нач. Л-штэйн - 7, Итоговый - 5
+
+Words [['yes', 'yeah'], ['a', 'if', 'I'], ['fast', 'I', 'thought', 'passed', 'thoughtsend'], ['and', '', 'antics'], ['exciting', 'I', 'text', 'excite', 'excited'], ['player', 'day', 'play'], ['is', 'in'], ['Sutton', 'so', 'such', 'Soulja', 'surgeon', 'Sergeant', 'searching', 'surgeonpost'], ['Foster', 'for']]
+Оригинальное - yes a fast and exciting player is Sergeant Foster
+В строке     - yes a fast and exciting player is Sutton Foster
+Сравниваемое - yes a fast and exciting player is Sergeant Foster
+Итоговое     - yes a fast and exciting player is Sergeant Foster
+37. OK, Нач. Л-штэйн - 6, Итоговый - 0
+
+Words [['Diane', 'the', "Diane's", 'DeAnza', '', 'theyare', 'dial', 'Siam'], ['smiled', "Diane's", 'small', 'smile'], ['again', 'my', 'Thai'], ['at', '', 'episode'], ['seven', 'the', 'episode', '2', "it's", 'twenty', '21st'], ['And', 'urgent'], ['his', 'he', ''], ['face', "he's"], ['went', 'when'], ['weather', 'through', 'right', 'rather']]
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - Diane smiled again at seven And his face went weather
+Сравниваемое - Diane smiled again at seven And his face went rather
+Итоговое     - Diane smiled again at seven And his face went rather
+38. OK, Нач. Л-штэйн - 17, Итоговый - 16
+
+Words [['Sergeant', 'so', 'search', 'Soulja', 'surgeon', 'surgeons', 'searching'], ['Foster', 'for', 'First'], ['and'], ['his', 'he'], ['face'], ['swelled', 'when', 'went'], ['weather', 'through', 'right', 'rather']]
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - Diane smiled again at Sergeant Foster and his face swelled weather
+Сравниваемое - Diane smiled again at Sergeant Foster and his face swelled weather
+Итоговое     - Diane smiled again at Sergeant Foster and his face went rather
+39. OK, Нач. Л-штэйн - 9, Итоговый - 3
+
+Words [['went', 'when', 'weather'], ['well', 'to']]
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - Diane smiled again at Sergeant Foster and his face weather
+Сравниваемое - Diane smiled again at Sergeant Foster and his face weather
+Итоговое     - Diane smiled again at Sergeant Foster and his face went
+40. OK, Нач. Л-штэйн - 6, Итоговый - 7
+
+Words [['his', 'he', ''], ['face', "he's"], ['went', 'when'], ['for', 'further'], ['the']]
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - Diane smiled again at Sergeant Foster and his face went further
+Сравниваемое - Diane smiled again at Sergeant Foster and his face went further
+Итоговое     - Diane smiled again at Sergeant Foster and his face went further
+41. OK, Нач. Л-штэйн - 5, Итоговый - 5
+
+Words [['Aldo', 'howto', "Idon't", 'outof'], ['weather', 'the', ''], ["I'd", 'red', '', 'address'], ['rather', 'are'], ['Prada', 'red']]
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - Diane smiled again at Sergeant Foster and his face went rather
+Сравниваемое - Diane smiled again at Sergeant Foster and his face went rather
+Итоговое     - Diane smiled again at Sergeant Foster and his face went rather
+42. OK, Нач. Л-штэйн - 3, Итоговый - 3
+
+Количество улучшений 37, процент 86
+Средний нач. Л-штейн - 7.72, средний итоговый - 4.14
+Время выполнения 43 проверок - 2.18, 0.051 sec на одну проверку
+Дата -2016-05-13 15:56:34.085637

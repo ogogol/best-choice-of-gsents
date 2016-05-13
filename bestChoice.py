@@ -69,7 +69,7 @@ def wordsList(orSent, sents, lineSentLen):
             sl = len(wd[i])
             maxLenSent = wd[i]
 
-    if sl >= lineSentLen:
+    if sl >= len(orSentWds) or sl >= lineSentLen:
         maxLenSent = joinCorrectSentWordsList(orSentWds, maxLenSent)
 
     # создаем двумерный список слов на основе самого длинного предожения
@@ -80,7 +80,7 @@ def wordsList(orSent, sents, lineSentLen):
 
     # наполняем двумерный список всех слов с учетом их порядка
     for i in range(len(sents)):
-        if sl >= lineSentLen:
+        if sl >= len(orSentWds) or sl >= lineSentLen:
             wd[i] = joinCorrectSentWordsList(orSentWds, wd[i])
         else:
             wd[i] = joinCorrectSentWordsList(maxLenSent, wd[i])
@@ -94,7 +94,8 @@ def wordsList(orSent, sents, lineSentLen):
                 if words[j].count(value) == 0:
                     words[j].append(value)
             else:
-                words.append(value)
+                if words[j-1].count(value) == 0:
+                    words[j-1].append(value)
 
     return words
 
@@ -150,6 +151,7 @@ def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     googleSentenceWords = correctMissedAndWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
     googleSentenceWords = correctMissedAndWrongWords(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
 
+    #print(misWds, wrWds)
     return ' '.join(googleSentenceWords)
 
 
@@ -164,32 +166,49 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     similarSent = getSimilarSent(originalSentence, lineSentence, sents) # выбираем лучшее предложение из последних
     googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
-    #print("Words %s" % words)
-    #print("Сравниваемое - %s" % similarSent)
-    #print("Итоговое     - %s" % googleSentenceWords)
+    #print("Предложения\n %s" % sentss[i])
+    f.write("Words %s\n" % words)
+    f.write("Оригинальное - %s\n" % originalSentences[i])
+    f.write("В строке     - %s\n" % lineSentences[i])
+    f.write("Сравниваемое - %s\n" % similarSent)
+    f.write("Итоговое     - %s\n" % googleSentenceWords)
     return googleSentenceWords
 
 
 #-------------ТЕСТ---------------------------
+import time
+from datetime import datetime
 from read_sents import readTest
+f = open ('test_result.txt', 'w')
+tt0 = time.time()
 originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
-
+sourceLevensh_sum = 0
+resultLevensh_sum = 0
+improvingCount = 0
 for i, orS in enumerate(originalSentences):
     gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
     if rightAnswers[i] == gSeBeCh:
         sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
         resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
-        print(i, "OK, Нач. Л-штэйн - %s, Итоговый - %s" % (sourceLevensh, resultLevensh))
+        if sourceLevensh > resultLevensh:
+            improvingCount += 1
+        sourceLevensh_sum += sourceLevensh
+        resultLevensh_sum += resultLevensh
+        f.write('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s\n' % (i, sourceLevensh, resultLevensh))
+        f.write('\n')
     else:
-        print(i, "НЕПРАВИЛЬНО")
-        #print("Предложения\n %s" % sentss[i])
-        print("Оригинальное - %s" % originalSentences[i])
-        print("В строке     - %s" % lineSentences[i])
-        print("Итоговое     - %s" % gSeBeCh)
-        print("Должно быть  - %s" % rightAnswers[i])
+        f.write('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!\n' % i)
+        f.write("Должно быть  - %s\n" % rightAnswers[i])
+        f.write('\n')
+    if i == len(originalSentences) - 1:
+        tt1 = time.time()
+        f.write('Количество улучшений %s, процент %s\n' % (improvingCount, int(improvingCount/(i+1)*100)))
+        f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1),2),
+                                                                    round(resultLevensh_sum/(i+1),2)))
+        f.write('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
+                'Дата -%s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
 
-
-
+f.close()
 
 
 
