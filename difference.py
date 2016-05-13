@@ -1,44 +1,5 @@
 import re
-import numpy as np
 from difflib import Differ
-
-def levenshtein(source, target):
-    if len(source) < len(target):
-        return levenshtein(target, source)
-
-    # So now we have len(source) >= len(target).
-    if len(target) == 0:
-        return len(source)
-
-    # We call tuple() to force strings to be used as sequences
-    # ('c', 'a', 't', 's') - numpy uses them as values by default.
-    source = np.array(tuple(source))
-    target = np.array(tuple(target))
-
-    # We use a dynamic programming algorithm, but with the
-    # added optimization that we only need the last two rows
-    # of the matrix.
-    previous_row = np.arange(target.size + 1)
-    for s in source:
-        # Insertion (target grows longer than source):
-        current_row = previous_row + 1
-
-        # Substitution or matching:
-        # Target and source items are aligned, and either
-        # are different (cost of 1), or are the same (cost of 0).
-        current_row[1:] = np.minimum(
-                current_row[1:],
-                np.add(previous_row[:-1], target != s))
-
-        # Deletion (target grows shorter than source):
-        current_row[1:] = np.minimum(
-                current_row[1:],
-                current_row[0:-1] + 1)
-
-        previous_row = current_row
-
-    return previous_row[-1]
-
 
 patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
 patternMinusSpaceLetter = re.compile(r'\- \w')
@@ -97,7 +58,7 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords):
             sent_num, isWd = getWordOrder(sent_count, lts + wrW, comSentWords)
             or_W = ''.join(patternLetter.findall(patternPlusSpaceLetter.sub('', cW)))
             orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
-            if isOrWd != True:
+            if not isOrWd:
                 or_W = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
                 orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
 
@@ -113,10 +74,6 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords):
                 lts += wrW
                 continue
 
-
-    #print(missedWds, wrongWds,)
-    #print(orSentWords)
-    #print(comSentWords)
     return excessWds, missedWds, wrongWds, rightWds
 
 def getFirstLettersTheSame(wd1, wd2):
@@ -171,3 +128,43 @@ def getSentsDifference(orSent, comSent):
 
     return excessWds, missedWds, wrongWds, rightWds
 
+def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
+    isWds = False
+    start = max([0, n-cutoff])
+    end = min(n+cutoff, len(comSentWds), len(orSentWds))
+    for i in range(start, end):
+        if comSentWds[n] == orSentWds[i]:
+            isWds = True
+    for i in range(start, end):
+        if comSentWds[n+1] == orSentWds[i]:
+            isWds = True
+
+    return isWds
+
+
+from jellyfish import jaro_winkler as jaro
+from jellyfish import levenshtein_distance as levenshtein
+
+def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
+    jaro_2words = jaro(baseWord, word1+word2)
+    if jaro_2words > jaro(baseWord, word1) and jaro_2words > jaro(baseWord, word2):
+        comSentWds[n] += comSentWds[n+1]
+        del comSentWds[n+1]
+
+    return comSentWds
+
+def joinCorrectSentWordsList(orSentWords, comSentWords):
+    sentLen = len(comSentWords)
+    orSentLen = len(orSentWords)
+    count = 1
+    for i, val in enumerate(orSentWords):
+        if i < sentLen - count:
+            if i < orSentLen - 1:
+                if not isTheSameWords(i, orSentWords, comSentWords):
+                    comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
+                    count += 1
+            else:
+                comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
+                count += 1
+
+    return comSentWords
