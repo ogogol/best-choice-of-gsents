@@ -40,83 +40,134 @@ def levenshtein(source, target):
     return previous_row[-1]
 
 
-
 patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
 patternMinusSpaceLetter = re.compile(r'\- \w')
+patternPlusSpaceLetter = re.compile(r'\+ \w')
 patternSpace = re.compile(r'\s+')
 patternLetter = re.compile(r'\w')
 patternPlus = re.compile(r'\+')
 patternMinus = re.compile(r'-')
+patternLetters = re.compile(r'\b\w+')
 
-def separatedComparedWords(comparedWords):
+def getWordOrder(n, wd, sentWords):
+    isWd = True
+    start = max([0, n-4])
+    end = min([len(sentWords), n + 2])
+    if wd in sentWords[start:end]:
+        num = sentWords.index(wd, start, end)
+    else:
+        num = n
+        isWd = False
+
+    return num, isWd
+
+
+def separateComparedWords(comparedWords, orSentWords, comSentWords):
     '''
     разделяет список сравненых слов на 4 типа, и выдает четыре словаря:
     :param comparedWords: list список сравниваемых слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
     :return: excessWds, missedWds, wrongWds, rightWds - dictionaries
     лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
     '''
-    excessWds = {}
-    missedWds = {}
-    wrongWds = {}
-    rightWds = {}
+    excessWds = {}; missedWds = {}; wrongWds = {}; rightWds = {}
+    count = 0
+    lts = ''
     for i, cW in enumerate(comparedWords):
         wd = ''.join(patternLetter.findall(cW))
-        plus = ''.join(patternPlus.findall(cW))
-        minus = ''.join(patternMinus.findall(cW))
-        if len(wd) <= len(plus):
-            excessWds[i] = [wd, i-len(missedWds), i-len(missedWds)]
-        elif len(plus)>0:
-            wrW = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
-            wrongWds[i] = [wrW, i-len(missedWds), i-len(excessWds)]
-        elif len(wd) <= len(minus):
-            missedWds[i] = [wd, i-len(excessWds), i-len(excessWds)]
-        elif len(minus)>0 and len(plus) == 0:
-            wrW = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
-            wrongWds[i] = [wrW, i-len(missedWds), i-len(excessWds)]
-        else:
-            rightWds[i] = [wd, i-len(missedWds), i-len(excessWds)]
+        plusesLen = len(''.join(patternPlus.findall(cW)))
+        minusesLen = len(''.join(patternMinus.findall(cW)))
 
+        sent_count = i-len(missedWds)-count
+        orSent_count = i-len(excessWds)-count
+
+        sent_num, isWd = getWordOrder(sent_count, wd, comSentWords)
+        orSent_num, isOrWd = getWordOrder(orSent_count, wd, orSentWords)
+
+        if plusesLen >= len(wd):
+            excessWds[i-count] = [wd, sent_num, sent_num]
+
+        elif minusesLen >= len(wd):
+            missedWds[i-count] = [wd, orSent_num, orSent_num]
+
+        elif plusesLen == 0 and minusesLen == 0:
+            rightWds[i-count] = [wd, sent_num, orSent_num]
+
+        else:           # plusesLen > 0 or (minusesLen > 0 and plusesLen == 0)
+            wrW = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
+            sent_num, isWd = getWordOrder(sent_count, lts + wrW, comSentWords)
+            or_W = ''.join(patternLetter.findall(patternPlusSpaceLetter.sub('', cW)))
+            orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
+            if isOrWd != True:
+                or_W = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
+                orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
+
+            if isWd:
+                if lts != '' and isOrWd == True:# если произошло неправильное разбиение,
+                    #  то последнее слово, находящееся в оригинальном предложении добавляем в список пропущенных слов
+                    missedWds[i-count+1] = [orSentWords[orSent_num], orSent_num, orSent_num]
+                    orSent_num -= 1
+                wrongWds[i-count] = [lts + wrW, sent_num, orSent_num]
+                lts = ''
+            else: #неправильное разбиение слов типа indiana разбито на 3 слова in dia na, складываем обратно
+                count += 1
+                lts += wrW
+                continue
+
+
+    #print(missedWds, wrongWds,)
+    #print(orSentWords)
+    #print(comSentWords)
     return excessWds, missedWds, wrongWds, rightWds
 
-def correctedWrongAndMissWordsList(missedWds, wrongWds, orSentWords, comSentWords):
+def getFirstLettersTheSame(wd1, wd2):
+    d = Differ()
+    diff = ''.join(d.compare(wd1.lower(), wd2.lower()))
+    diff = patternSpace.sub('',diff)
+
+    return patternLetters.match(diff)
+
+
+def correctWrongDetectedWords(exsWds, misWds, wrWds, rWds, orSentWds, comSentWds):
     '''
-    сравнивает слова из списка неправильных слов со словами из сравниваемого предложения и корректирует список,
-    в случае если слово из предожения оказалось разорванным на два слова типа tumi -> tu mi
-    :return: скорректированный wrongWds
+    если два подряд слова начинаются на одни буквы, но первое должно быть лишнее, а второе правильное
+    при обработке оба определяются как неправильные типа : w+ h+ o+  + w  a  t  c  h  e  d,
+    переписываем первое в лишнее, а второе в правильное
+    :param excessWds:
+    :param missedWds:
+    :param wrongWds:
+    :param rightWds:
+    :return:
     '''
-    delItems =[]
-    for key, value in wrongWds.items():
-        if len(comSentWords) > value[1]:
-            if comSentWords[value[1]] != wrongWds[key][0] and wrongWds.get(key+1) != None:
-                if comSentWords.count(wrongWds.get(key+1)[0]) == 0 \
-                        and comSentWords[value[1]] == wrongWds[key][0] + wrongWds[key+1][0]:
-                    wrongWds[key][0] = wrongWds[key][0] + wrongWds[key+1][0]
-                    i = wrongWds[key+1][2]
-                    missedWds[key+1] = [orSentWords [i], i, i]
-                    delItems.append(key+1)
+    delItems = []
+    for key, value in wrWds.items():
+        if wrWds.get(key+1) != None and \
+                        orSentWds[wrWds[key+1][2]] == comSentWds[wrWds[key+1][1]] and\
+                        getFirstLettersTheSame(value[0], wrWds[key+1][0]) != None:
+            exsWds[key] = [value[0], value[1], value[2]]
+            rWds[key+1] = [wrWds[key+1][0], wrWds[key+1][1], wrWds[key+1][2]]
 
     for i in delItems:
-        del wrongWds[i]
+        del wrWds[i]
 
-    return missedWds, wrongWds
+    return  exsWds, misWds, wrWds, rWds
 
-def sentsDifference(orSent, comSent):
+def getSentsDifference(orSent, comSent):
     '''
     сравнивает два предложения, оригинальное и сравниваемое, и выдает четыре словаря:
     :param orSent: string оригинальное предложение
     :param comSent: string сравниваемое
     :return: excessWds, missedWds, wrongWds, rightWds - dictionaries
-    лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
+    лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова в строке сравнения
     '''
-
     d = Differ()
     diff = ''.join(d.compare(orSent.lower(), comSent.lower()))#строка сравнения предложений типа: + m- b- u- t-  - i- n-  - a- n  y
+
     orSentWords = patternSpace.split(orSent.lower())
     comSentWords = patternSpace.split(comSent.lower())
     comparedWords = patternSentSplitWords.split(diff)#массив слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
 
-    excessWds, missedWds, wrongWds, rightWds = separatedComparedWords(comparedWords)
-    missedWds, wrongWds = correctedWrongAndMissWordsList(missedWds, wrongWds, orSentWords, comSentWords)
+    excessWds, missedWds, wrongWds, rightWds = separateComparedWords(comparedWords, orSentWords, comSentWords)
+    excessWds, missedWds, wrongWds, rightWds = correctWrongDetectedWords(excessWds, missedWds, wrongWds, rightWds, orSentWords, comSentWords)
 
     return excessWds, missedWds, wrongWds, rightWds
 

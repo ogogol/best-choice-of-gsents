@@ -26,10 +26,14 @@ import re
 patternComma = re.compile(r'\b([,\.]) ')
 patternSent = re.compile(r'.+')
 patternSents = re.compile(r'"([\w\d\s\']+?)"')
+patternSpaces = re.compile(r'\s{2,7}')
 
 def readTest(file):
     f = open (file, 'r')
-    line = [patternComma.sub(' ',line) for line in f]
+    line = []
+    for l in f:
+        l = patternComma.sub(' ', l)
+        line.append(patternSpaces.sub(' ', l))
     f.close()
     originalSentences = []
     lineSentences = []

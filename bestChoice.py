@@ -2,7 +2,7 @@
 from difference import *
 from difflib import get_close_matches
 
-def suitableWordsList (wd, wds):
+def suitableWordsList (n, wd, wds, sentLen):
     '''
     поиск слов по неправиьному слову и составление списка слов, стоящих в том же месте, где и неправильное слово
     :param wd: string
@@ -10,10 +10,18 @@ def suitableWordsList (wd, wds):
     :return: suitedWords list
     '''
     suitedWords = []
-    for ws in wds:
-        for w in ws:
+    wdsL = len(wds)
+    if sentLen > wdsL:
+        start = 0
+        end = wdsL
+    else:
+        start = max([0, n-1])
+        end = min([wdsL, n+4])
+
+    for i in range(start, end):
+        for w in wds[i]:
             if wd.lower() == w.lower():
-                for value in ws:
+                for value in wds[i]:
                     suitedWords.append(value)
 
     return suitedWords
@@ -32,10 +40,12 @@ def wodrsRightOrder (maxSent, sent):
     sl = len(sentWds)
 
     if msl - sl > 0:
-        exWds, misWds, wrWds, rWds = sentsDifference(maxSent, sent)
+        exWds, misWds, wrWds, rWds = getSentsDifference(maxSent, sent)
+        count = 0
         for key in misWds.keys():
-            if key < len(sentWds):
-                sentWds.insert(key,'')
+            if key < len(sentWds) and key + count < msl:
+                sentWds.insert(key + count,'')
+                count += 1
 
     return sentWds
 
@@ -87,7 +97,7 @@ def getSimilarSent(orSent, gSent, sents):
     return bestSent
 
 
-def missedAndWrongWordsCorrection(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
+def correctMissedAndWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
     '''
     находит пропущенные и неправильные слова и корректирует
     :param wordsDict: dictionary
@@ -97,7 +107,7 @@ def missedAndWrongWordsCorrection(wordsDict, wds, originalSentenceWords, googleS
     :return: googleSentenceWords list
     '''
     for value in wordsDict.values():
-        wdLst = suitableWordsList(value[0], wds)
+        wdLst = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
         if value[2] < len(originalSentenceWords):
             w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
             if len(w) > 0:
@@ -108,7 +118,7 @@ def missedAndWrongWordsCorrection(wordsDict, wds, originalSentenceWords, googleS
 
     return googleSentenceWords
 
-def googleSentenceCorrection(oSent, gSent, wds, cutoff = 0.4):
+def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     '''
     проверка предложения и замена неправильных слов на правильные
     :param oSent: string оригинальное предложение
@@ -120,27 +130,28 @@ def googleSentenceCorrection(oSent, gSent, wds, cutoff = 0.4):
     originalSentenceWords = oSent.split()
     googleSentenceWords = gSent.split()
 
-    exWds, misWds, wrWds, rWds = sentsDifference(oSent, gSent)
-    googleSentenceWords = missedAndWrongWordsCorrection(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
-    googleSentenceWords = missedAndWrongWordsCorrection(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
+    exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent)
+    googleSentenceWords = correctMissedAndWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
+    googleSentenceWords = correctMissedAndWrongWords(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
 
+    #print(misWds, wrWds, rWds)
     return ' '.join(googleSentenceWords)
 
 
 def googleSentensBestChoice(originalSentence, lineSentence, sents):
-    #------------------------- надо убрать
+    #------------------------- надо будет убрать
     if originalSentence.lower() == lineSentence.lower():
         googleSentenceWords = lineSentence
         return googleSentenceWords
-    #------------------------- надо убрать
+    #-------------------------
 
     words = wordsList(sents)
     similarSent = getSimilarSent(originalSentence, lineSentence, sents) # выбираем лучшее предложение из последних
-    googleSentenceWords = googleSentenceCorrection(originalSentence, similarSent, words)
+    googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
     #print("Words %s" % words)
     #print("Сравниваемое - %s" % similarSent)
-
+    #print("Итоговое     - %s" % googleSentenceWords)
     return googleSentenceWords
 
 
@@ -154,9 +165,9 @@ for i, orS in enumerate(originalSentences):
         print(i, "OK")
     else:
         print(i, "НЕПРАВИЛЬНО")
-        print("Предложения\n %s" % sentss[i])
+        #print("Предложения\n %s" % sentss[i])
         print("Оригинальное - %s" % originalSentences[i])
-        print("Выдал гугл   - %s" % lineSentences[i])
+        print("В строке     - %s" % lineSentences[i])
         print("Итоговое     - %s" % gSeBeCh)
         print("Должно быть  - %s" % rightAnswers[i])
 
