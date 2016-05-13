@@ -1,44 +1,5 @@
 import re
-import numpy as np
 from difflib import Differ
-
-def levenshtein(source, target):
-    if len(source) < len(target):
-        return levenshtein(target, source)
-
-    # So now we have len(source) >= len(target).
-    if len(target) == 0:
-        return len(source)
-
-    # We call tuple() to force strings to be used as sequences
-    # ('c', 'a', 't', 's') - numpy uses them as values by default.
-    source = np.array(tuple(source))
-    target = np.array(tuple(target))
-
-    # We use a dynamic programming algorithm, but with the
-    # added optimization that we only need the last two rows
-    # of the matrix.
-    previous_row = np.arange(target.size + 1)
-    for s in source:
-        # Insertion (target grows longer than source):
-        current_row = previous_row + 1
-
-        # Substitution or matching:
-        # Target and source items are aligned, and either
-        # are different (cost of 1), or are the same (cost of 0).
-        current_row[1:] = np.minimum(
-                current_row[1:],
-                np.add(previous_row[:-1], target != s))
-
-        # Deletion (target grows shorter than source):
-        current_row[1:] = np.minimum(
-                current_row[1:],
-                current_row[0:-1] + 1)
-
-        previous_row = current_row
-
-    return previous_row[-1]
-
 
 patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
 patternMinusSpaceLetter = re.compile(r'\- \w')
@@ -113,10 +74,6 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords):
                 lts += wrW
                 continue
 
-
-    #print(missedWds, wrongWds,)
-    #print(orSentWords)
-    #print(comSentWords)
     return excessWds, missedWds, wrongWds, rightWds
 
 def getFirstLettersTheSame(wd1, wd2):
@@ -171,3 +128,32 @@ def getSentsDifference(orSent, comSent):
 
     return excessWds, missedWds, wrongWds, rightWds
 
+from jellyfish import jaro_winkler as jaro
+from jellyfish import levenshtein_distance as levenshtein
+def isSumma2WordsTheBest(baseWord, word1, word2):
+    isTheBest = False
+    levenshtein_2words = levenshtein(baseWord, word1+word2)
+    if levenshtein_2words < levenshtein(baseWord, word1) and levenshtein_2words < levenshtein(baseWord, word2):
+        isTheBest = True
+
+    return isTheBest
+
+def joinCorrectSentWordsList(orSentWords, comSentWords):
+    sentLen = len(comSentWords)
+    count = 1
+    if len(orSentWords) < sentLen:
+        for i, val in enumerate(orSentWords):
+            if i < sentLen - count:
+                if isSumma2WordsTheBest(val, comSentWords[i], comSentWords[i+1]):
+                    comSentWords[i] += comSentWords[i+1]
+                    del comSentWords[i+1]
+                    count += 1
+    else:
+        for i, val in enumerate(comSentWords):
+            if i < sentLen - count:
+                if isSumma2WordsTheBest(orSentWords[i], val, comSentWords[i+1]):
+                    comSentWords[i] += comSentWords[i+1]
+                    del comSentWords[i+1]
+                    count += 1
+
+    return comSentWords

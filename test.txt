@@ -58,7 +58,7 @@ after the coffee and sandwiches inspector Walsh call Roger Clarkson to the offic
 the inspector began at once
 10 step to begin at once
 ["the", "Dean", "beans", "beastie", "then step", "being stepped", "then stick to", "being stepped up", "then step to be", "Dean Step2 big", "being stepped up again", "then step to begin a", "being stepped up again at", "being stepped up again at 1", "then step to begin at once", "10 step to begin at once"]
-then step to begin at once
+then stepto begin at once
 the inspector began at once
 the inspector again at once
 ["the", "Vince", "things to", "Vince Gill", "the inspector", "the inspector the", "the inspector did", "being stupid again", "being stupid again at", "being stupid again at 1", "being stupid again, at 1", "being stupid again, at once", "being stupid again at, once", "the inspector again at once"]
@@ -87,3 +87,7 @@ Diane did not kill my mother I know that
 Leon did not kill my mother I know that
 ["the", "they are", "Beyond", "D&D", "they are getting", "the Indiana", "when did not", "bnd.com", "when did not kill my", "yandy.com I'm", "yandy.com I'm a", "when did not kill my mother", "when did not kill my mother", "when did not kill my mother, and", "when did not kill my mother, I know", "when did not kill my mother, I know the", "when did not kill my mother, I know that", "when did not kill my mother I know, that", "Leon did not kill my mother I know that"]
 Leon did not kill my mother I know that
+why was Roger Clarkson afraid
+what was Project clocks and Afraid
+["why", "White", "white was", "white, was", "white was, Roger", "what was Project", "what was Project la", "what was Project Glass", "what was Project clocks", "what was Project o'clock so", "what was Project Clarkson", "what was Project, Clarkson", "what was Project, Clarkson Ave", "white was Roger clucks and Afraid", "what was Project clocks and Afraid"]
+why was Roger Clarkson and Afraid

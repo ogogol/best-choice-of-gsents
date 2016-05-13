@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from difference import *
+from jellyfish import levenshtein_distance as levenshtein
 from difflib import get_close_matches
 
 def suitableWordsList (n, wd, wds, sentLen):
@@ -50,13 +51,14 @@ def wodrsRightOrder (maxSent, sent):
     return sentWds
 
 
-def wordsList(sents):
+def wordsList(orSent, sents, lineSentLen):
     '''
     создаем и наполняем двумерный список слов на основе самого длинного предожения
     типа [['Peter'], ['Hobbs', 'hopes'], ['game', 'same', 'came'], ['here'], ['this'], ['mon', 'morning']]
     :param sents: list
     :return: words: list список упорядоченных слов, words_l те же слова но в нижнем регистре
     '''
+    orSentWds = orSent.split()
     # выбираем самое длинное предложение из предложенных гуглом и все предложения разбиваем на слова
     sl = 0
     wd = []
@@ -67,6 +69,9 @@ def wordsList(sents):
             sl = len(wd[i])
             maxLenSent = wd[i]
 
+    if sl >= lineSentLen:
+        maxLenSent = joinCorrectSentWordsList(orSentWds, maxLenSent)
+
     # создаем двумерный список слов на основе самого длинного предожения
     l = len(maxLenSent)
     words = [['']*1 for i in range(l)]
@@ -74,13 +79,22 @@ def wordsList(sents):
         words[i][0] = maxLenSent[i]
 
     # наполняем двумерный список всех слов с учетом их порядка
-    for i, s in enumerate(sents):
+    for i in range(len(sents)):
+        if sl >= lineSentLen:
+            wd[i] = joinCorrectSentWordsList(orSentWds, wd[i])
+        else:
+            wd[i] = joinCorrectSentWordsList(maxLenSent, wd[i])
+
         m = min(len(wd[i]) + 1, l)
         mS = ' '.join(maxLenSent[0:m])
-        wd[i] = wodrsRightOrder (mS, s)
+        sent = ' '.join(wd[i])
+        wd[i] = wodrsRightOrder (mS, sent)
         for j, value in enumerate(wd[i]):
-            if words[j].count(value) == 0:
-                words[j].append(value)
+            if j < len(words):
+                if words[j].count(value) == 0:
+                    words[j].append(value)
+            else:
+                words.append(value)
 
     return words
 
@@ -129,12 +143,13 @@ def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     '''
     originalSentenceWords = oSent.split()
     googleSentenceWords = gSent.split()
+    googleSentenceWords = joinCorrectSentWordsList(originalSentenceWords, googleSentenceWords)
+    gSent_new = ' '.join(googleSentenceWords)
 
-    exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent)
+    exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent_new)
     googleSentenceWords = correctMissedAndWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
     googleSentenceWords = correctMissedAndWrongWords(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
 
-    #print(misWds, wrWds, rWds)
     return ' '.join(googleSentenceWords)
 
 
@@ -145,7 +160,7 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
         return googleSentenceWords
     #-------------------------
 
-    words = wordsList(sents)
+    words = wordsList(originalSentence, sents, len(lineSentence))
     similarSent = getSimilarSent(originalSentence, lineSentence, sents) # выбираем лучшее предложение из последних
     googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
@@ -162,7 +177,9 @@ originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
 for i, orS in enumerate(originalSentences):
     gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
     if rightAnswers[i] == gSeBeCh:
-        print(i, "OK")
+        sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
+        resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+        print(i, "OK, Нач. Л-штэйн - %s, Итоговый - %s" % (sourceLevensh, resultLevensh))
     else:
         print(i, "НЕПРАВИЛЬНО")
         #print("Предложения\n %s" % sentss[i])
