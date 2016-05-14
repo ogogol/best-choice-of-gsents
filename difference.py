@@ -2,7 +2,7 @@ import re
 from difflib import Differ
 
 patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
-patternMinusSpaceLetter = re.compile(r'\- \w')
+patternMinusSpaceLetter = re.compile(r"\- \w")
 patternPlusSpaceLetter = re.compile(r'\+ \w')
 patternSpace = re.compile(r'\s+')
 patternLetter = re.compile(r'\w')
@@ -143,7 +143,6 @@ def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
 
 
 from jellyfish import jaro_winkler as jaro
-from jellyfish import levenshtein_distance as levenshtein
 
 def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
     jaro_2words = jaro(baseWord, word1+word2)

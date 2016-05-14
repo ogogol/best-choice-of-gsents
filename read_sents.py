@@ -23,7 +23,7 @@ def readSents(file):
     return phs
 
 import re
-patternComma = re.compile(r'\b([,\.]{1,2}) ')
+patternComma = re.compile(r'\b([,\.:;\-]{1,2}) ')
 patternSent = re.compile(r'.+')
 patternSents = re.compile(r'"([\w\d\s\']+?)"')
 patternSpaces = re.compile(r'\s{2,7}')
@@ -48,11 +48,94 @@ def readTest(file):
 
     return originalSentences, lineSentences, sentss, rightAnswers
 
-#originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
-#print (originalSentences)
-#print (lineSentences)
-#print (sentss)
 
-#from difflib import get_close_matches
-#print(get_close_matches('ill', ['no', 'El'], 1, 0.4))
+#-------------ТЕСТ---------------------------
+import time
+from datetime import datetime
+from jellyfish import levenshtein_distance as levenshtein
+from bestChoice import googleSentensBestChoice
+
+def testingAndWriting():
+    f = open ('test_result.txt', 'w')
+    tt0 = time.time()
+    originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
+    sourceLevensh_sum = 0
+    resultLevensh_sum = 0
+    improvingCount = 0
+    wrongCases = []
+    for i, orS in enumerate(originalSentences):
+        gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
+        if rightAnswers[i] == gSeBeCh:
+            sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
+            resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+            if sourceLevensh > resultLevensh:
+                improvingCount += 1
+            sourceLevensh_sum += sourceLevensh
+            resultLevensh_sum += resultLevensh
+            f.write('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s\n' % (i+1, sourceLevensh, resultLevensh))
+            f.write("Оригинальное - %s\n" % originalSentences[i])
+            f.write("В строке     - %s\n" % lineSentences[i])
+            f.write("Итоговое     - %s\n" % gSeBeCh)
+            f.write('\n')
+        else:
+            wrongCases.append(i+1)
+            f.write('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!\n' % (i+1))
+            f.write("Должно быть  - %s\n" % rightAnswers[i])
+            f.write('\n')
+        if i == len(originalSentences) - 1:
+            tt1 = time.time()
+            f.write('Неправильные проверки %s,  всего - %s\n' % (wrongCases, len(wrongCases)))
+            f.write('Количество улучшений %s, процент %s\n' % (improvingCount, int(improvingCount/(i+1)*100)))
+            f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1),2),
+                                                                        round(resultLevensh_sum/(i+1),2)))
+            f.write('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
+                    'Дата -%s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
+
+    f.close()
+    return
+
+
+def testing(full = True):
+    tt0 = time.time()
+    originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
+    sourceLevensh_sum = 0
+    resultLevensh_sum = 0
+    improvingCount = 0
+    wrongCases = []
+    for i, orS in enumerate(originalSentences):
+        gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
+        if rightAnswers[i] == gSeBeCh:
+            sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
+            resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+            if sourceLevensh > resultLevensh:
+                improvingCount += 1
+            sourceLevensh_sum += sourceLevensh
+            resultLevensh_sum += resultLevensh
+            if full:
+                print("Оригинальное - %s" % originalSentences[i])
+                print("В строке     - %s" % lineSentences[i])
+                print("Итоговое     - %s" % gSeBeCh)
+            print('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s' % (i+1, sourceLevensh, resultLevensh))
+        else:
+            wrongCases.append(i+1)
+            if full:
+                print("Оригинальное - %s" % originalSentences[i])
+                print("В строке     - %s" % lineSentences[i])
+                print("Итоговое     - %s" % gSeBeCh)
+            print('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!' % (i+1))
+            print("Должно быть  - %s" % rightAnswers[i])
+        if i == len(originalSentences) - 1:
+            tt1 = time.time()
+            print('\nНеправильные проверки %s,  всего - %s  ' % (wrongCases, len(wrongCases)))
+            print('Количество улучшений %s, процент %s' % (improvingCount, int(improvingCount/(i+1)*100)))
+            print('Средний нач. Л-штейн - %s, средний итоговый - %s' % (round(sourceLevensh_sum/(i+1),2),
+                                                                        round(resultLevensh_sum/(i+1),2)))
+            print('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
+                    'Дата - %s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
+
+    return
+
+
+testingAndWriting()
+
 
