@@ -101,13 +101,15 @@ def wordsList(orSent, sents, lineSentLen):
 
 
 def getSimilarSent(orSent, gSent, sents):
-    bestSent = gSent
+    bestSent = unicode(gSent)
+    orSent = unicode(orSent)
+
     sents.append(gSent)
     n = int(len(sents)/4)
     s = sents[::-1]
     for i in range(n):
-        if levenshtein(orSent, bestSent) > levenshtein(orSent, s[i+1]):
-            bestSent = s[i+1]
+        if levenshtein(orSent, bestSent) > levenshtein(orSent, unicode(s[i+1])):
+            bestSent = unicode(s[i+1])
 
     return bestSent
 
