@@ -5,7 +5,7 @@ from difflib import get_close_matches
 
 def suitableWordsList (n, wd, wds, sentLen):
     '''
-    поиск слов по неправиьному слову и составление списка слов, стоящих в том же месте, где и неправильное слово
+    поиск слов по неправильному слову и составление списка слов, стоящих в том же месте, где и неправильное слово
     :param wd: string
     :param wds: list
     :return: suitedWords list
@@ -125,6 +125,7 @@ def correctMissedAndWrongWords(wordsDict, wds, originalSentenceWords, googleSent
         wdLst = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
         if value[2] < len(originalSentenceWords):
             w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
+            #print(value[0], value[1], value[2], originalSentenceWords[value[2]], wdLst, w)
             if len(w) > 0:
                 if value[1] < len(googleSentenceWords):
                     googleSentenceWords[value[1]] = w[0]
@@ -151,7 +152,6 @@ def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     googleSentenceWords = correctMissedAndWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
     googleSentenceWords = correctMissedAndWrongWords(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff/2)
 
-    #print(misWds, wrWds)
     return ' '.join(googleSentenceWords)
 
 
@@ -167,48 +167,12 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
     #print("Предложения\n %s" % sentss[i])
-    f.write("Words %s\n" % words)
-    f.write("Оригинальное - %s\n" % originalSentences[i])
-    f.write("В строке     - %s\n" % lineSentences[i])
-    f.write("Сравниваемое - %s\n" % similarSent)
-    f.write("Итоговое     - %s\n" % googleSentenceWords)
+    #print("Words %s" % words)
+    #print("Сравниваемое - %s" % similarSent)
+
     return googleSentenceWords
 
 
-#-------------ТЕСТ---------------------------
-import time
-from datetime import datetime
-from read_sents import readTest
-f = open ('test_result.txt', 'w')
-tt0 = time.time()
-originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
-sourceLevensh_sum = 0
-resultLevensh_sum = 0
-improvingCount = 0
-for i, orS in enumerate(originalSentences):
-    gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
-    if rightAnswers[i] == gSeBeCh:
-        sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
-        resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
-        if sourceLevensh > resultLevensh:
-            improvingCount += 1
-        sourceLevensh_sum += sourceLevensh
-        resultLevensh_sum += resultLevensh
-        f.write('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s\n' % (i, sourceLevensh, resultLevensh))
-        f.write('\n')
-    else:
-        f.write('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!\n' % i)
-        f.write("Должно быть  - %s\n" % rightAnswers[i])
-        f.write('\n')
-    if i == len(originalSentences) - 1:
-        tt1 = time.time()
-        f.write('Количество улучшений %s, процент %s\n' % (improvingCount, int(improvingCount/(i+1)*100)))
-        f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1),2),
-                                                                    round(resultLevensh_sum/(i+1),2)))
-        f.write('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
-                'Дата -%s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
-
-f.close()
 
 
 
