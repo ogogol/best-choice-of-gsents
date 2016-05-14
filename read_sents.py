@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 def readSents(file):
     f = open (file, 'r')
     l = [line for line in f]
@@ -66,17 +67,17 @@ def testingAndWriting():
     for i, orS in enumerate(originalSentences):
         gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
         if rightAnswers[i] == gSeBeCh:
-            sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
-            resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+            sourceLevensh = levenshtein(unicode(originalSentences[i]), unicode(lineSentences[i]))
+            resultLevensh = levenshtein(unicode(originalSentences[i]), unicode(gSeBeCh))
             if sourceLevensh > resultLevensh:
                 improvingCount += 1
             sourceLevensh_sum += sourceLevensh
             resultLevensh_sum += resultLevensh
-            f.write('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s\n' % (i+1, sourceLevensh, resultLevensh))
-            f.write("Оригинальное - %s\n" % originalSentences[i])
-            f.write("В строке     - %s\n" % lineSentences[i])
-            f.write("Итоговое     - %s\n" % gSeBeCh)
-            f.write('\n')
+            f.write(u'%s. OK, Нач. Л-штэйн - %s, Итоговый - %s\n' % (i+1, sourceLevensh, resultLevensh))
+            f.write(u"Оригинальное - %s\n" % originalSentences[i])
+            f.write(u"В строке     - %s\n" % lineSentences[i])
+            f.write(u"Итоговое     - %s\n" % gSeBeCh)
+            f.write(u'\n')
         else:
             wrongCases.append(i+1)
             f.write('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!\n' % (i+1))
@@ -105,8 +106,8 @@ def testing(full = True):
     for i, orS in enumerate(originalSentences):
         gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
         if rightAnswers[i] == gSeBeCh:
-            sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
-            resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+            sourceLevensh = levenshtein(unicode(originalSentences[i]), unicode(lineSentences[i]))
+            resultLevensh = levenshtein(unicode(originalSentences[i]), unicode(gSeBeCh))
             if sourceLevensh > resultLevensh:
                 improvingCount += 1
             sourceLevensh_sum += sourceLevensh
@@ -114,14 +115,14 @@ def testing(full = True):
             if full:
                 print("Оригинальное - %s" % originalSentences[i])
                 print("В строке     - %s" % lineSentences[i])
-                print("Итоговое     - %s" % gSeBeCh)
+                print(u"Итоговое     - %s" % unicode(gSeBeCh))
             print('%s. OK, Нач. Л-штэйн - %s, Итоговый - %s' % (i+1, sourceLevensh, resultLevensh))
         else:
             wrongCases.append(i+1)
             if full:
                 print("Оригинальное - %s" % originalSentences[i])
                 print("В строке     - %s" % lineSentences[i])
-                print("Итоговое     - %s" % gSeBeCh)
+                print(u"Итоговое     - %s" % unicode(gSeBeCh))
             print('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!' % (i+1))
             print("Должно быть  - %s" % rightAnswers[i])
         if i == len(originalSentences) - 1:
@@ -136,6 +137,6 @@ def testing(full = True):
     return
 
 
-testingAndWriting()
+testing()
 
 

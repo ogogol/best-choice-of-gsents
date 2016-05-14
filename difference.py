@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 from difflib import Differ
 
@@ -145,6 +146,10 @@ def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
 from jellyfish import jaro_winkler as jaro
 
 def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
+    baseWord = unicode(baseWord)
+    word1 = unicode(word1)
+    word2 = unicode(word2)
+
     jaro_2words = jaro(baseWord, word1+word2)
     if jaro_2words > jaro(baseWord, word1) and jaro_2words > jaro(baseWord, word2):
         comSentWds[n] += comSentWds[n+1]
