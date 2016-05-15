@@ -68,10 +68,10 @@
 В строке     - after the coffee and sandwiches inspector Walsh cold Roger Clarkson to the office
 Итоговое     - after the coffee and sandwiches inspector Walsh call Roger Clarkson to the office
 
-15. OK, Нач. Л-штэйн - 10, Итоговый - 7
+15. OK, Нач. Л-штэйн - 10, Итоговый - 6
 Оригинальное - the inspector began at once
 В строке     - 10 step to begin at once
-Итоговое     - then stepto begin at once
+Итоговое     - the stepto begin at once
 
 16. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - the inspector began at once
@@ -83,10 +83,10 @@
 В строке     - but mr Briggs wanted have they gotten to you know for his phone
 Итоговое     - but mr Briggs wanted have the garden to you know for his phone
 
-18. OK, Нач. Л-штэйн - 13, Итоговый - 11
+18. OK, Нач. Л-штэйн - 13, Итоговый - 15
 Оригинальное - inspector Walsh watched roger for a minute
 В строке     - inspector Walsh who watched her for me
-Итоговое     - inspector Walsh who watched Roger for me
+Итоговое     - inspector Walsh watched watched Roger for me
 
 19. OK, Нач. Л-штэйн - 5, Итоговый - 3
 Оригинальное - inspector Walsh watched roger for a minute
@@ -178,20 +178,20 @@
 В строке     - yes have fun and exciting player is Sergeant Forrester
 Итоговое     - yes at first and exciting player is Sergeant Forrester
 
-37. OK, Нач. Л-штэйн - 7, Итоговый - 5
+37. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - is fast and exciting player is Sergeant Forrester
-Итоговое     - yes fast and exciting player is Sergeant Forrester
+Итоговое     - yes at fast and exciting player is Sergeant Forrester
 
 38. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - yes a fast and exciting player is Sutton Foster
 Итоговое     - yes a fast and exciting player is Sergeant Foster
 
-39. OK, Нач. Л-штэйн - 17, Итоговый - 16
+39. OK, Нач. Л-штэйн - 17, Итоговый - 12
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at seven And his face went weather
-Итоговое     - Diane smiled again at seven And his face went rather
+Итоговое     - Diane smiled again at urgent the And his face went rather
 
 40. OK, Нач. Л-штэйн - 9, Итоговый - 3
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
@@ -213,11 +213,38 @@
 В строке     - Diane smiled again at Sergeant Foster and his face went rather
 Итоговое     - Diane smiled again at Sergeant Foster and his face went rather
 
-44. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!
-Должно быть  - Diane smiled again at Soldier Forester and his face went read
+44. OK, Нач. Л-штэйн - 28, Итоговый - 10
+Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
+В строке     - they all smiled again it's urgent And his face went over there
+Итоговое     - Diane smiled again at urgent Forester And his face went over
 
-Неправильные проверки [44],  всего - 1
-Количество улучшений 37, процент 84
-Средний нач. Л-штейн - 7.55, средний итоговый - 4.05
-Время выполнения 44 проверок - 2.67, 0.061 sec на одну проверку
-Дата -2016-05-14 11:59:08.445451
+45. OK, Нач. Л-штэйн - 9, Итоговый - 1
+Оригинальное - the inspector began at once
+В строке     - ten step to begin at once
+Итоговое     - the inspector begin at once
+
+46. OK, Нач. Л-штэйн - 10, Итоговый - 1
+Оригинальное - the inspector began at once
+В строке     - things that begin at once
+Итоговое     - the inspector begin at once
+
+47. OK, Нач. Л-штэйн - 5, Итоговый - 1
+Оригинальное - the inspector began at once
+В строке     - inspector begin at once
+Итоговое     - the inspector begin at once
+
+48. OK, Нач. Л-штэйн - 10, Итоговый - 2
+Оригинальное - the inspector begin at once
+В строке     - TeamSpeak to begin at once
+Итоговое     - the inspect begin at once
+
+49. OK, Нач. Л-штэйн - 13, Итоговый - 0
+Оригинальное - the inspector begin at once
+В строке     - things picked up again at once
+Итоговое     - the inspector begin at once
+
+Неправильные проверки [],  всего - 0
+Количество улучшений 42, процент 85
+Средний нач. Л-штейн - 8.31, средний итоговый - 3.9
+Время выполнения 49 проверок - 2.31, 0.047 sec на одну проверку
+Дата -2016-05-15 20:10:27.020092
