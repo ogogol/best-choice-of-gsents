@@ -23,15 +23,17 @@ def readSents(file):
     return phs
 
 import re
-patternComma = re.compile(r'\b([,\.:;]{1,2}) |\-')
+patternComma = re.compile(r'\d(, )')
+patternPunctuation = re.compile(r'\b([,\.:;]{1,2}) |\-')
 patternSent = re.compile(r'.+')
-patternSents = re.compile(r'"([\w\d\s\']+?)"')
+patternSents = re.compile(r'"([\w\d\s\'&:]+?)"')
 patternSpaces = re.compile(r'\s{2,7}')
 
 def readTest(file):
     f = open (file, 'r')
     line = []
     for l in f:
+        l = patternPunctuation.sub(' ', l)
         l = patternComma.sub(' ', l)
         line.append(patternSpaces.sub(' ', l))
     f.close()
@@ -123,7 +125,7 @@ def testing(full = True):
                 print("В строке     - %s" % lineSentences[i])
                 print("Итоговое     - %s" % gSeBeCh)
             print('%s. !!!!!!!!!!---НЕПРАВИЛЬНО---!!!!!!!!!!!' % (i+1))
-            print("Должно быть  - %s" % rightAnswers[i])
+            print("Должно быть  - %s\n" % rightAnswers[i])
         if i == len(originalSentences) - 1:
             tt1 = time.time()
             print('\nНеправильные проверки %s,  всего - %s  ' % (wrongCases, len(wrongCases)))
@@ -136,6 +138,6 @@ def testing(full = True):
     return
 
 
-testing(False)
+testingAndWriting()
 
 

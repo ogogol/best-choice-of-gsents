@@ -1,25 +1,45 @@
 # -*- coding: utf-8 -*-
 from difference import *
 from jellyfish import levenshtein_distance as levenshtein
-from jellyfish import jaro_winkler as jaro
+from jellyfish import nysiis
 from difflib import get_close_matches
 
 
-def getImputedBeforeSentLength(lineSentWds, lastImputSentWds):
+def makeSentsWdsList(sents):
+    sentWds = []
+    for i, s in enumerate(sents):
+        sentWds.append(s.split())
+
+    return sentWds
+
+def getImputedBeforeSent(lineSentWds, sentWds):
+
+    lastImputSentWds = sentWds[len(sentWds)-1]
+    oldSentWds = []
 
     lineSentWdsLen = len(lineSentWds)
-    oldSentLen = lineSentWdsLen
     lastSentWdsLen = len(lastImputSentWds)
+    if lastSentWdsLen >= lineSentWdsLen:
+        return oldSentWds
 
     end = min(lineSentWdsLen, len(lastImputSentWds))
     lineSenWs_invert = lineSentWds[::-1]
     lastImSenWs_invert = lastImputSentWds[::-1]
     for i, w in enumerate(lineSenWs_invert):
+
         if i == lastSentWdsLen or w != lastImSenWs_invert[i]:
-            oldSentLen = lineSentWdsLen - i
+            oldSentWds = lineSentWds[:lineSentWdsLen - i]
             break
 
-    return oldSentLen
+    return oldSentWds
+
+def correctSents(lineSentWds, sentWds):
+    oldSentWds = getImputedBeforeSent(lineSentWds, sentWds)
+    correctedSentsWds = []
+    for i, s in enumerate(sentWds):
+        correctedSentsWds.append(oldSentWds+s)
+
+    return correctedSentsWds
 
 
 def suitableWordsList (n, wd, wds, sentLen):
@@ -72,25 +92,23 @@ def wordsRightOrder(maxSentWds, sentWds):
 
     return sentWds
 
-def wordsList(orSent, lineSent, sents):
+def wordsList(orSentWds, lineSentWds, sentWds):
     '''
     создаем и наполняем двумерный список слов на основе самого длинного предожения
     типа [['Peter'], ['Hobbs', 'hopes'], ['game', 'same', 'came'], ['here'], ['this'], ['mon', 'morning']]
     :param sents: list
     :return: words: list список упорядоченных слов, words_l те же слова но в нижнем регистре
     '''
-    orSentWds = orSent.split()
+
     orSentLen = len(orSentWds)
-    lineSentLen = len(lineSent.split())
+    lineSentLen = len(lineSentWds)
     # выбираем самое длинное предложение из предложенных гуглом и все предложения разбиваем на слова
     maxSentLen = 0
-    sentWds = []
     maxLongSent = ''
-    for i, s in enumerate(sents):
-        sentWds.append(s.split())
-        if len(sentWds[i]) >= maxSentLen:
-            maxSentLen = len(sentWds[i])
-            maxLongSent = sentWds[i]
+    for i, sw in enumerate(sentWds):
+        if len(sw) >= maxSentLen:
+            maxSentLen = len(sw)
+            maxLongSent = sw
 
     if maxSentLen >= orSentLen or maxSentLen >= lineSentLen:
         maxLongSent = joinCorrectSentWordsList(orSentWds, maxLongSent)
@@ -101,7 +119,7 @@ def wordsList(orSent, lineSent, sents):
 
     # наполняем список всех слов с учетом их порядка
     for i, sWds in enumerate(sentWds):
-        m = min(len(sentWds[i]) + 1, maxSentLen)
+        m = min(len(sWds) + 1, maxSentLen)
 
         if maxSentLen >= orSentLen or maxSentLen >= lineSentLen:
             sentWds[i] = joinCorrectSentWordsList(orSentWds, sWds)
@@ -126,7 +144,6 @@ def wordsList(orSent, lineSent, sents):
 
 def getSimilarSent(orSent, gSent, sents):
     bestSent = gSent
-    sents.append(gSent)
     n = int(len(sents)/4)
     s = sents[::-1]
     for i in range(n):
@@ -145,21 +162,55 @@ def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords
     :param googleSentenceWords: string
     :return: googleSentenceWords list
     '''
+
     for value in wordsDict.values():
-        wdLst = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
-        #print(value[2], wdLst)
         if value[2] < len(originalSentenceWords):
-            w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
+            wdLst = suitableWordsList(value[1], originalSentenceWords[value[2]], wds, len(googleSentenceWords))
+            if wdLst == []:
+                wdLst = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
             #print(value[0], value[1], value[2], originalSentenceWords[value[2]], wdLst, w)
-            if len(w) > 0:
-                if value[1] < len(googleSentenceWords):
-                    googleSentenceWords[value[1]] = w[0]
-                else:
-                    googleSentenceWords.append(w[0])
+        else:
+            wdLst = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
+        #print(value[2], wdLst)
+
+        w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
+
+        if len(w) > 0:
+            if value[1] < len(googleSentenceWords):
+                googleSentenceWords[value[1]] = w[0]
+            else:
+                googleSentenceWords.append(w[0])
 
     return googleSentenceWords
 
-def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, oldImputSentLen, cutoff):
+def addWordOrNotChoice(orSent, gSentWds, googleSentenceWords):
+    if levenshtein(orSent, ' '.join(gSentWds)) >= levenshtein(orSent, ' '.join(googleSentenceWords)):
+        #print(levenshtein(orSent, ' '.join(gSentWds)), ' '.join(gSentWds), levenshtein(orSent, ' '.join(googleSentenceWords)),' '.join(googleSentenceWords))
+        gSentWds = [w for w in googleSentenceWords]
+    else:
+        googleSentenceWords = [w for w in gSentWds]
+
+    return gSentWds, googleSentenceWords
+
+def addDelWordOrNotChoice(orSent, gSentWds1, gSentWds2, googleSentenceWords):
+    if levenshtein(orSent, ' '.join(gSentWds1)) > levenshtein(orSent, ' '.join(gSentWds2)):
+        if levenshtein(orSent, ' '.join(gSentWds2)) > levenshtein(orSent, ' '.join(googleSentenceWords)):
+            gSentWds1 = [w for w in googleSentenceWords]
+            gSentWds2 = [w for w in googleSentenceWords]
+        else:
+            gSentWds1 = [w for w in gSentWds2]
+            googleSentenceWords = [w for w in gSentWds2]
+    else:
+        if levenshtein(orSent, ' '.join(gSentWds1)) < levenshtein(orSent, ' '.join(googleSentenceWords)):
+            googleSentenceWords = [w for w in gSentWds1]
+            gSentWds2 = [w for w in gSentWds1]
+        else:
+            gSentWds1 = [w for w in googleSentenceWords]
+            gSentWds2 = [w for w in googleSentenceWords]
+
+    return gSentWds1, gSentWds2, googleSentenceWords
+
+def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
     '''
     находит пропущенные слова и корректирует
     :param wordsDict: dictionary
@@ -169,32 +220,35 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
     :return: googleSentenceWords list
     '''
     wList = []
-    gSentWds = [w for w in googleSentenceWords]
+    gSentWds1 = [w for w in googleSentenceWords]
+    gSentWds2 = [w for w in googleSentenceWords]
     orSent = ' '.join(originalSentenceWords)
 
     for value in wordsDict.values():
-        if value[1] < len(wds):
-            if value[0] != googleSentenceWords[value[1]]:#value[2] < len(originalSentenceWords) and
+        wList = suitableWordsList(value[1], value[0], wds, len(googleSentenceWords))
+        if wList == []:
+            if value[1] < len(wds) and value[1] < len(googleSentenceWords) and \
+                            value[0] != googleSentenceWords[value[1]]:
                 wList = wds[value[1]]
-        else:
-            wList = suitableWordsList(value[1] - oldImputSentLen, value[0], wds, len(googleSentenceWords))
+
         w = get_close_matches(value[0], wList, 1, cutoff)#originalSentenceWords[value[2]]
         #print(wList, value[0], value[1], value[2], originalSentenceWords[value[2]], w)
         if len(w) > 0:
             if value[1] < len(googleSentenceWords):
-                googleSentenceWords.insert(value[1], w[0])
+                del gSentWds1[value[1]]
+                gSentWds1.insert(value[1], w[0])
+                gSentWds2.insert(value[1], w[0])
+                gSentWds1, gSentWds2, googleSentenceWords = addDelWordOrNotChoice(orSent, gSentWds1, gSentWds2, googleSentenceWords)
+
             else:
-                googleSentenceWords.append(w[0])
-        #print(levenshtein(orSent, ' '.join(gSentWds)), levenshtein(orSent, ' '.join(googleSentenceWords)), gSentWds, googleSentenceWords)
-        if levenshtein(orSent, ' '.join(gSentWds)) >= levenshtein(orSent, ' '.join(googleSentenceWords)):
-            gSentWds = [w for w in googleSentenceWords]
-        else:
-            googleSentenceWords = [w for w in gSentWds]
+                gSentWds1.append(w[0])
+                gSentWds1, googleSentenceWords = addWordOrNotChoice(orSent, gSentWds1, googleSentenceWords)
+
 
     return googleSentenceWords
 
 
-def correctImputedSentence(oSent, gSent, wds, oldImputSentLen, cutoff = 0.4):
+def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     '''
     проверка предложения и замена неправильных слов на правильные
     :param oSent: string оригинальное предложение
@@ -211,7 +265,7 @@ def correctImputedSentence(oSent, gSent, wds, oldImputSentLen, cutoff = 0.4):
     exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent_new, wds)
     #print(misWds, wrWds)
     googleSentenceWords = correctWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
-    googleSentenceWords = correctMissedWords(misWds, wds, originalSentenceWords, googleSentenceWords, oldImputSentLen, cutoff)
+    googleSentenceWords = correctMissedWords(misWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
 
     return ' '.join(googleSentenceWords)
 
@@ -223,19 +277,26 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
         return googleSentenceWords
     #-------------------------
 
-    oldImputSentLen = getImputedBeforeSentLength(lineSentence.split(), sents[len(sents)-1].split())
-    words = wordsList(originalSentence, lineSentence, sents)
-    similarSent = getSimilarSent(originalSentence, lineSentence, sents) # выбираем лучшее предложение из последних
-    googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words, oldImputSentLen)
+    sentsWds = makeSentsWdsList(sents)
+    orSentWds = originalSentence.split()
+    lineSentWds = lineSentence.split()
+
+    correctedSentsWds = correctSents(lineSentWds, sentsWds)
+    #print(correctedSentsWds)
+    correctedSents = [' '.join(s) for s in correctedSentsWds]
+
+    words = wordsList(orSentWds, lineSentWds, correctedSentsWds)
+    similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
+    googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
     #print("Предложения %s" % sents)
-    #print("Words %s" % words)
-    #print("Сравниваемое - %s" % similarSent)
+    print("Words %s" % words)
+    print("Сравниваемое - %s" % similarSent)
 
     return googleSentenceWords
 
 
-from jellyfish import nysiis
+
 """
 bw = "Roger's"
 w1 = 'images'
@@ -259,4 +320,5 @@ print('DifPhone1 - %s, DifPhone2 - %s' % (levenshtein(baseWord, word1), levensht
 
 #print(get_close_matches('foster', ['And', '', 'first', 'Forester'], 1, 0.2))
 
-#print(getImputedBeforeSentLength('you never talk Tumi'.split(), 'Tumi'))
+#print(getImputedBeforeSent(['you', 'never', 'talk', 'Tumi'], [['to', 'me'], ['Tumi']]))
+#print(correctSents(['you', 'never', 'talk', 'Tumi'], [['to', 'me'], ['Tumi']]))
