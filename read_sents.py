@@ -23,7 +23,7 @@ def readSents(file):
     return phs
 
 import re
-patternComma = re.compile(r'\b([,\.:;\-]{1,2}) ')
+patternComma = re.compile(r'\b([,\.:;]{1,2}) |\-')
 patternSent = re.compile(r'.+')
 patternSents = re.compile(r'"([\w\d\s\']+?)"')
 patternSpaces = re.compile(r'\s{2,7}')
@@ -136,6 +136,6 @@ def testing(full = True):
     return
 
 
-testingAndWriting()
+testing(False)
 
 

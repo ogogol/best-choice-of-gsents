@@ -58,7 +58,7 @@ after the coffee and sandwiches inspector Walsh call Roger Clarkson to the offic
 the inspector began at once
 10 step to begin at once
 ["the", "Dean", "beans", "beastie", "then step", "being stepped", "then stick to", "being stepped up", "then step to be", "Dean Step2 big", "being stepped up again", "then step to begin a", "being stepped up again at", "being stepped up again at 1", "then step to begin at once", "10 step to begin at once"]
-then stepto begin at once
+the stepto begin at once
 the inspector began at once
 the inspector again at once
 ["the", "Vince", "things to", "Vince Gill", "the inspector", "the inspector the", "the inspector did", "being stupid again", "being stupid again at", "being stupid again at 1", "being stupid again, at 1", "being stupid again, at once", "being stupid again at, once", "the inspector again at once"]
@@ -70,7 +70,7 @@ but mr Briggs wanted have the garden to you know for his phone
 inspector Walsh watched roger for a minute
 inspector Walsh who watched her for me
 ["in", "it's", "inspe", "insta", "inspect", "inspector", "inspector", "inspector, will", "Inspector, Lewis", "Inspector Lewis", "inspector, those who were", "inspector, those who are", "Inspector, Lewis to watch", "inspector, those who watched", "inspector those who watched", "Inspector, Lewis to watch the", "inspector, those who watched Rome", "inspector, those who watched Roger", "Inspector, Lewis to watch the roads are", "inspector, was The Watch trailer for", "Inspector, Lewis to watch her for me", "inspector Walsh who watched her for me"]
-inspector Walsh who watched Roger for me
+inspector Walsh Watch watched Roger for are me
 inspector Walsh watched roger for a minute
 inspector Walsh, watch charger for a minute
 ["in", "East", "insta", "instep", "inspect", "inspector", "inspector will", "inspector, wolf", "inspector Walsh", "inspector Walsh, why", "inspector Walsh, what", "inspector Walsh, watch", "inspector Walsh, watch the", "inspector Walsh, watch, the", "inspector Walsh, watch, the road", "inspector Walsh, watch, Roger", "inspector Walsh, watch, the roads are", "inspector Walsh, watch, charger for", "inspector Walsh, watch, charger for an", "inspector Walsh, watch, Roger for me", "inspector Walsh, watch, charger for a minute", "inspector Walsh, watch charger for a minute"]
@@ -82,7 +82,7 @@ I see we found the empty bottle of sleeping tablets mr Clarkson In TheArms Room
 Roger's face did not change
 Joseph ASA did not change
 ["I don't", "I love you", "Rogers", "Joseph", "Joseph A", "I love your face", "images of faces", "Joseph a city", "I heard your face again", "I heard your face and you know", "I love your face I did not", "I love your face I did not change", "I, love your face I did not change", "I love your face I did not, change", "Joseph ASA did not change"]
-Rogers face did not change
+Rogers ASA did not change
 Diane did not kill my mother I know that  
 Leon did not kill my mother I know that
 ["the", "they are", "Beyond", "D&D", "they are getting", "the Indiana", "when did not", "bnd.com", "when did not kill my", "yandy.com I'm", "yandy.com I'm a", "when did not kill my mother", "when did not kill my mother", "when did not kill my mother, and", "when did not kill my mother, I know", "when did not kill my mother, I know the", "when did not kill my mother, I know that", "when did not kill my mother I know, that", "Leon did not kill my mother I know that"]
@@ -146,15 +146,15 @@ yes at first and exciting player is Sergeant Forrester
 yes a fast and exciting player is Sergeant Foster
 is fast and exciting player is Sergeant Forrester
 ["yes", "yes", "ES file", "yes first", "yes first and", "yes at first and I", "yes, at first and I", "yes, just send text", "yes, first and exciting", "yes, first and exciting play", "yes, first and exciting player", "yes first and exciting, player", "yes first and exciting player", "yes first and exciting player, is", "yes first and exciting player, is so", "yes first and exciting player, is Serge", "yes first and exciting player, is Soulja", "yes first and exciting player is, surgeon", "yes first and exciting player, insurgent", "yes first and exciting player, is Sergeant for", "yes first and exciting player, is Sergeant First", "yes first and exciting player, is Sergeant Forrester", "is fast and exciting player is Sergeant Forrester"]
-yes fast and exciting player is Sergeant Forrester
+yes at fast and exciting player is Sergeant Forrester
 yes a fast and exciting player is Sergeant Foster
 yes a fast and exciting player is Sutton Foster
 ["yeah", "yes", "yes", "yes, if I", "yes, I thought", "yes, I thought I", "yes, a fast and", "yes, I passed antics", "yes, I thought send text", "yes, a fast and excite", "yes, a fast and excited", "yes, a fast and exciting", "yes, a fast and exciting day", "yes, a fast and exciting play", "yes a fast and, exciting play", "yes a fast and, exciting player", "yes a fast and exciting, player", "yes a fast and exciting, player in", "yes a fast and exciting, player is", "yes a fast and exciting player, is", "yes a fast and exciting player, is so", "yes a fast and exciting player, is such", "yes a fast and exciting player, is Soulja", "yes a fast and exciting player is, Soulja", "yes a fast and exciting player is, surgeon", "yes a fast and exciting player is, Sergeant", "yes a fast and exciting player is, searching for", "yes a fast and exciting player is, surgeon post", "yes a fast and exciting player is, Sergeant Foster", "yes a fast and exciting player is Sutton Foster"]
 yes a fast and exciting player is Sergeant Foster
 Diane smiled again at Sergeant Foster and his face went redder
 Diane smiled again at seven., And his face went weather
-["the", "Diane", "Diane's", "De Anza", "Diane's my", "they are small", "dial smiled", "Siam smile Thai", "dial smiled again", "dial smiled again", "dial smiled again, at", "dial smiled again, at the", "dial smiled again, episode", "dial smiled again, episode 2", "dial smiled again, at seven", "dial smiled again, it's urgent", "dial smiled again, episode twenty", "dial smiled again, episode twenty-four", "dial smiled again, episode 21st", "dial smiled again, it's urgent.", "Diane smiled again at seven.", "Diane smiled again at seven., And", "Diane smiled again at seven., And he", "Diane smiled again at seven., And he's", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And, his face", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And his face, when", "Diane smiled again at seven., And his face, went", "Diane smiled again at seven., And his face, went through", "Diane smiled again at seven., And his face, went right", "Diane smiled again at seven., And his face, went rather", "Diane smiled again at seven., And his face went, rather", "Diane smiled again at seven., And his face went weather"]
-Diane smiled again at seven And his face went rather
+["the", "Diane", "Diane's", "De Anza", "Diane's my", "they are small", "dial smiled", "Siam smile Thai", "dial smiled again", "dial smiled again", "dial smiled again, at", "dial smiled again, at the", "dial smiled again, episode", "dial smiled again, episode two", "dial smiled again, at seven", "dial smiled again, it's urgent", "dial smiled again, episode twenty", "dial smiled again, episode twenty-four", "dial smiled again, episode twenty-first", "dial smiled again, it's urgent.", "Diane smiled again at seven.", "Diane smiled again at seven., And", "Diane smiled again at seven., And he", "Diane smiled again at seven., And he's", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And, his face", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And his face, when", "Diane smiled again at seven., And his face, went", "Diane smiled again at seven., And his face, went through", "Diane smiled again at seven., And his face, went right", "Diane smiled again at seven., And his face, went rather", "Diane smiled again at seven., And his face went, rather", "Diane smiled again at seven., And his face went weather"]
+Diane smiled again at urgent the And his face went rather
 Diane smiled again at Sergeant Foster and his face went redder
 Diane smiled again at Sergeant Foster and his face swelled weather
 ["so", "search", "Soulja", "surgeon", "surgeons", "searching for", "Sergeant First", "Sergeant Foster", "Sergeant, Foster", "sergeant.", "Sergeant, Foster and", "Sergeant, Foster and he", "Sergeant, Foster and his", "Sergeant, Foster and his face", "Sergeant Foster and, his face", "Sergeant Foster and his, face", "Sergeant Foster and his face", "Sergeant Foster and his face, when", "Sergeant Foster and his face, went", "Sergeant Foster and his face, went through", "Sergeant Foster and his face, went right", "Sergeant Foster and his face, went rather", "Sergeant Foster and his face went, rather", "Sergeant Foster and his face swelled weather"]
@@ -174,4 +174,24 @@ Diane smiled again at Sergeant Foster and his face went rather
 Diane smiled again at Sergeant Foster and his face went redder
 they all smiled again it's urgent. And his face went over there
 ["the", "do", "they are", "Diane", "De Anza", "they all smell", "they all smelled", "they all smell to", "they all smell that", "they all smelled again", "they all, smelled again", "they all, smelled again at", "they all smelled again, at", "they all smelled again, at the", "they all smelled again, episode", "they all smelled again, at Soldier", "they all smelled again, it's urgent", "they all smelled again, it's urgent for", "they all smelled again, it's urgent first", "they all smelled again, it's urgent Forester", "they all smelled again, it's urgent.", "they all smelled again it's, urgent.", "they all smelled again it's urgent.", "they all smelled again it's urgent., And", "they all smelled again it's urgent., And he", "they all smelled again it's urgent., And he's", "they all smelled again it's urgent. And, he's", "they all smelled again it's urgent. And, his face", "they all smelled again it's urgent. And his face", "they all smelled again it's urgent. And his face, when", "they all smelled again it's urgent. And his face, went", "they all smelled again it's urgent. And his face, went over", "they all smelled again it's urgent. And his face, when I read", "they all smelled again it's urgent. And his face, went over the", "they all smiled again it's urgent. And his face went over there"]
-Diane smiled again at Soldier Forester and his face went read
+Diane smiled again at urgent Forester And his face went over
+the inspector began at once
+ten step to begin at once
+["the", "then", "Vince", "things to", "then step", "then stepped", "the inspector", "vindictive", "then stick to be", "despicable", "then stick the bigger", "then stepped up again", "then stick to begin", "then stick to begin a", "then stick to begin at", "then stepped up again at 1", "then stick to begin at once", "then, stick to begin at once", "ten step to begin at once"]
+the inspector begin at once
+the inspector began at once
+things that begin at once
+["the", "Vince", "best", "things to", "Houston", "inspector", "beautiful", "despicable", "things that begin", "things that the beginning", "things that begin with y", "things that begin at 1", "things that begin at once", "things that, begin at once", "things that begin at once"]
+the inspector begin at once
+the inspector began at once
+inspector begin at once
+["the", "did", "Dean's", "Dennis", "Dental", "then step", "inspect", "the inspector", "the inspector be", "despicable", "the inspector bigger", "the inspector begin", "the inspector beginner", "the inspector beginning", "the inspector begin at 1", "the inspector begin at once", "the inspector, begin at once", "inspector begin at once"]
+the inspector begin at once
+the inspector begin at once
+TeamSpeak to begin at once
+["the", "teen", "things", "dance", "things to", "inspect", "can speak to", "things picked up", "can speak to be", "dance with the big", "can speak to begin", "can speak to begin a", "inspect the beginning", "things that begin with y", "can speak to begin at 1", "can speak to begin at once", "TeamSpeak to begin at once"]
+the inspect begin at once
+the inspector begin at once
+things picked up again at once
+["the", "then", "Vince", "things to", "Vince pick", "the inspector", "Vince picked up", "despicable", "Vince picked up again", "Vince pick the beginning", "Vince picked up again at 1", "the inspector begin at once", "things picked up again at once"]
+the inspector begin at once
