@@ -138,6 +138,6 @@ def testing(full = True):
     return
 
 
-testingAndWriting()
+testing()
 
 

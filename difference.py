@@ -18,7 +18,6 @@ def getWordOrderInWords (n, wd, wds, sentLen):
     :return: suitedWords list
     '''
     order = -1
-    suitedWords = []
     wdsL = len(wds)
     if sentLen > wdsL:
         start = 0
@@ -72,7 +71,6 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
 
         sent_num, isWd = getWordOrder(sent_count, wd, comSentWords)
         orSent_num, isOrWd = getWordOrder(orSent_count, wd, orSentWords)
-        #print(sent_num, orSent_num)
 
         if plusesLen >= wdLen:
             excessWds[i-count] = [wd, sent_num, orSent_num]
@@ -129,7 +127,6 @@ def correctWrongDetectedWords(exsWds, misWds, wrWds, rWds, orSentWds, comSentWds
     '''
     delItems = []
     for key, value in wrWds.items():
-        #print(key+1, wrWds, orSentWds, comSentWds)
         if wrWds.get(key+1) != None and \
                         orSentWds[wrWds[key+1][2]] == comSentWds[wrWds[key+1][1]] and\
                         getFirstLettersTheSame(value[0], wrWds[key+1][0]) != None:

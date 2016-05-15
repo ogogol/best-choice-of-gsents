@@ -83,10 +83,10 @@
 В строке     - but mr Briggs wanted have they gotten to you know for his phone
 Итоговое     - but mr Briggs wanted have the garden to you know for his phone
 
-18. OK, Нач. Л-штэйн - 13, Итоговый - 15
+18. OK, Нач. Л-штэйн - 13, Итоговый - 7
 Оригинальное - inspector Walsh watched roger for a minute
 В строке     - inspector Walsh who watched her for me
-Итоговое     - inspector Walsh watched watched Roger for me
+Итоговое     - inspector Walsh watched Roger for me
 
 19. OK, Нач. Л-штэйн - 5, Итоговый - 3
 Оригинальное - inspector Walsh watched roger for a minute
@@ -244,7 +244,7 @@
 Итоговое     - the inspector begin at once
 
 Неправильные проверки [],  всего - 0
-Количество улучшений 42, процент 85
-Средний нач. Л-штейн - 8.31, средний итоговый - 3.9
-Время выполнения 49 проверок - 2.31, 0.047 sec на одну проверку
-Дата -2016-05-15 20:10:27.020092
+Количество улучшений 43, процент 87
+Средний нач. Л-штейн - 8.31, средний итоговый - 3.73
+Время выполнения 49 проверок - 2.87, 0.059 sec на одну проверку
+Дата -2016-05-15 20:44:42.354367
