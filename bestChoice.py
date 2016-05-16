@@ -48,6 +48,7 @@ def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
 
     return isWds
 
+
 def addWordOrNotChoice(orSent, gSentWds, googleSentenceWords):
     #возращает наиболее близкий к оригиналу вариант из двух предложений, в одном из которых добавлено или удалено слово
     if levenshtein(orSent, ' '.join(gSentWds)) >= levenshtein(orSent, ' '.join(googleSentenceWords)):
@@ -56,6 +57,7 @@ def addWordOrNotChoice(orSent, gSentWds, googleSentenceWords):
         googleSentenceWords = [w for w in gSentWds]
 
     return gSentWds, googleSentenceWords
+
 
 def delAddWordOrNotChoice(orSent, gSentWds1, gSentWds2, googleSentenceWords):
     #возращает наиболее близкий к оригиналу вариант из трех предложений,
@@ -89,6 +91,7 @@ def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
 
     return comSentWds
 
+
 def joinCorrectSentWordsList(orSentWords, comSentWords):
     #проверяет все слова предожения на слияние подряд идущих слов
     #возращает скорретированный список слов предожения
@@ -117,6 +120,7 @@ def twoWordsRunning(sentWds):
                 r.append(i)
 
     return r
+
 
 def twoCoupleWordsRunning(sentWds):
     #возращает список порядковых номеров двух подряд одинаковых пары слов
@@ -225,8 +229,8 @@ def suitableWordsList (n, wd, wds, sentLen, about = True):
                         if suitedWords.count(value) == 0:
                             suitedWords.append(value)
 
-
     return suitedWords
+
 
 def wordsRightOrder(maxSentWds, sentWds):
     '''
@@ -303,7 +307,7 @@ def getSimilarSent(orSent, gSent, sents):
     return bestSent
 
 
-def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
+def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff = 0.4):
     '''
     находит неправильные слова и корректирует
     :param wordsDict: dictionary
@@ -332,7 +336,7 @@ def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords
     return googleSentenceWords
 
 
-def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff):
+def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWords, cutoff = 0.6):
     '''
     вставляет пропущенные слова, если это улучшает результат
     :param wordsDict: dictionary
@@ -365,7 +369,7 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
     return googleSentenceWords
 
 
-def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
+def correctImputedSentence(oSent, gSent, wds):
     '''
     проверка предложения и замена неправильных слов на правильные
     :param oSent: string оригинальное предложение
@@ -382,8 +386,8 @@ def correctImputedSentence(oSent, gSent, wds, cutoff = 0.4):
     exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent_new, wds)
 
     #print(misWds, wrWds)
-    googleSentenceWords = correctWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords, cutoff)
-    googleSentenceWords = correctMissedWords(misWds, wds, originalSentenceWords, googleSentenceWords, 0.6)
+    googleSentenceWords = correctWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords)
+    googleSentenceWords = correctMissedWords(misWds, wds, originalSentenceWords, googleSentenceWords)
     googleSentenceWords = del2WordsRunning(originalSentenceWords, googleSentenceWords)
 
     return ' '.join(googleSentenceWords)
@@ -411,7 +415,6 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     words = wordsList(orSentWds, lineSentWds, correctedSentsWds)
     similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
     googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
-
 
     #print("%s, Предложения %s" % (len(sents), sents))
     #print("Words %s" % words)

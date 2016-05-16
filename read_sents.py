@@ -47,8 +47,8 @@ def readTest(file):
     rightAnswers = []
 
     for i in range(1,len(line),4):
-        originalSentences.append(patternSent.match(line[i]).group())
-        lineSentences.append(patternSent.match(line[i+1]).group())
+        originalSentences.append(patternSent.match(line[i]).group().lower())
+        lineSentences.append(patternSent.match(line[i+1]).group().lower())
         sentss.append(patternSents.findall(line[i+2]))
         rightAnswers.append(patternSent.match(line[i+3]).group().lower())
 
@@ -142,6 +142,6 @@ def testing(full = True):
     return
 
 
-testingAndWriting()
+testing()
 
 
