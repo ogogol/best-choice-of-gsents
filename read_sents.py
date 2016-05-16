@@ -24,10 +24,12 @@ def readSents(file):
 
 import re
 patternComma = re.compile(r'\d(, )')
-patternPunctuation = re.compile(r'\b([,\.:;]{1,2}) |\-')
+patternPunctuation = re.compile(r'\b([,\.:;!\?]{1,2}) |\-')
+patternPunctuationWithoutSpace = re.compile(r'\b([,\.:;!\?])')
 patternSent = re.compile(r'.+')
-patternSents = re.compile(r'"([\w\d\s\'&:]+?)"')
+patternSents = re.compile(r'"([\w\d\s\':]+?)"')
 patternSpaces = re.compile(r'\s{2,7}')
+patternAnd = re.compile(r'&')
 
 def readTest(file):
     f = open (file, 'r')
@@ -35,6 +37,8 @@ def readTest(file):
     for l in f:
         l = patternPunctuation.sub(' ', l)
         l = patternComma.sub(' ', l)
+        l = patternPunctuationWithoutSpace.sub('', l)
+        l = patternAnd.sub(' and ', l)
         line.append(patternSpaces.sub(' ', l))
     f.close()
     originalSentences = []
@@ -138,6 +142,6 @@ def testing(full = True):
     return
 
 
-testing()
+testingAndWriting()
 
 
