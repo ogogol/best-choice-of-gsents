@@ -1,17 +1,17 @@
-1. OK, Нач. Л-штэйн - 3, Итоговый - 0
+1. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - Peter Hobbs came here this morning
 В строке     - Peter hopes came here this morning
-Итоговое     - Peter Hobbs came here this morning
+Итоговое     - peter hobbs came here this morning
 
-2. OK, Нач. Л-штэйн - 3, Итоговый - 0
+2. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - Peter Hobbs came here this morning
 В строке     - Peter Hobbs came here this morn
-Итоговое     - Peter Hobbs came here this morning
+Итоговое     - peter hobbs came here this morning
 
-3. OK, Нач. Л-штэйн - 3, Итоговый - 0
+3. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - Peter Hobbs came here this morning
 В строке     - Peter Hobbs came here this morn
-Итоговое     - Peter Hobbs came here this morning
+Итоговое     - peter hobbs came here this morning
 
 4. OK, Нач. Л-штэйн - 2, Итоговый - 0
 Оригинальное - he is very angry with you about that letter
@@ -28,45 +28,45 @@
 В строке     - you never talk Tumi
 Итоговое     - you never talk to me
 
-7. OK, Нач. Л-штэйн - 5, Итоговый - 1
+7. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - Jackie Stood at the window
 В строке     - Jackie Stewart at the window
-Итоговое     - Jackie stood at the window
+Итоговое     - jackie stood at the window
 
 8. OK, Нач. Л-штэйн - 8, Итоговый - 6
 Оригинальное - what are you talking about
 В строке     - that you are walking about
 Итоговое     - what you are talking about
 
-9. OK, Нач. Л-штэйн - 16, Итоговый - 4
+9. OK, Нач. Л-штэйн - 16, Итоговый - 5
 Оригинальное - Albert came in and went at once to Molly
 В строке     - my dad came in and went at 1 tomorrow
-Итоговое     - Albert came in and went at once to my
+Итоговое     - albert came in and went at once to my
 
-10. OK, Нач. Л-штэйн - 3, Итоговый - 3
+10. OK, Нач. Л-штэйн - 3, Итоговый - 4
 Оригинальное - she's much worse now Albert said
 В строке     - she's much worse now Albertson said
-Итоговое     - she's much worse now Albertson said
+Итоговое     - she's much worse now albertson said
 
-11. OK, Нач. Л-штэйн - 9, Итоговый - 5
+11. OK, Нач. Л-штэйн - 9, Итоговый - 7
 Оригинальное - Albert stopped eating and looked at Molly
 В строке     - Hobbit stop eating and look at Molly
-Итоговое     - Albert stop eating and look at Molly
+Итоговое     - albert stop eating and look at molly
 
-12. OK, Нач. Л-штэйн - 6, Итоговый - 3
+12. OK, Нач. Л-штэйн - 6, Итоговый - 4
 Оригинальное - but in any case I'd rather be seasick than dead
 В строке     - but in any case I'd rather be sick than that
-Итоговое     - but in any case I'd rather be seasick than that
+Итоговое     - but in any case i'd rather be seasick than that
 
-13. OK, Нач. Л-штэйн - 4, Итоговый - 3
+13. OK, Нач. Л-штэйн - 4, Итоговый - 4
 Оригинальное - We were sitting in my room and we were smoking and talking about how bad we were ill I mean of course
 В строке     - we were sitting in my room and we were smoking and talking about how bad we were no I mean of course
-Итоговое     - we were sitting in my room and we were smoking and talking about how bad we were El I mean of course
+Итоговое     - we were sitting in my room and we were smoking and talking about how bad we were i i mean of course
 
-14. OK, Нач. Л-штэйн - 3, Итоговый - 2
+14. OK, Нач. Л-штэйн - 3, Итоговый - 5
 Оригинальное - after the coffee and sandwiches inspector Walsh called Roger Clarkson to the office
 В строке     - after the coffee and sandwiches inspector Walsh cold Roger Clarkson to the office
-Итоговое     - after the coffee and sandwiches inspector Walsh call Roger Clarkson to the office
+Итоговое     - after the coffee and sandwiches inspector walsh call roger clarkson to the office
 
 15. OK, Нач. Л-штэйн - 10, Итоговый - 6
 Оригинальное - the inspector began at once
@@ -78,145 +78,145 @@
 В строке     - the inspector again at once
 Итоговое     - the inspector again at once
 
-17. OK, Нач. Л-штэйн - 12, Итоговый - 8
+17. OK, Нач. Л-штэйн - 12, Итоговый - 9
 Оригинальное - but mr Briggs wanted half the garden too you know for his farm
 В строке     - but mr Briggs wanted have they gotten to you know for his phone
-Итоговое     - but mr Briggs wanted have the garden to you know for his phone
+Итоговое     - but mr briggs wanted have the garden to you know for his phone
 
 18. OK, Нач. Л-штэйн - 13, Итоговый - 7
 Оригинальное - inspector Walsh watched roger for a minute
 В строке     - inspector Walsh who watched her for me
-Итоговое     - inspector Walsh watched Roger for me
+Итоговое     - inspector walsh watched roger for me
 
 19. OK, Нач. Л-штэйн - 5, Итоговый - 3
 Оригинальное - inspector Walsh watched roger for a minute
 В строке     - inspector Walsh watch charger for a minute
-Итоговое     - inspector Walsh watch Roger for a minute
+Итоговое     - inspector walsh watch roger for a minute
 
-20. OK, Нач. Л-штэйн - 10, Итоговый - 9
+20. OK, Нач. Л-штэйн - 10, Итоговый - 8
 Оригинальное - I see We found the empty bottle of sleeping tablets mr Clarkson in Diane's room
 В строке     - I see we found the empty bottle of sleeping tablets mr Clarkson In The Arms Room
-Итоговое     - I see we found the empty bottle of sleeping tablets mr Clarkson In TheArms Room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in indians room
 
-21. OK, Нач. Л-штэйн - 9, Итоговый - 1
+21. OK, Нач. Л-штэйн - 9, Итоговый - 2
 Оригинальное - Roger's face did not change
 В строке     - Joseph ASA did not change
-Итоговое     - Rogers face did not change
+Итоговое     - rogers face did not change
 
-22. OK, Нач. Л-штэйн - 5, Итоговый - 5
+22. OK, Нач. Л-штэйн - 5, Итоговый - 6
 Оригинальное - Diane did not kill my mother I know that 
 В строке     - Leon did not kill my mother I know that
-Итоговое     - Leon did not kill my mother I know that
+Итоговое     - indiana did not kill my mother i know that
 
-23. OK, Нач. Л-штэйн - 14, Итоговый - 1
+23. OK, Нач. Л-штэйн - 14, Итоговый - 2
 Оригинальное - why was Roger Clarkson afraid
 В строке     - what was Project clocks and Afraid
-Итоговое     - why was Roger Clarkson Afraid
+Итоговое     - why was roger clarkson afraid
 
-24. OK, Нач. Л-штэйн - 8, Итоговый - 4
+24. OK, Нач. Л-штэйн - 8, Итоговый - 5
 Оригинальное - He looked at sergeant Foster
 В строке     - he looked at Sutton Foster
-Итоговое     - he looked at surgeon Foster
+Итоговое     - he looked at surgeon foster
 
-25. OK, Нач. Л-штэйн - 16, Итоговый - 4
+25. OK, Нач. Л-штэйн - 16, Итоговый - 5
 Оригинальное - He looked at sergeant Foster
-В строке     - he looked at 740
-Итоговое     - he looked at surgeon Foster
+В строке     - he looked at 7:40
+Итоговое     - he looked at surgeon foster
 
-26. OK, Нач. Л-штэйн - 8, Итоговый - 6
+26. OK, Нач. Л-штэйн - 8, Итоговый - 7
 Оригинальное - He looked at sergeant Foster
 В строке     - he looked at the sergeant Forrester
-Итоговое     - he looked at a sergeant Forrester
+Итоговое     - he looked at a sergeant forrester
 
-27. OK, Нач. Л-штэйн - 5, Итоговый - 0
+27. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - Sergeant Foster wrote it down yes inspector
 В строке     - Sergeant Preston wrote it down yes inspector
-Итоговое     - Sergeant Foster wrote it down yes inspector
+Итоговое     - sergeant foster wrote it down yes inspector
 
 28. OK, Нач. Л-штэйн - 8, Итоговый - 6
 Оригинальное - a good day for tennis sergeant
 В строке     - a good day for tennis children
 Итоговое     - a good day for tennis sodon't
 
-29. OK, Нач. Л-штэйн - 4, Итоговый - 3
+29. OK, Нач. Л-штэйн - 4, Итоговый - 2
 Оригинальное - a good day for tennis sergeant
 В строке     - a good day for Dennis Sargent
-Итоговое     - a good day for tennis Sargent
+Итоговое     - a good day for tennis sargent
 
-30. OK, Нач. Л-штэйн - 13, Итоговый - 5
+30. OK, Нач. Л-штэйн - 13, Итоговый - 7
 Оригинальное - Sergeant Foster laughed
 В строке     - Sutton Foster Loft
-Итоговое     - Sergeant Foster law
+Итоговое     - sergeant foster law
 
 31. OK, Нач. Л-штэйн - 17, Итоговый - 7
 Оригинальное - She looked at sergeant Foster and smiled
 В строке     - chick look at the surgeon Foster and Smith
-Итоговое     - she looked at thesurgeon Foster and smiled
+Итоговое     - she looked at the urgent foster and smiled
 
-32. OK, Нач. Л-штэйн - 4, Итоговый - 2
+32. OK, Нач. Л-штэйн - 4, Итоговый - 4
 Оригинальное - Sergeant Foster's face went red
 В строке     - Sergeant Foster's face when to read
-Итоговое     - Sergeant Foster's face whento red
+Итоговое     - sergeant foster's face when red
 
 33. OK, Нач. Л-штэйн - 18, Итоговый - 16
 Оригинальное - Sergeant Foster's face went red
 В строке     - children Foster Freeze Ventura
-Итоговое     - surgeon Foster Freeze when
+Итоговое     - surgeon foster freeze when
 
-34. OK, Нач. Л-штэйн - 5, Итоговый - 2
+34. OK, Нач. Л-штэйн - 5, Итоговый - 4
 Оригинальное - Sergeant Foster's face went red
 В строке     - Sergeant Forrester face went red
-Итоговое     - Sergeant Foster face went red
+Итоговое     - sergeant foster face went red
 
-35. OK, Нач. Л-штэйн - 7, Итоговый - 1
+35. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - yes a fast and exciting player Insurgent poster
-Итоговое     - yes a fast and exciting player is Sergeant poster
+Итоговое     - yes a fast and exciting player is sergeant poster
 
-36. OK, Нач. Л-штэйн - 9, Итоговый - 6
+36. OK, Нач. Л-штэйн - 9, Итоговый - 8
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - yes have fun and exciting player is Sergeant Forrester
-Итоговое     - yes at first and exciting player is Sergeant Forrester
+Итоговое     - yes at first and exciting player is sergeant forrester
 
-37. OK, Нач. Л-штэйн - 7, Итоговый - 4
+37. OK, Нач. Л-штэйн - 7, Итоговый - 6
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - is fast and exciting player is Sergeant Forrester
-Итоговое     - yes at fast and exciting player is Sergeant Forrester
+Итоговое     - yes at fast and exciting player is sergeant forrester
 
-38. OK, Нач. Л-штэйн - 6, Итоговый - 0
+38. OK, Нач. Л-штэйн - 6, Итоговый - 2
 Оригинальное - yes a fast and exciting player is Sergeant Foster
 В строке     - yes a fast and exciting player is Sutton Foster
-Итоговое     - yes a fast and exciting player is Sergeant Foster
+Итоговое     - yes a fast and exciting player is sergeant foster
 
-39. OK, Нач. Л-штэйн - 17, Итоговый - 12
+39. OK, Нач. Л-штэйн - 17, Итоговый - 11
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at seven And his face went weather
-Итоговое     - Diane smiled again at urgent the And his face went rather
+Итоговое     - diane smiled again at urgent four and his face went rather
 
-40. OK, Нач. Л-штэйн - 9, Итоговый - 3
+40. OK, Нач. Л-штэйн - 9, Итоговый - 6
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at Sergeant Foster and his face swelled weather
-Итоговое     - Diane smiled again at Sergeant Foster and his face went rather
+Итоговое     - diane smiled again at sergeant foster and his face went rather
 
-41. OK, Нач. Л-штэйн - 6, Итоговый - 7
+41. OK, Нач. Л-штэйн - 6, Итоговый - 10
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at Sergeant Foster and his face weather
-Итоговое     - Diane smiled again at Sergeant Foster and his face went
+Итоговое     - diane smiled again at sergeant foster and his face went
 
-42. OK, Нач. Л-штэйн - 5, Итоговый - 5
+42. OK, Нач. Л-штэйн - 5, Итоговый - 8
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at Sergeant Foster and his face went further
-Итоговое     - Diane smiled again at Sergeant Foster and his face went further
+Итоговое     - diane smiled again at sergeant foster and his face went further
 
-43. OK, Нач. Л-штэйн - 3, Итоговый - 3
+43. OK, Нач. Л-штэйн - 3, Итоговый - 6
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - Diane smiled again at Sergeant Foster and his face went rather
-Итоговое     - Diane smiled again at Sergeant Foster and his face went rather
+Итоговое     - diane smiled again at sergeant foster and his face went red
 
 44. OK, Нач. Л-штэйн - 28, Итоговый - 10
 Оригинальное - Diane smiled again at Sergeant Foster and his face went redder
 В строке     - they all smiled again it's urgent And his face went over there
-Итоговое     - Diane smiled again at urgent Forester And his face went over
+Итоговое     - diane smiled again at urgent forester and his face went read
 
 45. OK, Нач. Л-штэйн - 9, Итоговый - 1
 Оригинальное - the inspector began at once
@@ -248,43 +248,143 @@
 В строке     - then stick to begin at once
 Итоговое     - the inspector begin at once
 
-51. OK, Нач. Л-штэйн - 7, Итоговый - 4
+51. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - this house is very big roger said
 В строке     - this house is a very big roller set
-Итоговое     - this house is a very big roller said
+Итоговое     - this house is a very big rogers said
 
-52. OK, Нач. Л-штэйн - 3, Итоговый - 2
+52. OK, Нач. Л-штэйн - 3, Итоговый - 1
 Оригинальное - this house is very big roger said
 В строке     - this house is very big brother said
-Итоговое     - this house is very big Rogers said
+Итоговое     - this house is very big rogers said
 
 53. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - your mother is dead and now you're rich
 В строке     - your mother is dead and now your age
 Итоговое     - your mother is dead and now you're rich
 
-54. OK, Нач. Л-штэйн - 3, Итоговый - 1
+54. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - Roger's face was suddenly afraid
 В строке     - Rogers face is suddenly afraid
-Итоговое     - Rogers face was suddenly afraid
+Итоговое     - rogers face was suddenly afraid
 
-55. OK, Нач. Л-штэйн - 17, Итоговый - 8
+55. OK, Нач. Л-штэйн - 17, Итоговый - 9
 Оригинальное - but mr Briggs I wanted half the garden too you know for his farm
 В строке     - but mr Briggs wanted to have the garden to you know where she's from
-Итоговое     - but mr Briggs wanted have the garden to you know for is from
+Итоговое     - but mr briggs wanted have the garden to you know for is from
 
-56. OK, Нач. Л-штэйн - 17, Итоговый - 5
+56. OK, Нач. Л-штэйн - 17, Итоговый - 6
 Оригинальное - but mr Briggs I wanted half the garden too you know for his farm
 В строке     - but mr Briggs wanted have they gotten to you know where he's from
-Итоговое     - but mr Briggs wanted half the garden to you know for his from
+Итоговое     - but mr briggs wanted half the garden to you know for his from
 
-57. OK, Нач. Л-штэйн - 7, Итоговый - 8
+57. OK, Нач. Л-штэйн - 7, Итоговый - 9
 Оригинальное - inspector Walsh moved a pencil on the table
 В строке     - inspector will smoke a pencil on the table
-Итоговое     - inspector East advanced a pencil on the table
+Итоговое     - inspector world's smoke a pencil on the table
+
+58. OK, Нач. Л-штэйн - 7, Итоговый - 1
+Оригинальное - yes I did again she said no
+В строке     - he said it again she said no
+Итоговое     - yes i did again she said no
+
+59. OK, Нач. Л-штэйн - 4, Итоговый - 1
+Оригинальное - she loved the house and didn't want to sell it
+В строке     - she left the house and didn't want to sell it
+Итоговое     - she love the house and didn't want to sell it
+
+60. OK, Нач. Л-штэйн - 17, Итоговый - 14
+Оригинальное - Inspector Walsh watched Roger for a minute
+В строке     - inspector Walsh watch the road your permit
+Итоговое     - inspector walsh watched are for your for
+
+61. OK, Нач. Л-штэйн - 12, Итоговый - 8
+Оригинальное - inspector Walsh watched Roger for a minute
+В строке     - inspector Walsh what are the four minute
+Итоговое     - inspector walsh watch order for minute
+
+62. OK, Нач. Л-штэйн - 15, Итоговый - 12
+Оригинальное - inspector Walsh watched Roger for a minute
+В строке     - inspector wolf watch Roger from it for me
+Итоговое     - inspector watch watch roger for me
+
+63. OK, Нач. Л-штэйн - 10, Итоговый - 8
+Оригинальное - I see We found the empty bottle of sleeping tablets mr Clarkson in Diane's room
+В строке     - I see we found the empty bottle of sleeping tablets mr Clarkson In The Arms Room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in indians room
+
+64. OK, Нач. Л-штэйн - 11, Итоговый - 4
+Оригинальное - I see We found the empty bottle of sleeping tablets mr Clarkson in Diane's room
+В строке     - I see we found the empty bottle of sleeping tablets mr Clarkson in in Indians
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
+
+65. OK, Нач. Л-штэйн - 7, Итоговый - 3
+Оригинальное - Roger's face did not change
+В строке     - produce face did not change
+Итоговое     - roger face did not change
+
+66. OK, Нач. Л-штэйн - 10, Итоговый - 1
+Оригинальное - Diane did not kill my mother
+В строке     - diane did not kill my miami my mother
+Итоговое     - diane did not kill my mother
+
+67. OK, Нач. Л-штэйн - 6, Итоговый - 5
+Оригинальное - Diane didn't kill my mother I know that
+В строке     - Daniel didn't kill my mother hi I know that
+Итоговое     - diane didn't kill my mother hi i know that
+
+68. OK, Нач. Л-штэйн - 12, Итоговый - 6
+Оригинальное - Very well I would like to see Diane next
+В строке     - very well I would love to see that you're next
+Итоговое     - very well i would like to see that next
+
+69. OK, Нач. Л-штэйн - 13, Итоговый - 7
+Оригинальное - Inspector Walsh stood up and put his hands in his pockets
+В строке     - inspector wrote that and put his hands in his pockets
+Итоговое     - inspector will stop up and put his hands in his pockets
+
+70. OK, Нач. Л-штэйн - 16, Итоговый - 9
+Оригинальное - Why was Roger Clarkson afraid
+В строке     - why wasn't your crops and Afraid
+Итоговое     - why was roger crops afraid
+
+71. OK, Нач. Л-штэйн - 8, Итоговый - 3
+Оригинальное - Why was Roger Clarkson afraid
+В строке     - why was Roger clocks and Afraid
+Итоговое     - why was roger clarkson afraid
+
+72. OK, Нач. Л-штэйн - 16, Итоговый - 13
+Оригинальное - He looked at Sergeant Foster
+В строке     - he looked at 7:40
+Итоговое     - he looked at a section for
+
+73. OK, Нач. Л-штэйн - 18, Итоговый - 6
+Оригинальное - He looked at Sergeant Foster
+В строке     - he look at 7:40
+Итоговое     - he looked at surgeon foster
+
+74. OK, Нач. Л-штэйн - 16, Итоговый - 8
+Оригинальное - He looked at Sergeant Foster
+В строке     - he looked at 7:40
+Итоговое     - he looked at sargent for
+
+75. OK, Нач. Л-штэйн - 8, Итоговый - 6
+Оригинальное - He looked at Sergeant Foster
+В строке     - heat look at Sergeant Forrester
+Итоговое     - he looked at sergeant forrester
+
+76. OK, Нач. Л-штэйн - 28, Итоговый - 18
+Оригинальное - He looked at Sergeant Foster
+В строке     - Sergeant Forrester he looked Incheon
+Итоговое     - he forrester he looked
+
+77. OK, Нач. Л-штэйн - 14, Итоговый - 6
+Оригинальное - He looked at Sergeant Foster
+В строке     - he looked at Foster Sargent
+Итоговое     - he looked at sergeant soldier
 
 Неправильные проверки [],  всего - 0
-Количество улучшений 50, процент 87
-Средний нач. Л-штейн - 8.28, средний итоговый - 3.67
-Время выполнения 57 проверок - 2.6, 0.046 sec на одну проверку
-Дата -2016-05-16 13:26:07.547126
+Количество улучшений 67, процент 87
+Средний нач. Л-штейн - 9.35, средний итоговый - 5.16
+Время выполнения 77 проверок - 3.72, 0.048 sec на одну проверку
+Дата -2016-05-16 21:05:55.379994
