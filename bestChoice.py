@@ -51,7 +51,8 @@ def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
 
 def addWordOrNotChoice(orSent, gSentWds, googleSentenceWords):
     #возращает наиболее близкий к оригиналу вариант из двух предложений, в одном из которых добавлено или удалено слово
-    if levenshtein(orSent, ' '.join(gSentWds)) >= levenshtein(orSent, ' '.join(googleSentenceWords)):
+    orSent = unicode(orSent)
+    if levenshtein(orSent, unicode(' '.join(gSentWds))) >= levenshtein(orSent, unicode(' '.join(googleSentenceWords))):
         gSentWds = [w for w in googleSentenceWords]
     else:
         googleSentenceWords = [w for w in gSentWds]
@@ -62,15 +63,16 @@ def addWordOrNotChoice(orSent, gSentWds, googleSentenceWords):
 def delAddWordOrNotChoice(orSent, gSentWds1, gSentWds2, googleSentenceWords):
     #возращает наиболее близкий к оригиналу вариант из трех предложений,
     #в одном из которых добавлено или удалено слово, в другом и то и другое
-    if levenshtein(orSent, ' '.join(gSentWds1)) > levenshtein(orSent, ' '.join(gSentWds2)):
-        if levenshtein(orSent, ' '.join(gSentWds2)) > levenshtein(orSent, ' '.join(googleSentenceWords)):
+    orSent = unicode(orSent)
+    if levenshtein(orSent, unicode(' '.join(gSentWds1))) > levenshtein(orSent, unicode(' '.join(gSentWds2))):
+        if levenshtein(orSent, unicode(' '.join(gSentWds2))) > levenshtein(orSent, unicode(' '.join(googleSentenceWords))):
             gSentWds1 = [w for w in googleSentenceWords]
             gSentWds2 = [w for w in googleSentenceWords]
         else:
             gSentWds1 = [w for w in gSentWds2]
             googleSentenceWords = [w for w in gSentWds2]
     else:
-        if levenshtein(orSent, ' '.join(gSentWds1)) < levenshtein(orSent, ' '.join(googleSentenceWords)):
+        if levenshtein(orSent, unicode(' '.join(gSentWds1))) < levenshtein(orSent, unicode(' '.join(googleSentenceWords))):
             googleSentenceWords = [w for w in gSentWds1]
             gSentWds2 = [w for w in gSentWds1]
         else:
@@ -84,8 +86,11 @@ def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
     #проверяет не больше ли подходит два слова из предложения вместе на слово из оригинала,
     #чем каждое само по себе
     #возращает лучший вариант списка слов предожении, либо с одним слитым, либо с двумя
-    jaro_2words = levenshtein(baseWord, word1+word2)
-    if jaro_2words < levenshtein(baseWord, word1) and jaro_2words < levenshtein(baseWord, word2):
+    baseWord = unicode(baseWord)
+    word1 = unicode(word1)
+    word2 = unicode(word2)
+    leve_2words = levenshtein(baseWord, word1+word2)
+    if leve_2words < levenshtein(baseWord, word1) and leve_2words < levenshtein(baseWord, word2):
         comSentWds[n] += comSentWds[n+1]
         del comSentWds[n+1]
 
@@ -248,8 +253,8 @@ def wordsRightOrder(maxSentWds, sentWds):
             if i + 1 < msl and i < len(sentWds):
                 if sentWds[i] == maxSentWds[i]:
                     continue
-                elif levenshtein(nysiis(sentWds[i]), nysiis(maxSentWds[i])) >\
-                        levenshtein(nysiis(sentWds[i]), nysiis(maxSentWds[i+1])):
+                elif levenshtein(nysiis(unicode(sentWds[i])), nysiis(unicode(maxSentWds[i]))) >\
+                        levenshtein(nysiis(unicode(sentWds[i])), nysiis(unicode(maxSentWds[i+1]))):
                     sentWds.insert(i,'')
 
     return sentWds
@@ -300,8 +305,9 @@ def getSimilarSent(orSent, gSent, sents):
     bestSent = gSent
     n = int(len(sents)/4)
     s = sents[::-1]
+    orSent = unicode(orSent)
     for i in range(n):
-        if levenshtein(orSent, bestSent) > levenshtein(orSent, s[i+1]):
+        if levenshtein(orSent, unicode(bestSent)) > levenshtein(orSent, unicode(s[i+1])):
             bestSent = s[i+1]
 
     return bestSent

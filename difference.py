@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 from difflib import Differ
 
@@ -11,12 +12,11 @@ patternMinus = re.compile(r'-')
 patternLetters = re.compile(r'\b\w+')
 
 def getWordOrderInWords (n, wd, wds, sentLen):
-    '''
-    поиск слов по неправильному слову и составление списка слов, стоящих в том же месте списка слов, где и неправильное слово
-    :param wd: string
-    :param wds: list
-    :return: suitedWords list
-    '''
+    #поиск слов по неправильному слову и составление списка слов, стоящих в том же месте списка слов, где и неправильное слово
+    #:param wd: string
+    #:param wds: list
+    #:return: suitedWords list
+
     order = -1
     wdsL = len(wds)
     if sentLen > wdsL:
