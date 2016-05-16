@@ -2,15 +2,15 @@
 Peter Hobbs came here this morning
 Peter hopes came here this morning
 ["Peter", "Pizza Hut", "Peter helps", "pizza shops in", "Peter Hobbs game", "Peter helps games", "Peter Hobbs game he", "Peter Hobbs game here", "Peter Hobbs game here", "Peter Hobbs game here this", "Peter Hobbs game here this", "Peter Hobbs game here this", "Peter helps came here this morning", "Peter Hobbs game here this morn", "Peter helps came here this morning", "Peter hopes came here this morning"]
-Peter Hobbs came here this morning
+peter hobbs came here this morning
 Peter Hobbs came here this morning
 Peter Hobbs came here this morn
 ["the", "the morning", "this morn"]
-Peter Hobbs came here this morning
+peter hobbs came here this morning
 Peter Hobbs came here this morning
 Peter Hobbs came here this morn
 ["this", "in the morning", "the morn"]
-Peter Hobbs came here this morning
+peter hobbs came here this morning
 he is very angry with you about that letter
 he is very angry with you about that later
 ["he is very angry with you about that letter", "he is very angry with you about that letter", "he is very angry with you about that later"]
@@ -26,7 +26,7 @@ you never talk to me
 Jackie Stood at the window
 Jackie Stewart at the window
 ['yeah", "Jack", "Jackie", "Yankees", "jackets", "Jackass 2", "Jackie's Store", "Jackie Stewart", "Jackie Stewart at", "Jackie Stewart at the", "Jackie Stewart at the way", "Jackie Stewart at the Wynn", "Jackie Stewart at the wind", "Jackie stood at the window", "JackieJackie", "Jackie Stewart at the window"]
-Jackie stood at the window
+jackie stood at the window
 what are you talking about
 that you are walking about
 ["that you", "what you are talking about", "that you are walking about"]
@@ -34,15 +34,15 @@ what you are talking about
 Albert came in and went at once to Molly
 my dad came in and went at 1 tomorrow
 ["Albert came in and went", "Albert came in and went out", "Albert came in and went and", "Albert came in and went at 1", "Albert came in and went at once", "Albert came in and went at once to", "Albert came in and went at once to", "Albert came in and went at once to my", "Albert came in and went at once to my", "Albert came in and went at once tomorrow", "my dad came in and went at 1 tomorrow"]
-Albert came in and went at once to my
+albert came in and went at once to my
 she's much worse now Albert said
 she's much worse now Albertson said
 ["she's much worse now Albertson so", "she's much worse now Albertson set", "she's much worse now Albertson said"]
-she's much worse now Albertson said
+she's much worse now albertson said
 Albert stopped eating and looked at Molly
 Hobbit stop eating and look at Molly
 ["all the", "Albert", "Hobbit", "Hobbit Stow", "Hobbit stop", "Hobbit stop", "Hobbit stop it", "Hobbit stop Ed", "Hobbit stop eating", "Hobbit stop eating", "Hobbit stop eating and", "Hobbit stop eating an aloe", "Hobbit stop eating antelope", "Hobbit stop eating and look at", "Hobbit stop eating and look at the", "Hobbit stop eating and look at my", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Molly"]
-Albert stop eating and look at Molly
+albert stop eating and look at molly
 but in any case I'd rather be seasick than dead
 but in any case I'd rather be sick than that
 ["my", "mud", "Matty", "Martin", "McKinney", "not in any", "but in any case", "but in any case", "but in any case I", "but in any case I'd", "but in any case I do", "but in any case I draw", "but in any case I'd rather", "but in any case I'd rather be", "but in any case I'd rather be", "but in any case I'd rather be here", "but in any case I'd rather be to see", "but in any case I'd rather be to see", "but in any case I'd rather be seasick", "but in any case I'd rather be seasick the", "but in any case I'd rather be sick than", "but in any case I'd rather be sick than the", "but in any case I'd rather be sick than that", "but in any case I'd rather be sick than that"]
@@ -50,7 +50,7 @@ but in any case I'd rather be seasick than that
 We were sitting in my room and we were smoking and talking about how bad we were ill I mean of course
 we were sitting in my room and we were smoking and talking about how bad we were no I mean of course
 ["we", "we were", "we will", "we, will", "we, will see", "he wants it", "we want City", "we were sitting", "we were sitting in", "we were sitting in my", "we, were sitting in my", "we were sitting, in my", "we were sitting, in my room", "we were sitting in, my room", "we were sitting in my, room", "we were sitting in my room", "we were sitting in my room, and", "we were sitting in my room, and we", "we were sitting in my room, and we were", "we were sitting in my room, and, we were", "we were sitting in my room, and we, were", "we were sitting in my room, and we were", "we were sitting in my room, and we were, so", "we were sitting in my room, and we were, slow", "we were sitting in my room, and we, will smoke", "we were sitting in my room, and we, were smoking", "we were sitting in my room, and we were smoking", "we were sitting in my room, and we were smoking, a", "we were sitting in my room, and we were smoking, and", "we were sitting in my room, and we were smoking, and to", "we were sitting in my room, and we were smoking, and talk", "we were sitting in my room, and we were smoking, and talking", "we were sitting in my room, and we were smoking and, talking", "we were sitting in my room, and we were smoking and, talking about", "we were sitting in my room, and we were smoking and talking, about", "we were sitting in my room, and we were smoking and talking about", "we were sitting in my room, and we were smoking and talking about", "we were sitting in my room, and we were smoking and talking about, how", "we were sitting in my room, and we were smoking and talking about, how about", "we were sitting in my room, and we were smoking and talking about, how bad", "we were sitting in my room, and we were smoking and talking about, how, about we", "we were sitting in my room, and we were smoking and talking about, how, bad we were", "we were sitting in my room, and we were smoking and talking about, how bad we were", "we were sitting in my room, and we were smoking and talking about, how bad we were, El", "we were sitting in my room, and we were smoking and talking about, how bad we were, El", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I'm", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean the", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean if", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean if", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I'm in the car", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean of course", "we were sitting in my room, and we were smoking and talking about, how bad we were, no I mean of course"]
-we were sitting in my room and we were smoking and talking about how bad we were El I mean of course
+we were sitting in my room and we were smoking and talking about how bad we were i I mean of course
 after the coffee and sandwiches inspector Walsh called Roger Clarkson to the office
 after the coffee and sandwiches inspector Walsh, cold, Roger, Clarkson to the office
 ["how", "after", "after the", "after, the", "after the", "after the, call", "after the, coffee", "after the, coffee and", "after the coffee, and", "after the Coffee, & Tea", "after the coffee, and send", "after the coffee, and sandwich", "after the coffee, and sandwiches", "after the coffee and, sandwiches", "after the coffee and sandwiches", "after the coffee and sandwiches, in", "after the coffee and sandwiches, instead", "after the coffee and sandwiches, inspect", "after the coffee and sandwiches, inspector", "after the coffee and sandwiches inspector", "after the coffee and sandwiches inspector, will", "after the coffee and sandwiches inspector, Walsh", "after the coffee and sandwiches inspector Walsh", "after the coffee and sandwiches inspector Walsh, call", "after the coffee and sandwiches inspector Walsh, cold", "after the coffee and sandwiches inspector Walsh, cold", "after the coffee and sandwiches inspector Walsh, cold, girl", "after the coffee and sandwiches inspector Walsh, cold, girls", "after the coffee and sandwiches inspector Walsh, cold, Kroger", "after the coffee and sandwiches inspector Walsh, cold, girl girl", "after the coffee and sandwiches inspector Walsh, cold, world clock", "after the coffee and sandwiches inspector Walsh, cold, girl your clocks", "after the coffee and sandwiches inspector Walsh, cold, girl girl Oxon", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Raw", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger call", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Clark", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger klotz", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, klotz", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, Clarkson", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Clarkson, to", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, klotz until", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, Clarkson to do", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, Clarkson - 0", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, Clarkson 202", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, klotz m203", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger, klotz M twenty he's", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, clock", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, clocks", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson, to", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson, to the", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to, the", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to, do", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to, the Earth", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to, the other", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to, the office", "after the coffee and sandwiches inspector Walsh, cold, Kroger Jackson, Roger Watson 203, Clarkson to the office"]
@@ -78,7 +78,7 @@ inspector Walsh watch Roger for a minute
 I see. We found the empty bottle of sleeping tablets mr. Clarkson in Diane's room
 I see we found the empty bottle of sleeping tablets mr. Clarkson In The Arms Room
 ["I", "ice", "I see", "I see", "I see, we", "I see, we've", "I see, we found", "I see, we found", "I see, we found, the", "I see, we found, the a", "I see, we found, the end", "I see, we found, the empty", "I see, we found the, empty by", "I see, we found the, empty but", "I see, we found the, empty bottle", "I see, we found the empty, bottle", "I see, we found the empty, bottle of", "I see, we found the empty bottle, of", "I see, we found the empty bottle of", "I see, we found the empty bottle of, glue", "I see, we found the empty bottle of, sleep", "I see, we found the empty bottle of, sleeping", "I see, we found the empty bottle of, flipping the", "I see, we found the empty bottle of, triple tap", "I see, we found the empty bottle of, sleeping tablet", "I see, we found the empty bottle of, sleeping tablets", "I see, we found the empty bottle of sleeping tablets", "I see, we found the empty bottle of sleeping tablets, new", "I see, we found the empty bottle of sleeping tablets, Miss", "I see, we found the empty bottle of sleeping tablets, mr.", "I see, we found the empty bottle of sleeping tablets, mr. o'clock", "I see, we found the empty bottle of sleeping tablets, mr., o'clock", "I see, we found the empty bottle of sleeping tablets, mr., clocks", "I see, we found the empty bottle of sleeping tablets, mr., Clarkson", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, in", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, and", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, in the", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, India", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, Indian", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, Indians", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, In The Arms Room", "I see, we found the empty bottle of sleeping tablets, mr. Clarkson, In The Arms Room"]
-I see we found the empty bottle of sleeping tablets mr Clarkson In TheArms Room
+I see we found the empty bottle of sleeping tablets mr Clarkson in indians room
 Roger's face did not change
 Joseph ASA did not change
 ["I don't", "I love you", "Rogers", "Joseph", "Joseph A", "I love your face", "images of faces", "Joseph a city", "I heard your face again", "I heard your face and you know", "I love your face I did not", "I love your face I did not change", "I, love your face I did not change", "I love your face I did not, change", "Joseph ASA did not change"]
@@ -86,7 +86,7 @@ Rogers face did not change
 Diane did not kill my mother I know that  
 Leon did not kill my mother I know that
 ["the", "they are", "Beyond", "D&D", "they are getting", "the Indiana", "when did not", "bnd.com", "when did not kill my", "yandy.com I'm", "yandy.com I'm a", "when did not kill my mother", "when did not kill my mother", "when did not kill my mother, and", "when did not kill my mother, I know", "when did not kill my mother, I know the", "when did not kill my mother, I know that", "when did not kill my mother I know, that", "Leon did not kill my mother I know that"]
-Leon did not kill my mother I know that
+Indiana did not kill my mother I know that
 why was Roger Clarkson afraid
 what was Project clocks and Afraid
 ["why", "White", "white was", "white, was", "white was, Roger", "what was Project", "what was Project la", "what was Project Glass", "what was Project clocks", "what was Project o'clock so", "what was Project Clarkson", "what was Project, Clarkson", "what was Project, Clarkson Ave", "white was Roger clucks and Afraid", "what was Project clocks and Afraid"]
@@ -122,11 +122,11 @@ Sergeant Foster law
 She looked at sergeant Foster and smiled
 chick look at the surgeon Foster & Smith
 ["she", "chick", "JetBlue", "she look", "she looked", "chick look at", "chick look at this", "chick look at the", "chick look at the Sun", "chick look at the soda", "chick look at the surgeon", "chick look at, the surgeon", "chick look at, this urgent", "chick look at, the surgeon for", "chick look at, the surgeon Foster", "chick look at the surgeon, Foster", "chick look at the, surgeon.", "chick look at the surgeon, Foster and", "chick look at the surgeon, Foster and some", "chick look at the surgeon, Foster & Smith", "chick look at the surgeon, Foster and smile", "chick look at the surgeon, Foster and smiled", "chick look at the surgeon Foster, and smiled", "chick look at the surgeon Foster & Smith"]
-she looked at thesurgeon Foster and smiled
+she looked at the urgent Foster and smiled
 Sergeant Foster's face went red
 Sergeant Foster's face when to read
 ["so", "search", "Soldier", "surgeon", "sergeant", "Sergeant for", "Sergeant First", "Sergeant Foster", "Sergeant, Foster", "Sergeant, fastest", "Sergeant fastest", "Sergeant fastest, way", "Sergeant, Foster space", "Sergeant Foster space", "Sergeant, fastest Facebook", "Sergeant, fastest face when", "Sergeant, Foster Space Center", "Sergeant, Foster's Freeze Ventura", "Sergeant, fastest face when the red", "Sergeant Foster's face when to read"]
-Sergeant Foster's face whento red
+sergeant foster's face when red
 Sergeant Foster's face went red
 children Foster Freeze Ventura
 ["so", "search", "surgeon", "children", "children's", "searching for", "children's first", "Sutton Foster", "children.", "children's Foster Freeze", "children's Foster Freeze", "children's Foster Freeze, when", "children's Foster Freeze, want", "children's Foster Freeze, Ventura", "children Foster Freeze Ventura"]
@@ -154,7 +154,7 @@ yes a fast and exciting player is Sergeant Foster
 Diane smiled again at Sergeant Foster and his face went redder
 Diane smiled again at seven., And his face went weather
 ["the", "Diane", "Diane's", "De Anza", "Diane's my", "they are small", "dial smiled", "Siam smile Thai", "dial smiled again", "dial smiled again", "dial smiled again, at", "dial smiled again, at the", "dial smiled again, episode", "dial smiled again, episode two", "dial smiled again, at seven", "dial smiled again, it's urgent", "dial smiled again, episode twenty", "dial smiled again, episode twenty-four", "dial smiled again, episode twenty-first", "dial smiled again, it's urgent.", "Diane smiled again at seven.", "Diane smiled again at seven., And", "Diane smiled again at seven., And he", "Diane smiled again at seven., And he's", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And, his face", "Diane smiled again at seven., And his face", "Diane smiled again at seven., And his face, when", "Diane smiled again at seven., And his face, went", "Diane smiled again at seven., And his face, went through", "Diane smiled again at seven., And his face, went right", "Diane smiled again at seven., And his face, went rather", "Diane smiled again at seven., And his face went, rather", "Diane smiled again at seven., And his face went weather"]
-Diane smiled again at urgent the And his face went rather
+diane smiled again at urgent four and his face went rather
 Diane smiled again at Sergeant Foster and his face went redder
 Diane smiled again at Sergeant Foster and his face swelled weather
 ["so", "search", "Soulja", "surgeon", "surgeons", "searching for", "Sergeant First", "Sergeant Foster", "Sergeant, Foster", "sergeant.", "Sergeant, Foster and", "Sergeant, Foster and he", "Sergeant, Foster and his", "Sergeant, Foster and his face", "Sergeant Foster and, his face", "Sergeant Foster and his, face", "Sergeant Foster and his face", "Sergeant Foster and his face, when", "Sergeant Foster and his face, went", "Sergeant Foster and his face, went through", "Sergeant Foster and his face, went right", "Sergeant Foster and his face, went rather", "Sergeant Foster and his face went, rather", "Sergeant Foster and his face swelled weather"]
@@ -170,11 +170,11 @@ Diane smiled again at Sergeant Foster and his face went further
 Diane smiled again at Sergeant Foster and his face went redder
 Diane smiled again at Sergeant Foster and his face went rather
 ["how to", "I don't", "out of the", "Aldo", "Aldo, red", "Aldo, weather", "Aldo, weather", "Aldo, weather, are", "Aldo, weather, address", "Aldo, weather, I'd rather", "Aldo, weather, I'd rather", "Aldo, weather, I'd rather, red", "Aldo, weather, I'd rather, Prada"]
-Diane smiled again at Sergeant Foster and his face went rather
+Diane smiled again at Sergeant Foster and his face went red
 Diane smiled again at Sergeant Foster and his face went redder
 they all smiled again it's urgent. And his face went over there
 ["the", "do", "they are", "Diane", "De Anza", "they all smell", "they all smelled", "they all smell to", "they all smell that", "they all smelled again", "they all, smelled again", "they all, smelled again at", "they all smelled again, at", "they all smelled again, at the", "they all smelled again, episode", "they all smelled again, at Soldier", "they all smelled again, it's urgent", "they all smelled again, it's urgent for", "they all smelled again, it's urgent first", "they all smelled again, it's urgent Forester", "they all smelled again, it's urgent.", "they all smelled again it's, urgent.", "they all smelled again it's urgent.", "they all smelled again it's urgent., And", "they all smelled again it's urgent., And he", "they all smelled again it's urgent., And he's", "they all smelled again it's urgent. And, he's", "they all smelled again it's urgent. And, his face", "they all smelled again it's urgent. And his face", "they all smelled again it's urgent. And his face, when", "they all smelled again it's urgent. And his face, went", "they all smelled again it's urgent. And his face, went over", "they all smelled again it's urgent. And his face, when I read", "they all smelled again it's urgent. And his face, went over the", "they all smiled again it's urgent. And his face went over there"]
-Diane smiled again at urgent Forester And his face went over
+Diane smiled again at urgent Forester And his face went read
 the inspector began at once
 ten step to begin at once
 ["the", "then", "Vince", "things to", "then step", "then stepped", "the inspector", "vindictive", "then stick to be", "despicable", "then stick the bigger", "then stepped up again", "then stick to begin", "then stick to begin a", "then stick to begin at", "then stepped up again at 1", "then stick to begin at once", "then, stick to begin at once", "ten step to begin at once"]
@@ -202,7 +202,7 @@ the inspector begin at once
 this house is very big roger said
 this house is a very big roller set
 ["the", "this", "this how", "this house", "this, house is", "this, house is a", "this, house is it", "this house, is it", "this house, isn't", "this house, is a girl", "this house, is a very", "this house, is a very big", "this house is a, very big", "this house is a very, big", "this house is a, great big world", "this house is a, very big order", "this house is a, very big Rogers", "this house is a, very big order so", "this house is a, very big brother said", "this house is a, very big order set", "this house is a very big, order set", "this house is a very big roller set"]
-this house is a, very big roller said
+this house is a very big rogers said
 this house is very big roger said
 this house is very big brother said
 ["the", "this", "this how", "this house", "this, house is", "this house, is", "this house, is the", "this house, is very", "this house is, very", "this house is, very big", "this house is very, big", "this house is very big", "this house is very big, word", "this house is very big, order", "this house is very big, Rogers", "this house is very big, order so", "this house is very big, brother said", "this house is very big brother said"]
@@ -226,4 +226,84 @@ but mr Briggs wanted half the garden to you know for his from
 inspector Walsh moved a pencil on the table
 inspector will smoke a pencil on the table
 ["is", "East", "insta", "instant", "inspector", "inspector will", "Instructables", "inspector will snow", "inspector will smoke", "inspector will, smoke a", "inspector will smoke, a", "inspector will smoke, it", "inspector will smoke, and", "inspector will smoke, up in", "inspector, world's most advanced", "inspector, will smoke a pencil", "inspector, will smoke a pencil on", "inspector, will smoke a pencil and", "inspector, will smoke a pencil on the", "inspector, will smoke a pencil on the day", "inspector will smoke a pencil, on the day", "inspector will smoke a pencil, on the table", "inspector will smoke a pencil on the, table", "inspector will smoke a pencil on the table"]
-inspector East advanced a pencil on the table
+inspector world's smoke a pencil on the table
+yes I did again she said no
+he said it again she said no
+["yes", "yes I", "he said", "yes I do", "yes I did", "yes I, did", "yes I did", "yes I did, it", "yes I did, I got", "yes I did, again", "yes I did again", "yes I did again, she", "yes I did again, she's", "yes I did again, she said", "yes I did again, she said no", "yes I did again she said, no", "he said it again she said no"
+yes I did again she said, no
+she loved the house and didn't want to sell it
+she left the house and didn't want to sell it
+["she", "Sheila", "Hitler", "she'd love to", "good luck today", "she left the house", "she left the house and", "she left the house, and", "she left the house, and do", "she left the house, and get", "she left the house, and getting", "she left the house, and didn't", "she left the house, and didn't one", "she left the house and, didn't want", "she left the house and, didn't want to", "she left the house and didn't, want to", "she left the house and didn't, want to see", "she left the house and didn't, want to sell", "she left the house and didn't want, to sell it", "she left the house and didn't want to, sell it", "she left the house and didn't want to sell it"]
+she love the house and didn't want to sell it
+Inspector Walsh watched Roger for a minute
+inspector Walsh watch the road your permit
+["East", "Easter", "respect", "inspector", "inspector will", "inspector, will", "inspector, Walsh", "inspector, Wilson", "inspector, Walsh what", "inspector, Walsh watched", "inspector, Walsh watch the", "inspector, Walsh Watchtower", "inspector, Walsh watch the road", "inspector Walsh, watch the road", "inspector Walsh, watch the roads are", "inspector Walsh, watch the Road River", "inspector Walsh, watch the road report", "inspector Walsh, watch the roads are for me", "inspector Walsh watch the, roads are for me", "inspector Walsh watch the, road your permit", "inspector Walsh watch the road your permit"]
+inspector walsh watched are for your for
+inspector Walsh watched Roger for a minute
+inspector Walsh what are the four minute
+["in", "is", "East", "insta", "inspect", "inspector", "inspector roll", "inspector Walsh", "inspector, Walsh", "inspector Walsh", "inspector Walsh, what", "inspector Walsh, watch the", "inspector Walsh, what are", "inspector Walsh, WatchMojo", "inspector Walsh, what's the weather for", "inspector Walsh, watch the order form", "inspector Walsh, watch the door for me", "inspector Walsh, what does reform mean", "inspector Walsh, what are the four minute", "inspector Walsh what are the four minute"]
+inspector Walsh watch order for minute
+inspector Walsh watched Roger for a minute
+inspector wolf watch Roger from it for me
+["he's", "East", "Krispy", "Houston", "inspector", "despicable", "inspector will", "inspector wolf", "inspector, wolf", "inspector wolf", "inspector wolf, what", "inspector wolf what", "inspector wolf what, road", "inspector wolf, watch Roger", "inspector wolf, what Rogers", "inspector wolf, watch Roger for", "inspector wolf, watch Roger from", "inspector wolf, watch Roger for me", "inspector wolf, watch Roger Freeman", "inspector wolf, watch Roger from it for", "inspector wolf watch Roger, from it for", "inspector wolf watch Roger, from it for me", "inspector wolf watch Roger from it for, me", "inspector wolf watch Roger from it for me"]
+inspector watch watch Roger for me
+I see. We found the empty bottle of sleeping tablets mr. Clarkson in Diane's room
+I see we found the empty bottle of sleeping tablets mr. Clarkson In The Arms Room
+["I", "ice", "I see", "I see", "I see, we", "I see, we've", "I see, if I", "I see, we fall", "I see, we found", "I see we, found the", "I see we found, the", "I see we found, the a", "I see we found, the m", "I see we found, the end", "I see we found, the empty", "I see we found, the empty by", "I see we found, the empty but", "I see we found the, empty but", "I see we found the, empty bottle", "I see we found the, empty bottle of", "I see we found the empty, bottle of", "I see we found the empty, bottle of sea", "I see we found the empty, bottle of sleep", "I see we found the empty, bottle of sleepy", "I see we found the empty, bottle of sleeping", "I see we found the empty bottle, of sleeping", "I see we found the empty bottle of, sleeping", "I see we found the empty bottle of, sleeping pills", "I see we found the empty bottle of, sleeping tablet", "I see we found the empty bottle of, sleeping tablets", "I see we found the empty bottle of sleeping, tablets", "I see we found the empty bottle of sleeping tablets", "I see we found the empty bottle of sleeping tablets, me", "I see we found the empty bottle of sleeping tablets, Miss", "I see we found the empty bottle of sleeping tablets, missed", "I see we found the empty bottle of sleeping tablets, mr.", "I see we found the empty bottle of sleeping tablets, mr. claw", "I see we found the empty bottle of sleeping tablets, mr. o'clock", "I see we found the empty bottle of sleeping tablets, mr. clocks", "I see we found the empty bottle of sleeping tablets, mr. Clarkson", "I see we found the empty bottle of sleeping tablets mr., Clarkson", "I see we found the empty bottle of sleeping tablets mr. Clarkson", "I see we found the empty bottle of sleeping tablets mr. Clarkson, in", "I see we found the empty bottle of sleeping tablets mr. Clarkson, and", "I see we found the empty bottle of sleeping tablets mr. Clarkson, in the", "I see we found the empty bottle of sleeping tablets mr. Clarkson, Indian", "I see we found the empty bottle of sleeping tablets mr. Clarkson, Indians", "I see we found the empty bottle of sleeping tablets mr. Clarkson, in the answer", "I see we found the empty bottle of sleeping tablets mr. Clarkson, in the antrum", "I see we found the empty bottle of sleeping tablets mr. Clarkson In The Arms Room"]
+I see we found the empty bottle of sleeping tablets mr Clarkson In indians Room
+I see. We found the empty bottle of sleeping tablets mr. Clarkson in Diane's room
+I see we found the empty bottle of sleeping tablets mr Clarkson in, in Indians
+["in", "in", "in, in", "in, in", "in, in, and", "in, in, in the", "in, in, India", "in, in, Indian", "in, in Indians", "in, in Indians, in", "in, in Indians, in", "in, in Indians, in, the", "in, in Indians, India", "in, in Indians, Indian", "in, in Indians, in Diane's", "in, in Indians, and I answered", "in, in Indians, in Diane's room", "in, in Indians"]
+I see we found the empty bottle of sleeping tablets mr Clarkson in Diane's room
+Roger's face did not change
+produce face did not change
+["Rhode", "Roger", "produce", "produce face", "produce, face", "produce, face the", "produce, Facebook", "produce, face dinner", "produce, face did not", "produce, face did not see", "produce, face did not change", "produce face, did not change", "produce face did not, change", "produce face did not change"]
+Roger face did not change
+Diane did not kill my mother
+diane did not kill my miami my mother
+["my", "my app", "my, app", "Miami", "Miami", "Miami, my", "Miami, Miami", "Miami, my mother", "Miami, my mother"]
+diane did not kill my mother
+Diane didn't kill my mother I know that
+Daniel didn't kill my mother hi I know that
+["the", "Diane", "DMV", "Daniel", "Diane Dillard", "Diane Dillard", "Diane, didn't get", "they ended up getting", "Diane get it didn't", "Diane didn't get into", "Diane get it didn't kill", "they ended up getting killed", "Diane get it didn't kill my", "Diane get it didn't kill my my", "Diane get it didn't kill my mom", "Diane get it didn't kill my mother", "Diane get it didn't kill my, mother", "Daniel didn't kill my mother", "Daniel didn't kill my mother, hi", "Daniel didn't kill my mother, hi", "Daniel didn't kill my mother, hi, hi", "Daniel didn't kill my mother, hi, I'm", "Daniel didn't kill my mother, hi, I know", "Daniel didn't kill my mother, hi, I know if", "Daniel didn't kill my mother, hi, I know the", "Daniel didn't kill my mother, hi, I know that", "Daniel didn't kill my mother, hi I know, that", "Daniel didn't kill my mother, hi I know that"]
+Diane didn't kill my mother hi I know that
+Very well. I would like to see Diane next
+very well I would love to see that you're next
+["no", "Mary", "Myrtle", "merry way", "very well", "very well", "very well, I", "very well, I'll", "very well, I will", "very well, I would", "very well, I would like", "very well, I would love", "very well, I would love to", "very well, I would love to see", "very well I, would love to see", "very well I would, love to see", "very well I would, love to see you", "very well I would, like to see the", "very well I would, love to see that", "very well I would, love to see that you're", "very well I would, love to see that", "very well I would, love to see that your neck", "very well I would, love to see that you're next", "very well I would love to see that, you're next", "very well I would love to see that you're next"]
+very well I would like to see that next
+Inspector Walsh stood up and put his hands in his pockets
+inspector wrote that and put his hands in his pockets
+["East", "Easter", "he stepped", "inspector", "inspector will", "inspector, will", "inspector, Road", "inspector, roast", "inspector, roasted", "inspector, roasted of", "inspector roasted, of", "inspector roasted of", "inspector roasted of, an", "inspector roasted, event", "inspector, will stop and pay", "inspector, roasted up and put", "inspector, roasted up and put her", "inspector, roasted up and put his", "inspector roasted up and put, his", "inspector roasted up and put his", "inspector roasted up and put his, hat", "inspector roasted up and put his, hand", "inspector roasted up and put his, hands", "inspector roasted up and put his hands", "inspector roasted up and put his hands, in", "inspector roasted up and put his hands, in his", "inspector roasted up and put his hands, in his pocket", "inspector roasted up and put his hands in, his pocket", "inspector roasted up and put his hands in, his pockets", "inspector roasted up and put his hands in his, pockets", "inspector wrote that and put his hands in his pockets"]
+inspector will stop up and put his hands in his pockets
+Why was Roger Clarkson afraid
+why wasn't your crops and Afraid
+["why", "why were", "why was", "why wasn't", "why was Rhode", "why was about", "why, was about", "why, was Roger", "why, was allergic", "why, was algebra", "why, was erratic Rock", "why, wasn't Rachel Proctor", "why, wasn't your problem", "why, was about your props on the", "why, was about your proximity", "why, was about your crops and Afraid", "why was about your, crops and Afraid", "why wasn't your crops and Afraid"]
+why was Roger crops Afraid
+Why was Roger Clarkson afraid
+why was Roger clocks and Afraid
+["why", "White", "why were", "why was", "why was Rhode", "why, was Roger", "why was, Roger", "why was, original", "why was, Roger clay", "why was, Roger o'clock", "why was, Roger Clark", "why was, Roger clucks", "why was, Roger Clarkson", "why was, Roger Clarkson if", "why was Roger, Clarkson if", "why was Roger, Clarkson if I", "why was Roger Clarkson, if I", "why was Roger, clucks and Afraid", "why was Roger clocks and Afraid"]
+why was Roger Clarkson Afraid
+He looked at Sergeant Foster
+he looked at 7:40
+["he", "can", "Hilo", "he looked", "he looked at", "he looked, at", "he looked, at us", "he looked, at as a", "he looked, at us as", "he looked, at us and", "he looked, at a section", "he looked at, us a chance", "he looked at, a section for", "he looked at, 7:40", "he looked at 7:40"]
+he looked at a section for
+He looked at Sergeant Foster
+he look at 7:40
+["he", "Heat", "Hilo", "he look", "he looked", "he look at", "he, look at her", "he, look at some", "he, look at surgeon", "he look at, surgeon", "he look at, surgeons", "he look at, surgeon for", "he look at, 7:40", "he look at, Sutton Foster", "he look at 7:40"]
+he looked at surgeon Foster
+He looked at Sergeant Foster
+he looked at 7:40
+["he", "Hilo", "he looked", "he looked at", "he looked, at", "he looked, at so", "he looked at, so", "he looked at, said", "he looked at, Soldier", "he looked at, surgeon", "he looked at, Sargent", "he looked at, Sargent for", "he looked at, Sargent fort", "he looked at, 7:40", "he looked at 7:40"]
+he looked at sargent for
+He looked at Sergeant Foster
+heat look at Sergeant Forrester
+["he", "Heat", "Hitler", "heat look", "he looked", "heat look at", "heat look at the", "heat look at some", "heat look up Soulja", "heat look at surgeon", "heat look, at surgeon", "heat look, at this urgent", "heat look, at the surgeons", "heat look, at the surgeon for", "heat look, up Sergeant First", "heat look, up Sergeant Forrester", "heat look at Sergeant Forrester"]
+he looked at sergeant forrester
+He looked at Sergeant Foster
+Sergeant Forrester he looked, Incheon
+["at", "it's", "so", "episodes", "Soulja", "it's urgent", "it's urgent for", "it's urgent Forest", "Sergeant Forrester", "Sergeant Forrester", "Sergeant Forrester, he", "Sergeant Forrester, Heat", "Sergeant Forrester, Hilo", "Sergeant Forrester, heat look", "Sergeant Forrester, he looked", "Sergeant Forrester he looked", "Sergeant Forrester he looked, can", "Sergeant Forrester he looked, and she", "Sergeant Forrester he looked, Incheon"]
+he forrester he looked
+He looked at Sergeant Foster
+he looked at Foster Sargent
+["he", "Heat", "Hilo", "heat look", "he looked", "he looked at", "he looked, at", "he looked at", "he looked at, for", "he looked at, first", "he looked at, Foster", "he looked, at.", "he looked at, Foster so", "he looked at, Foster Soldier", "he looked at, foster children", "he looked at, Foster sergeant", "he looked at Foster, sergeant", "he looked at Foster Sargent"]
+he looked at sergeant soldier
