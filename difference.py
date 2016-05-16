@@ -12,13 +12,12 @@ patternLetters = re.compile(r'\b\w+')
 
 def getWordOrderInWords (n, wd, wds, sentLen):
     '''
-    поиск слов по неправильному слову и составление списка слов, стоящих в том же месте, где и неправильное слово
+    поиск слов по неправильному слову и составление списка слов, стоящих в том же месте списка слов, где и неправильное слово
     :param wd: string
     :param wds: list
     :return: suitedWords list
     '''
     order = -1
-    suitedWords = []
     wdsL = len(wds)
     if sentLen > wdsL:
         start = 0
@@ -35,6 +34,7 @@ def getWordOrderInWords (n, wd, wds, sentLen):
     return order
 
 def getWordOrder(n, wd, sentWords):
+    #возращает порядковый номер слова в предложении и флаг TRUE при удачном поиске, и FALSE наоборот
     isWd = False
     start = max([0, n-4])
     sentWordsLen = len(sentWords)
@@ -53,11 +53,14 @@ def getWordOrder(n, wd, sentWords):
 def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
     '''
     разделяет список сравненых слов на 4 типа, и выдает четыре словаря:
+    в качестве ключа порядковый номер слова в строке сравнения
+    первое значение само слово
+    второе значение порядковый номер его в сравниваемом предложении
+    третье значение порядковый номер в оригинальном предожении, с которым происходит сравнение
     :param comparedWords: list список сравниваемых слов со знаками +- типа:[+ m- b- u- t-, - i- n, ...]
     :return: excessWds, missedWds, wrongWds, rightWds - dictionaries
     лишние слова, пропущенные слова, неправиьные и правильные слова, где ключом является порядок слова
     '''
-
     excessWds = {}; missedWds = {}; wrongWds = {}; rightWds = {}
     count = 0
     lts = ''
@@ -72,7 +75,6 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
 
         sent_num, isWd = getWordOrder(sent_count, wd, comSentWords)
         orSent_num, isOrWd = getWordOrder(orSent_count, wd, orSentWords)
-        #print(sent_num, orSent_num)
 
         if plusesLen >= wdLen:
             excessWds[i-count] = [wd, sent_num, orSent_num]
@@ -109,6 +111,7 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
     return excessWds, missedWds, wrongWds, rightWds
 
 def getFirstLettersTheSame(wd1, wd2):
+    #возращает одинаковые первые буквы у двух идущих друг за другом слов
     d = Differ()
     diff = ''.join(d.compare(wd1.lower(), wd2.lower()))
     diff = patternSpace.sub('',diff)
@@ -129,7 +132,6 @@ def correctWrongDetectedWords(exsWds, misWds, wrWds, rWds, orSentWds, comSentWds
     '''
     delItems = []
     for key, value in wrWds.items():
-        #print(key+1, wrWds, orSentWds, comSentWds)
         if wrWds.get(key+1) != None and \
                         orSentWds[wrWds[key+1][2]] == comSentWds[wrWds[key+1][1]] and\
                         getFirstLettersTheSame(value[0], wrWds[key+1][0]) != None:
@@ -161,42 +163,3 @@ def getSentsDifference(orSent, comSent, wds):
 
     return excessWds, missedWds, wrongWds, rightWds
 
-def isTheSameWords(n, orSentWds, comSentWds, cutoff = 2):
-    isWds = False
-    start = max([0, n-cutoff])
-    end = min(n+cutoff, len(comSentWds), len(orSentWds))
-    for i in range(start, end):
-        if comSentWds[n] == orSentWds[i]:
-            isWds = True
-    for i in range(start, end):
-        if comSentWds[n+1] == orSentWds[i]:
-            isWds = True
-
-    return isWds
-
-
-from jellyfish import jaro_winkler as jaro
-
-def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
-    jaro_2words = jaro(baseWord, word1+word2)
-    if jaro_2words > jaro(baseWord, word1) and jaro_2words > jaro(baseWord, word2):
-        comSentWds[n] += comSentWds[n+1]
-        del comSentWds[n+1]
-
-    return comSentWds
-
-def joinCorrectSentWordsList(orSentWords, comSentWords):
-    sentLen = len(comSentWords)
-    orSentLen = len(orSentWords)
-    count = 1
-    for i, val in enumerate(orSentWords):
-        if i < sentLen - count:
-            if i < orSentLen - 1:
-                if not isTheSameWords(i, orSentWords, comSentWords):
-                    comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
-                    count += 1
-            else:
-                comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
-                count += 1
-
-    return comSentWords

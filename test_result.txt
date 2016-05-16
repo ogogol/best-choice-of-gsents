@@ -83,10 +83,10 @@
 В строке     - but mr Briggs wanted have they gotten to you know for his phone
 Итоговое     - but mr Briggs wanted have the garden to you know for his phone
 
-18. OK, Нач. Л-штэйн - 13, Итоговый - 15
+18. OK, Нач. Л-штэйн - 13, Итоговый - 7
 Оригинальное - inspector Walsh watched roger for a minute
 В строке     - inspector Walsh who watched her for me
-Итоговое     - inspector Walsh watched watched Roger for me
+Итоговое     - inspector Walsh watched Roger for me
 
 19. OK, Нач. Л-штэйн - 5, Итоговый - 3
 Оригинальное - inspector Walsh watched roger for a minute
@@ -120,7 +120,7 @@
 
 25. OK, Нач. Л-штэйн - 16, Итоговый - 4
 Оригинальное - He looked at sergeant Foster
-В строке     - he looked at 7:40
+В строке     - he looked at 740
 Итоговое     - he looked at surgeon Foster
 
 26. OK, Нач. Л-штэйн - 8, Итоговый - 6
@@ -143,14 +143,14 @@
 В строке     - a good day for Dennis Sargent
 Итоговое     - a good day for tennis Sargent
 
-30. OK, Нач. Л-штэйн - 13, Итоговый - 7
+30. OK, Нач. Л-штэйн - 13, Итоговый - 5
 Оригинальное - Sergeant Foster laughed
 В строке     - Sutton Foster Loft
-Итоговое     - Sergeant Foster Loft
+Итоговое     - Sergeant Foster law
 
-31. OK, Нач. Л-штэйн - 20, Итоговый - 7
+31. OK, Нач. Л-штэйн - 17, Итоговый - 7
 Оригинальное - She looked at sergeant Foster and smiled
-В строке     - chick look at the surgeon Foster & Smith
+В строке     - chick look at the surgeon Foster and Smith
 Итоговое     - she looked at thesurgeon Foster and smiled
 
 32. OK, Нач. Л-штэйн - 4, Итоговый - 2
@@ -243,8 +243,48 @@
 В строке     - things picked up again at once
 Итоговое     - the inspector begin at once
 
+50. OK, Нач. Л-штэйн - 8, Итоговый - 0
+Оригинальное - the inspector begin at once
+В строке     - then stick to begin at once
+Итоговое     - the inspector begin at once
+
+51. OK, Нач. Л-штэйн - 7, Итоговый - 4
+Оригинальное - this house is very big roger said
+В строке     - this house is a very big roller set
+Итоговое     - this house is a very big roller said
+
+52. OK, Нач. Л-штэйн - 3, Итоговый - 2
+Оригинальное - this house is very big roger said
+В строке     - this house is very big brother said
+Итоговое     - this house is very big Rogers said
+
+53. OK, Нач. Л-штэйн - 6, Итоговый - 0
+Оригинальное - your mother is dead and now you're rich
+В строке     - your mother is dead and now your age
+Итоговое     - your mother is dead and now you're rich
+
+54. OK, Нач. Л-штэйн - 3, Итоговый - 1
+Оригинальное - Roger's face was suddenly afraid
+В строке     - Rogers face is suddenly afraid
+Итоговое     - Rogers face was suddenly afraid
+
+55. OK, Нач. Л-штэйн - 17, Итоговый - 8
+Оригинальное - but mr Briggs I wanted half the garden too you know for his farm
+В строке     - but mr Briggs wanted to have the garden to you know where she's from
+Итоговое     - but mr Briggs wanted have the garden to you know for is from
+
+56. OK, Нач. Л-штэйн - 17, Итоговый - 5
+Оригинальное - but mr Briggs I wanted half the garden too you know for his farm
+В строке     - but mr Briggs wanted have they gotten to you know where he's from
+Итоговое     - but mr Briggs wanted half the garden to you know for his from
+
+57. OK, Нач. Л-штэйн - 7, Итоговый - 8
+Оригинальное - inspector Walsh moved a pencil on the table
+В строке     - inspector will smoke a pencil on the table
+Итоговое     - inspector East advanced a pencil on the table
+
 Неправильные проверки [],  всего - 0
-Количество улучшений 42, процент 85
-Средний нач. Л-штейн - 8.31, средний итоговый - 3.9
-Время выполнения 49 проверок - 2.31, 0.047 sec на одну проверку
-Дата -2016-05-15 20:10:27.020092
+Количество улучшений 50, процент 87
+Средний нач. Л-штейн - 8.28, средний итоговый - 3.67
+Время выполнения 57 проверок - 2.6, 0.046 sec на одну проверку
+Дата -2016-05-16 13:26:07.547126
