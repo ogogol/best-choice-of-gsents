@@ -84,32 +84,63 @@ def isSumma2WordsTheBest(baseWord, word1, word2, n, comSentWds):
     #проверяет не больше ли подходит два слова из предложения вместе на слово из оригинала,
     #чем каждое само по себе
     #возращает лучший вариант списка слов предожении, либо с одним слитым, либо с двумя
-    jaro_2words = levenshtein(baseWord, word1+word2)
-    if jaro_2words < levenshtein(baseWord, word1) and jaro_2words < levenshtein(baseWord, word2):
+    leve_2words = levenshtein(baseWord, word1+word2)
+    if leve_2words < levenshtein(baseWord, word1) and leve_2words < levenshtein(baseWord, word2):
         comSentWds[n] += comSentWds[n+1]
         del comSentWds[n+1]
 
     return comSentWds
 
 
-def joinCorrectSentWordsList(orSentWords, comSentWords):
+def concatWords(orSentWords, comSentWords):
     #проверяет все слова предожения на слияние подряд идущих слов
     #возращает скорретированный список слов предожения
     sentLen = len(comSentWords)
     orSentLen = len(orSentWords)
     count = 1
     for i, val in enumerate(orSentWords):
-        if i < sentLen - count:
+        if i < sentLen - count and (val != comSentWords[i] or val != comSentWords[i+1]):
+            ny_baseWord = nysiis(val).replace("'",'')
+            ny_word1 = nysiis(comSentWords[i]).replace("'",'')
+            ny_word2 = nysiis(comSentWords[i+1]).replace("'",'')
+            if  ny_baseWord < ny_word1 and ny_baseWord < ny_word2:
+                continue
             if i < orSentLen - 1:
                 if not isTheSameWords(i, orSentWords, comSentWords):
-                    comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
+                    comSentWords = isSumma2WordsTheBest(val, comSentWords[i], comSentWords[i+1], i, comSentWords)
                     count += 1
             else:
-                comSentWords = isSumma2WordsTheBest(orSentWords[i], comSentWords[i], comSentWords[i+1], i, comSentWords)
+                comSentWords = isSumma2WordsTheBest(val, comSentWords[i], comSentWords[i+1], i, comSentWords)
                 count += 1
 
     return comSentWords
 
+def splitWords(orSentWords, comSentWords):
+    #проверяет все слова предожения на разделение, если это лучше подходит к словам оригинала
+    #возращает скорретированный список слов предожения
+
+    count = 0
+    for i, val in enumerate(orSentWords):
+        if  i == len(comSentWords) + count: count += 1
+
+        if val != comSentWords[i-count]:
+            if len(comSentWords[i-count]) < 5: continue
+            n = comSentWords[i-count].find(val)
+            if n == -1: continue
+            gSentWds1 = [w for w in comSentWords]
+
+            if n == 0:
+                f_halfW = val
+                s_halfW = comSentWords[i-count][len(val)-1:]
+            else:
+                f_halfW = comSentWords[i-count][:n]
+                s_halfW = comSentWords[i-count][n:]
+
+            comSentWords[i-count] = f_halfW
+            comSentWords.insert(i+1-count, s_halfW)
+            gSentWds1, comSentWords = addWordOrNotChoice(' '.join(orSentWords), gSentWds1, comSentWords)
+
+    return comSentWords
 
 def twoWordsRunning(sentWds):
     #возращает список порядковых номеров двух подряд одинаковых слов
@@ -269,7 +300,9 @@ def wordsList(orSentWds, lineSentWds, sentWds):
             maxSentLen = len(sw)
             maxLongSent = sw
 
-    maxLongSent = joinCorrectSentWordsList(orSentWds, maxLongSent)
+    #maxLongSent = splitWords(orSentWds, maxLongSent)
+    #maxLongSent = concatWords(orSentWds, maxLongSent)
+
     words = []
     for i, w in enumerate(maxLongSent):
         words.append([w,])
@@ -278,7 +311,9 @@ def wordsList(orSentWds, lineSentWds, sentWds):
     for i, sWds in enumerate(sentWds):
         m = min(len(sWds) + 1, maxSentLen)
 
-        sentWds[i] = joinCorrectSentWordsList(orSentWds, sWds)
+        sentWds[i] = splitWords(orSentWds, sWds)
+        sentWds[i] = concatWords(orSentWds, sWds)
+
         if m <= len(orSentWds):
             mS = orSentWds[0:m]
         else:
@@ -380,7 +415,10 @@ def correctImputedSentence(oSent, gSent, wds):
     '''
     originalSentenceWords = oSent.split()
     googleSentenceWords = gSent.split()
-    googleSentenceWords = joinCorrectSentWordsList(originalSentenceWords, googleSentenceWords)
+
+    googleSentenceWords = splitWords(originalSentenceWords, googleSentenceWords)
+    googleSentenceWords = concatWords(originalSentenceWords, googleSentenceWords)
+
     gSent_new = ' '.join(googleSentenceWords)
 
     exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent_new, wds)
@@ -412,8 +450,11 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     correctedSentsWds = correctSents(lineSentWds, sentsWds)
     correctedSents = [' '.join(s) for s in correctedSentsWds]
 
-    words = wordsList(orSentWds, lineSentWds, correctedSentsWds)
     similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
+    if originalSentence == similarSent:
+        return similarSent
+
+    words = wordsList(orSentWds, lineSentWds, correctedSentsWds)
     googleSentenceWords = correctImputedSentence(originalSentence, similarSent, words)
 
     #print("%s, Предложения %s" % (len(sents), sents))
@@ -421,3 +462,17 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     #print("Сравниваемое - %s" % similarSent)
 
     return googleSentenceWords
+'''
+baseWord = 'annihilate'
+word1 = 'i'
+word2 = "late"
+
+leve_2words = levenshtein(baseWord, word1+word2)
+print(leve_2words, levenshtein(baseWord, word1), levenshtein(baseWord, word2))
+print(nysiis(baseWord), nysiis(word1), nysiis(word2).replace("'",''), nysiis(word1+word2).replace("'",''))
+print(baseWord[:baseWord.find(word2)], baseWord[baseWord.find(word2):])
+
+orSentWords = ['am', 'i', 'late', 'ate']
+comSentWords = ['am', 'annihilate']
+print(splitWords(orSentWords, comSentWords))
+'''
