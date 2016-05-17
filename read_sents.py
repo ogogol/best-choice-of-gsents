@@ -72,8 +72,8 @@ def testingAndWriting():
     for i, orS in enumerate(originalSentences):
         gSeBeCh = googleSentensBestChoice(orS, lineSentences[i], sentss[i])
         if rightAnswers[i] == gSeBeCh:
-            sourceLevensh = levenshtein(originalSentences[i], lineSentences[i])
-            resultLevensh = levenshtein(originalSentences[i], gSeBeCh)
+            sourceLevensh = levenshtein(unicode(originalSentences[i]), unicode(lineSentences[i]))
+            resultLevensh = levenshtein(unicode(originalSentences[i]), unicode(gSeBeCh))
             if sourceLevensh > resultLevensh:
                 improvingCount += 1
             sourceLevensh_sum += sourceLevensh
@@ -95,7 +95,7 @@ def testingAndWriting():
             f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1),2),
                                                                         round(resultLevensh_sum/(i+1),2)))
             f.write('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
-                    'Дата -%s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
+                    'Дата -%s, Python 2.7 ' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
 
     f.close()
     return
@@ -136,10 +136,10 @@ def testing(full = True):
             print 'Количество улучшений %s, процент %s' % (improvingCount, int(improvingCount/float(i+1)*100))
             print 'Средний нач. Л-штейн - %s, средний итоговый - %s' % (round(sourceLevensh_sum/float(i+1),2),
                                                                         round(resultLevensh_sum/float(i+1),2))
-            print 'Время выполнения %s проверок - %s, %s sec на одну проверку\nДата - %s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now()))
+            print 'Время выполнения %s проверок - %s, %s sec на одну проверку\nДата - %s' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/float(i+1), 3), str(datetime.now()))
 
     return
 
-testing()
+testingAndWriting()
 
 
