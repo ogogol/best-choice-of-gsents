@@ -142,7 +142,7 @@ def testing(full = True):
     return
 
 
-testing()
+testingAndWriting()
 
 
 

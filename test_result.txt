@@ -43,15 +43,15 @@
 В строке     - my dad came in and went at 1 tomorrow
 Итоговое     - albert came in and went at once to my
 
-10. OK, Нач. Л-штэйн - 3, Итоговый - 3
+10. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - she's much worse now albert said
 В строке     - she's much worse now albertson said
-Итоговое     - she's much worse now albertson said
+Итоговое     - she's much worse now albert said
 
-11. OK, Нач. Л-штэйн - 9, Итоговый - 5
+11. OK, Нач. Л-штэйн - 9, Итоговый - 3
 Оригинальное - albert stopped eating and looked at molly
 В строке     - hobbit stop eating and look at molly
-Итоговое     - albert stop eating and look at molly
+Итоговое     - albert stoped eating and look at molly
 
 12. OK, Нач. Л-штэйн - 6, Итоговый - 3
 Оригинальное - but in any case i'd rather be seasick than dead
@@ -68,10 +68,10 @@
 В строке     - after the coffee and sandwiches inspector walsh cold roger clarkson to the office
 Итоговое     - after the coffee and sandwiches inspector walsh call roger clarkson to the office
 
-15. OK, Нач. Л-штэйн - 10, Итоговый - 6
+15. OK, Нач. Л-штэйн - 10, Итоговый - 8
 Оригинальное - the inspector began at once
 В строке     - 10 step to begin at once
-Итоговое     - the stepto begin at once
+Итоговое     - the step begin at once
 
 16. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - the inspector began at once
@@ -93,10 +93,10 @@
 В строке     - inspector walsh watch charger for a minute
 Итоговое     - inspector walsh watch roger for a minute
 
-20. OK, Нач. Л-штэйн - 7, Итоговый - 4
+20. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
-Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in indians room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in ndians room
 
 21. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - roger's face did not change
@@ -253,10 +253,10 @@
 В строке     - this house is a very big roller set
 Итоговое     - this house is a very big rogers said
 
-52. OK, Нач. Л-штэйн - 3, Итоговый - 1
+52. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - this house is very big roger said
 В строке     - this house is very big brother said
-Итоговое     - this house is very big rogers said
+Итоговое     - this house is very big roger said
 
 53. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - your mother is dead and now you're rich
@@ -278,10 +278,10 @@
 В строке     - but mr briggs wanted have they gotten to you know where he's from
 Итоговое     - but mr briggs wanted half the garden to you know for his from
 
-57. OK, Нач. Л-штэйн - 6, Итоговый - 8
+57. OK, Нач. Л-штэйн - 6, Итоговый - 7
 Оригинальное - inspector walsh moved a pencil on the table
 В строке     - inspector will smoke a pencil on the table
-Итоговое     - inspector world's smoke a pencil on the table
+Итоговое     - inspector ables smoke a pencil on the table
 
 58. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes i did again she said no
@@ -303,15 +303,15 @@
 В строке     - inspector walsh what are the four minute
 Итоговое     - inspector walsh watch order for minute
 
-62. OK, Нач. Л-штэйн - 14, Итоговый - 10
+62. OK, Нач. Л-штэйн - 14, Итоговый - 9
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector wolf watch roger from it for me
-Итоговое     - inspector watch watch roger for me
+Итоговое     - inspector watch watch roger for an me
 
-63. OK, Нач. Л-штэйн - 7, Итоговый - 4
+63. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
-Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in indians room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in ndians room
 
 64. OK, Нач. Л-штэйн - 10, Итоговый - 0
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
@@ -383,8 +383,13 @@
 В строке     - he looked at foster sargent
 Итоговое     - he looked at sergeant soldier
 
+78. OK, Нач. Л-штэйн - 4, Итоговый - 0
+Оригинальное - am i late
+В строке     - annihilate
+Итоговое     - am i late
+
 Неправильные проверки [],  всего - 0
-Количество улучшений 71, процент 92
-Средний нач. Л-штейн - 8.68, средний итоговый - 3.61
-Время выполнения 77 проверок - 3.88, 0.05 sec на одну проверку
-Дата -2016-05-16 21:34:29.427251
+Количество улучшений 73, процент 93
+Средний нач. Л-штейн - 8.62, средний итоговый - 3.46
+Время выполнения 78 проверок - 4.87, 0.062 sec на одну проверку
+Дата -2016-05-17 15:35:06.562138

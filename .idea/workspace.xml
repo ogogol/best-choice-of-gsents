@@ -21,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bestChoice.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bestChoice.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bestChoice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68330467">
+            <state vertical-scroll-proportion="-13.689655">
               <caret line="303" column="5" selection-start-line="303" selection-start-column="5" selection-end-line="303" selection-end-column="5" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="read_sents.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="read_sents.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/read_sents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.72131145">
+              <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -74,8 +74,8 @@
         <option value="$PROJECT_DIR$/read-sents.py" />
         <option value="$PROJECT_DIR$/bestChoice_simple.py" />
         <option value="$PROJECT_DIR$/difference.py" />
-        <option value="$PROJECT_DIR$/read_sents.py" />
         <option value="$PROJECT_DIR$/bestChoice.py" />
+        <option value="$PROJECT_DIR$/read_sents.py" />
       </list>
     </option>
   </component>
@@ -541,14 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_sents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/difference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6551723">
@@ -561,11 +553,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bestChoice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68330467">
+        <state vertical-scroll-proportion="-13.689655">
           <caret line="303" column="5" selection-start-line="303" selection-start-column="5" selection-end-line="303" selection-end-column="5" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_sents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72131145">
+          <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
