@@ -91,9 +91,9 @@ def testingAndWriting():
         if i == len(originalSentences) - 1:
             tt1 = time.time()
             f.write('Неправильные проверки %s,  всего - %s\n' % (wrongCases, len(wrongCases)))
-            f.write('Количество улучшений %s, процент %s\n' % (improvingCount, int(improvingCount/(i+1)*100)))
-            f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1),2),
-                                                                        round(resultLevensh_sum/(i+1),2)))
+            f.write('Количество улучшений %s, процент %s\n' % (improvingCount, int(improvingCount/(i+1.0)*100)))
+            f.write('Средний нач. Л-штейн - %s, средний итоговый - %s\n' % (round(sourceLevensh_sum/(i+1.0),2),
+                                                                        round(resultLevensh_sum/(i+1.0),2)))
             f.write('Время выполнения %s проверок - %s, %s sec на одну проверку\n'
                     'Дата -%s, Python 2.7 ' % (i+1, round(tt1-tt0,2), round((tt1-tt0)/(i+1), 3), str(datetime.now())))
 
@@ -140,6 +140,6 @@ def testing(full = True):
 
     return
 
-testing()
+testingAndWriting()
 
 

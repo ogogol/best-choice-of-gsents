@@ -33,10 +33,10 @@
 В строке     - jackie stewart at the window
 Итоговое     - jackie stood at the window
 
-8. OK, Нач. Л-штэйн - 8, Итоговый - 6
+8. OK, Нач. Л-штэйн - 8, Итоговый - 4
 Оригинальное - what are you talking about
 В строке     - that you are walking about
-Итоговое     - what you are talking about
+Итоговое     - what you are you talking about
 
 9. OK, Нач. Л-штэйн - 15, Итоговый - 3
 Оригинальное - albert came in and went at once to molly
@@ -93,10 +93,10 @@
 В строке     - inspector walsh watch charger for a minute
 Итоговое     - inspector walsh watch roger for a minute
 
-20. OK, Нач. Л-штэйн - 7, Итоговый - 3
+20. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
-Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in ndians room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in dians room
 
 21. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - roger's face did not change
@@ -198,10 +198,10 @@
 В строке     - diane smiled again at sergeant foster and his face swelled weather
 Итоговое     - diane smiled again at sergeant foster and his face went rather
 
-41. OK, Нач. Л-штэйн - 6, Итоговый - 7
+41. OK, Нач. Л-штэйн - 6, Итоговый - 4
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at sergeant foster and his face weather
-Итоговое     - diane smiled again at sergeant foster and his face went
+Итоговое     - diane smiled again at sergeant foster and his face went weather
 
 42. OK, Нач. Л-штэйн - 5, Итоговый - 5
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -253,10 +253,10 @@
 В строке     - this house is a very big roller set
 Итоговое     - this house is a very big rogers said
 
-52. OK, Нач. Л-штэйн - 3, Итоговый - 0
+52. OK, Нач. Л-штэйн - 3, Итоговый - 1
 Оригинальное - this house is very big roger said
 В строке     - this house is very big brother said
-Итоговое     - this house is very big roger said
+Итоговое     - this house is very big rogers said
 
 53. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - your mother is dead and now you're rich
@@ -293,10 +293,10 @@
 В строке     - she left the house and didn't want to sell it
 Итоговое     - she love the house and didn't want to sell it
 
-60. OK, Нач. Л-штэйн - 15, Итоговый - 12
+60. OK, Нач. Л-штэйн - 15, Итоговый - 11
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh watch the road your permit
-Итоговое     - inspector walsh watched are for your for
+Итоговое     - inspector walsh watched ro for your ad
 
 61. OK, Нач. Л-штэйн - 12, Итоговый - 7
 Оригинальное - inspector walsh watched roger for a minute
@@ -308,10 +308,10 @@
 В строке     - inspector wolf watch roger from it for me
 Итоговое     - inspector watch watch roger for an me
 
-63. OK, Нач. Л-штэйн - 7, Итоговый - 3
+63. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
-Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in ndians room
+Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in dians room
 
 64. OK, Нач. Л-штэйн - 10, Итоговый - 0
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
@@ -336,7 +336,7 @@
 68. OK, Нач. Л-штэйн - 11, Итоговый - 4
 Оригинальное - very well i would like to see diane next
 В строке     - very well i would love to see that you're next
-Итоговое     - very well i would like to see that next
+Итоговое     - very well i would like to see the next
 
 69. OK, Нач. Л-штэйн - 11, Итоговый - 5
 Оригинальное - inspector walsh stood up and put his hands in his pockets
@@ -373,23 +373,83 @@
 В строке     - heat look at sergeant forrester
 Итоговое     - he looked at sergeant forrester
 
-76. OK, Нач. Л-штэйн - 28, Итоговый - 17
+76. OK, Нач. Л-штэйн - 28, Итоговый - 7
 Оригинальное - he looked at sergeant foster
 В строке     - sergeant forrester he looked incheon
-Итоговое     - he forrester he looked
+Итоговое     - at looked he sergeant forrester
 
-77. OK, Нач. Л-штэйн - 13, Итоговый - 4
+77. OK, Нач. Л-штэйн - 13, Итоговый - 0
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at foster sargent
-Итоговое     - he looked at sergeant soldier
+Итоговое     - he looked at sergeant foster
 
 78. OK, Нач. Л-штэйн - 4, Итоговый - 0
 Оригинальное - am i late
 В строке     - annihilate
 Итоговое     - am i late
 
+79. OK, Нач. Л-штэйн - 1, Итоговый - 0
+Оригинальное - no you're on time
+В строке     - now you're on time
+Итоговое     - no you're on time
+
+80. OK, Нач. Л-штэйн - 5, Итоговый - 1
+Оригинальное - are your parents at home
+В строке     - are parents at home
+Итоговое     - are our parents at home
+
+81. OK, Нач. Л-штэйн - 7, Итоговый - 4
+Оригинальное - are they new
+В строке     - parthenia
+Итоговое     - harley then new
+
+82. OK, Нач. Л-штэйн - 10, Итоговый - 10
+Оригинальное - are they new
+В строке     - auburn u
+Итоговое     - auburn u
+
+83. OK, Нач. Л-штэйн - 10, Итоговый - 10
+Оригинальное - are they new
+В строке     - holiday inn
+Итоговое     - holiday inn
+
+84. OK, Нач. Л-штэйн - 7, Итоговый - 1
+Оригинальное - are they new
+В строке     - art venue
+Итоговое     - are the new
+
+85. OK, Нач. Л-штэйн - 11, Итоговый - 9
+Оригинальное - are they new
+В строке     - heart radio
+Итоговое     - are
+
+86. OK, Нач. Л-штэйн - 3, Итоговый - 4
+Оригинальное - is she at home
+В строке     - is head home
+Итоговое     - is he home
+
+87. OK, Нач. Л-штэйн - 8, Итоговый - 1
+Оригинальное - are your shoes new
+В строке     - rei shoes near
+Итоговое     - are you shoes new
+
+88. OK, Нач. Л-штэйн - 9, Итоговый - 5
+Оригинальное - are your shoes new
+В строке     - oreo shoes
+Итоговое     - are you shoes
+
+89. OK, Нач. Л-штэйн - 14, Итоговый - 5
+Оригинальное - are your shoes new
+В строке     - i choose you
+Итоговое     - are you shoes
+
+90. OK, Нач. Л-штэйн - 10, Итоговый - 4
+Оригинальное - are your shoes new
+В строке     - oreo shoes in you
+Итоговое     - are you shoes in
+
 Неправильные проверки [],  всего - 0
-Количество улучшений 73, процент 0
-Средний нач. Л-штейн - 8.0, средний итоговый - 3.0
-Время выполнения 78 проверок - 4.38, 0.056 sec на одну проверку
-Дата -2016-05-17 15:56:36.825000, Python 2.7 
+Количество улучшений 83, процент 92
+Средний нач. Л-штейн - 8.52, средний итоговый - 3.37
+Время выполнения 90 проверок - 2.57, 0.029 sec на одну проверку
+Дата -2016-05-18 13:29:41.910000, Python 2.7 
