@@ -7,7 +7,7 @@ from words import *
 
 def delWordsRunning(oneOrCouple, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
-    #разбита на две функции эта и del2WordsRunning
+    #разбита на две функции эта и wordsRunning
     if len(orSentWdsRunning) < len(gSentWdsRunning):
         gSentWds1 = [w for w in googleSentenceWords]
         count = 0
@@ -20,7 +20,8 @@ def delWordsRunning(oneOrCouple, orSentWdsRunning, originalSentenceWords, gSentW
 
     return googleSentenceWords
 
-def del2WordsRunning(originalSentenceWords, googleSentenceWords):
+
+def wordsRunning(originalSentenceWords, googleSentenceWords):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
     #разбита на две функции эта и delWordsRunning
     gSentWdsRunning = [i for i in twoWordsRunning(googleSentenceWords)]
@@ -80,7 +81,7 @@ def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords
             wdLst = suitableWordsList(value[1], value[0], wds, gSentLen)
 
         w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
-        #print(value[1], originalSentenceWords[value[2]], value[0], wdLst, w)
+
         if len(w) > 0:
             if value[1] < len(googleSentenceWords):
                 googleSentenceWords[value[1]] = w[0]
@@ -107,7 +108,7 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
         wList = suitableWordsList(value[1], value[0], wds, gSentLen, False)
 
         w = get_close_matches(value[0], wList, 1, cutoff)
-        #print(value[1], originalSentenceWords[value[2]], value[0], wList, w)
+
         if len(w) > 0:
             if value[1] < len(googleSentenceWords):
                 del gSentWds1[value[1]]
@@ -118,7 +119,6 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
             else:
                 gSentWds1.append(w[0])
                 gSentWds1, googleSentenceWords = addWordOrNotChoice(orSent, gSentWds1, googleSentenceWords)
-
 
     return googleSentenceWords
 
@@ -142,10 +142,15 @@ def correctImputedSentence(oSent, gSent, wds):
 
     exWds, misWds, wrWds, rWds = getSentsDifference(oSent, gSent_new, wds)
 
-    #print(misWds, wrWds)
     googleSentenceWords = correctWrongWords(wrWds, wds, originalSentenceWords, googleSentenceWords)
+    if oSent == ' '.join(googleSentenceWords):
+        return ' '.join(googleSentenceWords)
     googleSentenceWords = correctMissedWords(misWds, wds, originalSentenceWords, googleSentenceWords)
-    googleSentenceWords = del2WordsRunning(originalSentenceWords, googleSentenceWords)
+
+    if oSent == ' '.join(googleSentenceWords):
+        return ' '.join(googleSentenceWords)
+
+    googleSentenceWords = wordsRunning(originalSentenceWords, googleSentenceWords)
 
     return ' '.join(googleSentenceWords)
 
@@ -153,9 +158,12 @@ def correctImputedSentence(oSent, gSent, wds):
 def googleSentensBestChoice(originalSentence, lineSentence, sents):
     #главная функция по коррекции наговоренного предложения в строке ввода к масимальной похожести на оригинальное,
     #на основе разпознанных вариантов от гугла
+
+    #-------------------------??? надо будет убрать ???
     originalSentence = cleaningText(originalSentence)
     lineSentence = cleaningText(lineSentence)
     sents = cleaningText(sents)
+    #-------------------------
 
     #------------------------- надо будет убрать
     if originalSentence == lineSentence:

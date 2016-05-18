@@ -448,8 +448,58 @@
 В строке     - oreo shoes in you
 Итоговое     - are you shoes in
 
+91. OK, Нач. Л-штэйн - 6, Итоговый - 6
+Оригинальное - are your shoes new
+В строке     - are your shoes and you
+Итоговое     - are your shoes and you
+
+92. OK, Нач. Л-штэйн - 5, Итоговый - 1
+Оригинальное - are your shoes new
+В строке     - oreo shoes new
+Итоговое     - are you shoes new
+
+93. OK, Нач. Л-штэйн - 5, Итоговый - 1
+Оригинальное - are your shoes new
+В строке     - oreo shoes new
+Итоговое     - are you shoes new
+
+94. OK, Нач. Л-штэйн - 5, Итоговый - 0
+Оригинальное - are your shoes new
+В строке     - oreo shoes new
+Итоговое     - are your shoes new
+
+95. OK, Нач. Л-штэйн - 7, Итоговый - 4
+Оригинальное - it's red
+В строке     - pizza hut
+Итоговое     - it's rather
+
+96. OK, Нач. Л-штэйн - 8, Итоговый - 10
+Оригинальное - he's twenty four
+В строке     - history for
+Итоговое     - his for
+
+97. OK, Нач. Л-штэйн - 5, Итоговый - 1
+Оригинальное - how are your parents
+В строке     - how are parents
+Итоговое     - how are our parents
+
+98. OK, Нач. Л-штэйн - 3, Итоговый - 0
+Оригинальное - who is that man
+В строке     - who is batman
+Итоговое     - who is that man
+
+99. OK, Нач. Л-штэйн - 7, Итоговый - 7
+Оригинальное - no i'm not but i'm thirty
+В строке     - no i'm not but i'm just too
+Итоговое     - no i'm not but i'm just too
+
+100. OK, Нач. Л-штэйн - 3, Итоговый - 0
+Оригинальное - can you phone again later
+В строке     - can a phone again later
+Итоговое     - can you phone again later
+
 Неправильные проверки [],  всего - 0
-Количество улучшений 83, процент 92
-Средний нач. Л-штейн - 8.52, средний итоговый - 3.37
-Время выполнения 90 проверок - 2.57, 0.029 sec на одну проверку
-Дата -2016-05-18 13:29:41.910000, Python 2.7 
+Количество улучшений 90, процент 90
+Средний нач. Л-штейн - 8.21, средний итоговый - 3.33
+Время выполнения 100 проверок - 2.56, 0.026 sec на одну проверку
+Дата -2016-05-18 15:03:45.849000, Python 2.7 

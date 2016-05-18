@@ -359,3 +359,43 @@ Are your shoes new
 Oreo shoes in you
 ["I", "are", "are you", "are, you sure", "are you, sure", "Oreo shoes", "Oreo shoes in", "Oreo shoes and you", "Oreo shoes, and you", "Oreo shoes in you"]
 are you shoes in
+Are your shoes new
+are your shoes and you
+["I", "are", "are you", "are you sure", "are, you sure", "Oreo shoes", "are your shoes and you", "are your shoes and you"]
+are your shoes and you
+Are your shoes new
+Oreo shoes new
+["I", "are", "are you", "are you sure", "are, you sure", "Oreo shoes", "are you sure you", "Oreo shoes new"]
+are you shoes new
+Are your shoes new
+Oreo shoes new
+["are", "are you", "partners", "are you sure", "heart issues", "are you sure you", "Oreo shoes new"]
+Are you shoes new
+Are your shoes new
+Oreo shoes new
+["I", "are", "are you", "are, you", "are, you sure", "are you, sure", "are, your shoes", "are, you sure you", "Oreo shoes new"]
+Are your shoes new
+It's red
+Pizza Hut
+["it's", "it's a", "it's all", "Pizza Hut", "it's rather", "Pizza Hut"]
+it's rather
+He's twenty four
+history for
+["his", "mr.", "history", "history of", "Christopher", "history for", "history for"]
+his for
+how are your parents
+how are parents
+["how", "how", "how, I", "how, are", "how, I have to", "how, is there", "how, is there a", "how, is there an", "how, our parents", "how are parents"]
+how are our parents
+who is that man
+who is Batman
+["who", "who is", "Who is the", "who is that", "who, is that my", "who, is Batman", "who is, Batman", "who is Batman"]
+who is that man
+no I'm not but I'm thirty
+no I'm not but I'm just too
+["no", "no I", "no I'm", "no I'm not", "no, I'm not", "no, I'm not but", "no, I'm not but I", "no, I'm not but I'm", "no I'm, not but I'm", "no I'm not, but I'm", "no I'm not but, I'm", "no I'm not but, I'm just", "no I'm not but I'm, just", "no I'm not but I'm just too"]
+no i'm not but i'm just too
+can you phone again later
+can a phone again later
+["can", "can I", "can you", "can I buy", "can a phone", "can I find a", "can, I find a", "California", "can a phone again", "can a phone again they", "can a phone again late", "can a phone again later", "can a phone again, later", "can a phone again later"]
+can you phone again later
