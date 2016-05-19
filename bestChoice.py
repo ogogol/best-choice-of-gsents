@@ -25,12 +25,12 @@ def wordsRunning(originalSentenceWords, googleSentenceWords):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
     #разбита на две функции эта и delWordsRunning
     gSentWdsRunning = [i for i in twoWordsRunning(googleSentenceWords)]
-    if len(gSentWdsRunning) > 0:
+    if gSentWdsRunning:
         orSentWdsRunning = [i for i in twoWordsRunning(originalSentenceWords)]
         googleSentenceWords = delWordsRunning(1, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords)
 
     gSentWdsRunning = [i for i in twoCoupleWordsRunning(googleSentenceWords)]
-    if len(gSentWdsRunning) > 0:
+    if gSentWdsRunning:
         orSentWdsRunning = [i for i in twoCoupleWordsRunning(originalSentenceWords)]
         googleSentenceWords = delWordsRunning(2, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords)
 
@@ -82,7 +82,7 @@ def correctWrongWords(wordsDict, wds, originalSentenceWords, googleSentenceWords
 
         w = get_close_matches(originalSentenceWords[value[2]], wdLst, 1, cutoff)
 
-        if len(w) > 0:
+        if w:
             if value[1] < len(googleSentenceWords):
                 googleSentenceWords[value[1]] = w[0]
             else:
@@ -109,7 +109,7 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
 
         w = get_close_matches(value[0], wList, 1, cutoff)
 
-        if len(w) > 0:
+        if w:
             if value[1] < len(googleSentenceWords):
                 del gSentWds1[value[1]]
                 gSentWds1.insert(value[1], w[0])

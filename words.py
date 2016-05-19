@@ -192,7 +192,7 @@ def suitableWordsList (n, wd, wds, sentLen, about = True):
     for i in range(start, end):
         if about == False:
             approx_w = get_close_matches(wd, wds[i], 1, 0.6)
-            if len(approx_w) > 0:
+            if approx_w:
                 suitedWords.append(approx_w[0])
         else:
             for w in wds[i]:
