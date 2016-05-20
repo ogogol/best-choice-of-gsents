@@ -5,6 +5,8 @@ from jellyfish import levenshtein_distance as levenshtein
 from difflib import get_close_matches
 from diff_match_patch import diff_match_patch
 from difference import getSentsDifference
+#-------------------------Активизировать (убрать решетку)
+#from project.main_apps.audio.text.funcs import prepare_transcriptions
 
 #------------------------------Нужно убрать-------------------------------------------------------
 # нужно для тестирования
@@ -47,12 +49,13 @@ def make_trascriptions_dict(originalSentences, sentss):
 # установить http://espeak.sourceforge.net/download.html
 # и прописать путь
 # в случае если нет в базе транскрипции определяет ее
+# перенести в  project.main_apps.audio.text.funcs в функцию prepare_transcriptions
 def ipa_trahcsription(word):
     transcription = check_output(["C:\Program Files\eSpeak\command_line\espeak.exe", "-q", "--ipa", '-v', 'en', word]).decode('utf-8')
+    #------------------------УБРАТЬ
     transcription = transcription.replace(u"ˌ", "")
     transcription = transcription.replace(u"ˈ", "")
 
-    #------------------------УБРАТЬ
     transcription = transcription.replace(u"ð", "t")# нужно для тестирования
     transcription = transcription.replace("d", "t")# нужно для тестирования
     #----------------------------------------------
@@ -61,10 +64,14 @@ def ipa_trahcsription(word):
 #-------------------------------------------------------------------------------------------------------
 
 
-def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccuracy_coefficient = 1.5):
+#---------------------------------------------- из переменных transriptions_dict УБРАТЬ
+def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccuracy_coefficient = 1.5, lang = 'en'):
     result = []
     unique_or_words = get_unique_words(original_words)
-    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict)
+    #-----------------------------Убрать коммент
+    #transriptions_dict = prepare_transcriptions(user_words+original_words, lang)
+    #-----------------------------------------------
+    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words)
 
     if original_words == user_words:
         return ' '.join(user_words), result
@@ -76,7 +83,7 @@ def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccur
     return ' '.join(user_words), result
 
 
-def get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict,
+def get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict = {},
                          phone = False, inaccuracy_coefficient = 1.5):
 
     exWds, misWds, wrWds, rWds = getSentsDifference(' '.join(original_words), ' '. join(user_words), user_words)

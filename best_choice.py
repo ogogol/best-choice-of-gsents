@@ -1,9 +1,45 @@
 # -*- coding: utf-8 -*-
+#------------------------- надо будет убрать
 from cleaningText import cleaningText
+#-------------------------
 from difference import *
 from words import *
 
 
+def googleSentensBestChoice(originalSentence, lineSentence, sents):
+    #главная функция по коррекции наговоренного предложения в строке ввода к масимальной похожести на оригинальное,
+    #на основе разпознанных вариантов от гугла
+
+    #------------------------- надо будет убрать patternAnd = re.compile(r'&')   l = patternAnd.sub(' and ', l)
+    originalSentence = cleaningText(originalSentence)
+    lineSentence = cleaningText(lineSentence)
+    sents = cleaningText(sents)
+    #------------------------- patternAnd = re.compile(r'&')   l = patternAnd.sub(' and ', l)
+
+    #------------------------- надо будет убрать
+    if originalSentence == lineSentence:
+        return lineSentence
+    #-------------------------
+
+    sentsWds = makeSentsWdsList(sents)
+    orSentWds = originalSentence.split()
+    lineSentWds = lineSentence.split()
+
+    correctedSentsWds = correctSents(lineSentWds, sentsWds)
+    correctedSents = [' '.join(s) for s in correctedSentsWds]
+
+    similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
+    if originalSentence == similarSent:
+        return similarSent
+
+    words = makeWordsList(orSentWds, lineSentWds, correctedSentsWds)
+    googleSentence = correctImputedSentence(originalSentence, similarSent, words)
+
+    #print("%s, Предложения %s" % (len(sents), sents))
+    #print("Words %s" % words)
+    #print("Сравниваемое - %s" % similarSent)
+
+    return googleSentence
 
 def delWordsRunning(oneOrCouple, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
@@ -153,39 +189,3 @@ def correctImputedSentence(oSent, gSent, wds):
     googleSentenceWords = wordsRunning(originalSentenceWords, googleSentenceWords)
 
     return ' '.join(googleSentenceWords)
-
-
-def googleSentensBestChoice(originalSentence, lineSentence, sents):
-    #главная функция по коррекции наговоренного предложения в строке ввода к масимальной похожести на оригинальное,
-    #на основе разпознанных вариантов от гугла
-
-    #-------------------------??? надо будет убрать ???
-    originalSentence = cleaningText(originalSentence)
-    lineSentence = cleaningText(lineSentence)
-    sents = cleaningText(sents)
-    #-------------------------
-
-    #------------------------- надо будет убрать
-    if originalSentence == lineSentence:
-        return lineSentence
-    #-------------------------
-
-    sentsWds = makeSentsWdsList(sents)
-    orSentWds = originalSentence.split()
-    lineSentWds = lineSentence.split()
-
-    correctedSentsWds = correctSents(lineSentWds, sentsWds)
-    correctedSents = [' '.join(s) for s in correctedSentsWds]
-
-    similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
-    if originalSentence == similarSent:
-        return similarSent
-
-    words = makeWordsList(orSentWds, lineSentWds, correctedSentsWds)
-    googleSentence = correctImputedSentence(originalSentence, similarSent, words)
-
-    #print("%s, Предложения %s" % (len(sents), sents))
-    #print("Words %s" % words)
-    #print("Сравниваемое - %s" % similarSent)
-
-    return googleSentence
