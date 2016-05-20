@@ -42,7 +42,7 @@ she's much worse now albert said
 Albert stopped eating and looked at Molly
 Hobbit stop eating and look at Molly
 ["all the", "Albert", "Hobbit", "Hobbit Stow", "Hobbit stop", "Hobbit stop", "Hobbit stop it", "Hobbit stop Ed", "Hobbit stop eating", "Hobbit stop eating", "Hobbit stop eating and", "Hobbit stop eating an aloe", "Hobbit stop eating antelope", "Hobbit stop eating and look at", "Hobbit stop eating and look at the", "Hobbit stop eating and look at my", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Miley", "Hobbit stop eating and look at Molly"]
-albert stoped eating and look at molly
+albert stop eating and look at molly
 but in any case I'd rather be seasick than dead
 but in any case I'd rather be sick than that
 ["my", "mud", "Matty", "Martin", "McKinney", "not in any", "but in any case", "but in any case", "but in any case I", "but in any case I'd", "but in any case I do", "but in any case I draw", "but in any case I'd rather", "but in any case I'd rather be", "but in any case I'd rather be", "but in any case I'd rather be here", "but in any case I'd rather be to see", "but in any case I'd rather be to see", "but in any case I'd rather be seasick", "but in any case I'd rather be seasick the", "but in any case I'd rather be sick than", "but in any case I'd rather be sick than the", "but in any case I'd rather be sick than that", "but in any case I'd rather be sick than that"]
@@ -58,7 +58,7 @@ after the coffee and sandwiches inspector Walsh call Roger Clarkson to the offic
 the inspector began at once
 10 step to begin at once
 ["the", "Dean", "beans", "beastie", "then step", "being stepped", "then stick to", "being stepped up", "then step to be", "Dean Step2 big", "being stepped up again", "then step to begin a", "being stepped up again at", "being stepped up again at 1", "then step to begin at once", "10 step to begin at once"]
-the step begin at once
+the stepto begin at once
 the inspector began at once
 the inspector again at once
 ["the", "Vince", "things to", "Vince Gill", "the inspector", "the inspector the", "the inspector did", "being stupid again", "being stupid again at", "being stupid again at 1", "being stupid again, at 1", "being stupid again, at once", "being stupid again at, once", "the inspector again at once"]

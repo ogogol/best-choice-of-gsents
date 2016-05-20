@@ -108,7 +108,7 @@ def concatWords(orSentWords, comSentWords):
             ny_baseWord = nysiis(unicode(orSentWords[i])).replace("'",'')
             ny_word1 = nysiis(unicode(comSentWords[i])).replace("'",'')
             ny_word2 = nysiis(unicode(comSentWords[i+1])).replace("'",'')
-            if  ny_baseWord < ny_word1 and ny_baseWord < ny_word2:
+            if  len(ny_baseWord) < len(ny_word1) and len(ny_baseWord) < len(ny_word2):
                 continue
             if i < orSentLen - 1:
                 if not isTheSameWords(i, orSentWords, comSentWords):
@@ -241,8 +241,7 @@ def makeWordsList(orSentWds, lineSentWds, sentWds):
         if len(sw) >= maxSentLen:
             maxSentLen = len(sw)
             maxLongSent = sw
-    #maxLongSent = splitWords(orSentWds, maxLongSent)
-    #maxLongSent = concatWords(orSentWds, maxLongSent)
+
     words = []
     for i, w in enumerate(maxLongSent):
         words.append([w,])

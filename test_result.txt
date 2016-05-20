@@ -3,503 +3,906 @@
 В строке     - peter hopes came here this morning
 Итоговое     - peter hobbs came here this morning
 
+После автозамены    - peter hobbs came here this morning
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 2. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - peter hobbs came here this morning
 В строке     - peter hobbs came here this morn
 Итоговое     - peter hobbs came here this morning
+
+После автозамены    - peter hobbs came here this morning
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 3. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - peter hobbs came here this morning
 В строке     - peter hobbs came here this morn
 Итоговое     - peter hobbs came here this morning
 
+После автозамены    - peter hobbs came here this morning
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 4. OK, Нач. Л-штэйн - 2, Итоговый - 0
 Оригинальное - he is very angry with you about that letter
 В строке     - he is very angry with you about that later
 Итоговое     - he is very angry with you about that letter
+
+После автозамены    - he is very angry with you about that letter
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 5. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - you never talk to me
 В строке     - you never talk tumi
 Итоговое     - you never talk to me
 
+После автозамены    - you never talk to me
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 6. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - you never talk to me
 В строке     - you never talk tumi
 Итоговое     - you never talk to me
+
+После автозамены    - you never talk to me
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 7. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - jackie stood at the window
 В строке     - jackie stewart at the window
 Итоговое     - jackie stood at the window
 
+После автозамены    - jackie stood at the window
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 8. OK, Нач. Л-штэйн - 8, Итоговый - 4
 Оригинальное - what are you talking about
 В строке     - that you are walking about
 Итоговое     - what you are you talking about
+
+После автозамены    - what you are you talking about
+Итоговый Левенштэйн - 4
+Клиенту - []
 
 9. OK, Нач. Л-штэйн - 15, Итоговый - 3
 Оригинальное - albert came in and went at once to molly
 В строке     - my dad came in and went at 1 tomorrow
 Итоговое     - albert came in and went at once to my
 
+После автозамены    - albert came in and went at once to my
+Итоговый Левенштэйн - 3
+Клиенту - [{'newWord': 'my', 'word': 'my', 'order': 8, 'words': ['in', 'at', 'and', 'molly']}]
+
 10. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - she's much worse now albert said
 В строке     - she's much worse now albertson said
 Итоговое     - she's much worse now albert said
 
-11. OK, Нач. Л-штэйн - 9, Итоговый - 3
+После автозамены    - she's much worse now albert said
+Итоговый Левенштэйн - 0
+Клиенту - []
+
+11. OK, Нач. Л-штэйн - 9, Итоговый - 5
 Оригинальное - albert stopped eating and looked at molly
 В строке     - hobbit stop eating and look at molly
-Итоговое     - albert stoped eating and look at molly
+Итоговое     - albert stop eating and look at molly
+
+После автозамены    - albert stopped eating and looked at molly
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'stopped', 'word': 'stop', 'order': 1, 'words': ['stopped']}, {'newWord': 'looked', 'word': 'look', 'order': 4, 'words': ['looked']}]
 
 12. OK, Нач. Л-штэйн - 6, Итоговый - 3
 Оригинальное - but in any case i'd rather be seasick than dead
 В строке     - but in any case i'd rather be sick than that
 Итоговое     - but in any case i'd rather be seasick than that
 
+После автозамены    - but in any case i'd rather be seasick than dead
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'that', 'word': 'that', 'order': 9, 'words': ['than']}, {'newWord': 'dead', 'word': 'that', 'order': 9, 'words': ['dead', "i'd", 'than', 'but']}]
+
 13. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - we were sitting in my room and we were smoking and talking about how bad we were ill i mean of course
 В строке     - we were sitting in my room and we were smoking and talking about how bad we were no i mean of course
 Итоговое     - we were sitting in my room and we were smoking and talking about how bad we were i i mean of course
+
+После автозамены    - we were sitting in my room and we were smoking and talking about how bad we were i i mean of course
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'i', 'word': 'i', 'order': 17, 'words': ['i', 'in']}, {'newWord': 'i', 'word': 'i', 'order': 17, 'words': ['i', 'my', 'in', 'ill']}]
 
 14. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - after the coffee and sandwiches inspector walsh called roger clarkson to the office
 В строке     - after the coffee and sandwiches inspector walsh cold roger clarkson to the office
 Итоговое     - after the coffee and sandwiches inspector walsh call roger clarkson to the office
 
-15. OK, Нач. Л-штэйн - 10, Итоговый - 8
+После автозамены    - after the coffee and sandwiches inspector walsh called roger clarkson to the office
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'called', 'word': 'call', 'order': 7, 'words': ['called']}]
+
+15. OK, Нач. Л-штэйн - 10, Итоговый - 6
 Оригинальное - the inspector began at once
 В строке     - 10 step to begin at once
-Итоговое     - the step begin at once
+Итоговое     - the stepto begin at once
+
+После автозамены    - the inspector began at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}, {'newWord': 'inspector', 'word': 'stepto', 'order': 1, 'words': ['inspector', 'the']}]
 
 16. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - the inspector began at once
 В строке     - the inspector again at once
 Итоговое     - the inspector again at once
 
+После автозамены    - the inspector began at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'began', 'word': 'again', 'order': 2, 'words': ['began']}]
+
 17. OK, Нач. Л-штэйн - 12, Итоговый - 8
 Оригинальное - but mr briggs wanted half the garden too you know for his farm
 В строке     - but mr briggs wanted have they gotten to you know for his phone
 Итоговое     - but mr briggs wanted have the garden to you know for his phone
+
+После автозамены    - but mr briggs wanted half the garden too you know for his know
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'half', 'word': 'have', 'order': 4, 'words': ['half']}, {'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'know', 'word': 'phone', 'order': 12, 'words': ['know', 'the', 'garden', 'for']}]
 
 18. OK, Нач. Л-штэйн - 13, Итоговый - 6
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh who watched her for me
 Итоговое     - inspector walsh watched roger for me
 
+После автозамены    - inspector walsh watched roger for minute
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'minute', 'word': 'me', 'order': 5, 'words': ['for', 'minute', 'a']}]
+
 19. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh watch charger for a minute
 Итоговое     - inspector walsh watch roger for a minute
+
+После автозамены    - inspector walsh watched roger for a minute
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh']}]
 
 20. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
 Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in dians room
 
+После автозамены    - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "diane's", 'word': 'dians', 'order': 13, 'words': ["diane's"]}]
+
 21. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - roger's face did not change
 В строке     - joseph asa did not change
 Итоговое     - rogers face did not change
+
+После автозамены    - roger's face did not change
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'order': 0, 'words': ["roger's"]}]
 
 22. OK, Нач. Л-штэйн - 5, Итоговый - 4
 Оригинальное - diane did not kill my mother i know that 
 В строке     - leon did not kill my mother i know that
 Итоговое     - indiana did not kill my mother i know that
 
+После автозамены    - diane did not kill my mother i know that
+Итоговый Левенштэйн - 1
+Клиенту - [{'newWord': 'diane', 'word': 'indiana', 'order': 0, 'words': ['diane']}]
+
 23. OK, Нач. Л-штэйн - 11, Итоговый - 0
 Оригинальное - why was roger clarkson afraid
 В строке     - what was project clocks and afraid
 Итоговое     - why was roger clarkson afraid
+
+После автозамены    - why was roger clarkson afraid
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 24. OK, Нач. Л-штэйн - 6, Итоговый - 3
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at sutton foster
 Итоговое     - he looked at surgeon foster
 
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
+
 25. OK, Нач. Л-штэйн - 15, Итоговый - 3
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at 7:40
 Итоговое     - he looked at surgeon foster
+
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
 
 26. OK, Нач. Л-штэйн - 7, Итоговый - 5
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at the sergeant forrester
 Итоговое     - he looked at a sergeant forrester
 
+После автозамены    - he looked at a sergeant foster
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 5, 'words': ['foster']}]
+
 27. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - sergeant foster wrote it down yes inspector
 В строке     - sergeant preston wrote it down yes inspector
 Итоговое     - sergeant foster wrote it down yes inspector
+
+После автозамены    - sergeant foster wrote it down yes inspector
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 28. OK, Нач. Л-штэйн - 8, Итоговый - 6
 Оригинальное - a good day for tennis sergeant
 В строке     - a good day for tennis children
 Итоговое     - a good day for tennis sodon't
 
+После автозамены    - a good day for tennis sergeant
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': "sodon't", 'order': 5, 'words': ['sergeant', 'good']}]
+
 29. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - a good day for tennis sergeant
 В строке     - a good day for dennis sargent
 Итоговое     - a good day for tennis sargent
+
+После автозамены    - a good day for tennis sergeant
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'order': 5, 'words': ['sergeant']}]
 
 30. OK, Нач. Л-штэйн - 12, Итоговый - 5
 Оригинальное - sergeant foster laughed
 В строке     - sutton foster loft
 Итоговое     - sergeant foster law
 
+После автозамены    - sergeant foster laughed
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'laughed', 'word': 'law', 'order': 2, 'words': ['laughed']}]
+
 31. OK, Нач. Л-штэйн - 16, Итоговый - 5
 Оригинальное - she looked at sergeant foster and smiled
 В строке     - chick look at the surgeon foster and smith
 Итоговое     - she looked at the urgent foster and smiled
+
+После автозамены    - she looked at she urgent foster and smiled
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'she', 'word': 'the', 'order': 3, 'words': ['she']}, {'newWord': 'urgent', 'word': 'urgent', 'order': 4, 'words': ['sergeant']}, {'newWord': 'she', 'word': 'she', 'order': 0, 'words': ['she', 'at', 'and']}, {'newWord': 'urgent', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'and']}]
 
 32. OK, Нач. Л-штэйн - 4, Итоговый - 2
 Оригинальное - sergeant foster's face went red
 В строке     - sergeant foster's face when to read
 Итоговое     - sergeant foster's face when red
 
+После автозамены    - sergeant foster's face went red
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'went', 'word': 'when', 'order': 3, 'words': ['went']}]
+
 33. OK, Нач. Л-штэйн - 18, Итоговый - 14
 Оригинальное - sergeant foster's face went red
 В строке     - children foster freeze ventura
 Итоговое     - surgeon foster freeze when
+
+После автозамены    - sergeant foster's face went
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': "foster's", 'word': 'foster', 'order': 1, 'words': ["foster's"]}, {'newWord': 'went', 'word': 'when', 'order': 3, 'words': ['went']}, {'newWord': 'sergeant', 'word': 'surgeon', 'order': 0, 'words': ['sergeant']}, {'newWord': 'face', 'word': 'freeze', 'order': 2, 'words': ["foster's", 'face']}]
 
 34. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - sergeant foster's face went red
 В строке     - sergeant forrester face went red
 Итоговое     - sergeant foster face went red
 
+После автозамены    - sergeant foster's face went red
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "foster's", 'word': 'foster', 'order': 1, 'words': ["foster's"]}]
+
 35. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - yes a fast and exciting player is sergeant foster
 В строке     - yes a fast and exciting player insurgent poster
 Итоговое     - yes a fast and exciting player is sergeant poster
+
+После автозамены    - yes a fast and exciting player is sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'foster', 'word': 'poster', 'order': 8, 'words': ['foster', 'player']}]
 
 36. OK, Нач. Л-штэйн - 9, Итоговый - 6
 Оригинальное - yes a fast and exciting player is sergeant foster
 В строке     - yes have fun and exciting player is sergeant forrester
 Итоговое     - yes at first and exciting player is sergeant forrester
 
+После автозамены    - yes a fast and exciting player is sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 8, 'words': ['foster']}, {'newWord': 'a', 'word': 'at', 'order': 1, 'words': ['fast', 'a']}, {'newWord': 'fast', 'word': 'first', 'order': 2, 'words': ['fast']}]
+
 37. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - yes a fast and exciting player is sergeant foster
 В строке     - is fast and exciting player is sergeant forrester
 Итоговое     - yes at fast and exciting player is sergeant forrester
+
+После автозамены    - yes a fast and exciting player is sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 8, 'words': ['foster']}, {'newWord': 'a', 'word': 'at', 'order': 1, 'words': ['fast', 'a']}]
 
 38. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes a fast and exciting player is sergeant foster
 В строке     - yes a fast and exciting player is sutton foster
 Итоговое     - yes a fast and exciting player is sergeant foster
 
+После автозамены    - yes a fast and exciting player is sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 39. OK, Нач. Л-штэйн - 15, Итоговый - 9
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at seven and his face went weather
 Итоговое     - diane smiled again at urgent four and his face went rather
+
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'redder', 'word': 'rather', 'order': 10, 'words': ['redder', 'foster']}, {'newWord': 'sergeant', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'went']}, {'newWord': 'foster', 'word': 'four', 'order': 5, 'words': ['foster']}]
 
 40. OK, Нач. Л-штэйн - 9, Итоговый - 3
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at sergeant foster and his face swelled weather
 Итоговое     - diane smiled again at sergeant foster and his face went rather
 
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'redder', 'word': 'rather', 'order': 10, 'words': ['redder', 'foster']}]
+
 41. OK, Нач. Л-штэйн - 6, Итоговый - 4
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at sergeant foster and his face weather
 Итоговое     - diane smiled again at sergeant foster and his face went weather
+
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'redder', 'word': 'weather', 'order': 10, 'words': ['redder', 'went', 'foster', 'at']}]
 
 42. OK, Нач. Л-штэйн - 5, Итоговый - 5
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at sergeant foster and his face went further
 Итоговое     - diane smiled again at sergeant foster and his face went further
 
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'foster', 'word': 'further', 'order': 10, 'words': ['foster']}, {'newWord': 'redder', 'word': 'foster', 'order': 10, 'words': ['foster', 'redder', 'face']}]
+
 43. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - diane smiled again at sergeant foster and his face went rather
 Итоговое     - diane smiled again at sergeant foster and his face went red
+
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'redder', 'word': 'red', 'order': 10, 'words': ['redder']}]
 
 44. OK, Нач. Л-штэйн - 26, Итоговый - 8
 Оригинальное - diane smiled again at sergeant foster and his face went redder
 В строке     - they all smiled again it's urgent and his face went over there
 Итоговое     - diane smiled again at urgent forester and his face went read
 
+После автозамены    - diane smiled again at sergeant foster and his face went redder
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'went']}, {'newWord': 'foster', 'word': 'forester', 'order': 5, 'words': ['foster', 'redder']}, {'newWord': 'redder', 'word': 'read', 'order': 10, 'words': ['redder', 'at', 'and', 'went']}]
+
 45. OK, Нач. Л-штэйн - 9, Итоговый - 1
 Оригинальное - the inspector began at once
 В строке     - ten step to begin at once
 Итоговое     - the inspector begin at once
+
+После автозамены    - the inspector began at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
 
 46. OK, Нач. Л-штэйн - 10, Итоговый - 1
 Оригинальное - the inspector began at once
 В строке     - things that begin at once
 Итоговое     - the inspector begin at once
 
+После автозамены    - the inspector began at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
+
 47. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - the inspector began at once
 В строке     - inspector begin at once
 Итоговое     - the inspector begin at once
+
+После автозамены    - the inspector began at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
 
 48. OK, Нач. Л-штэйн - 8, Итоговый - 2
 Оригинальное - the inspector begin at once
 В строке     - teamspeak to begin at once
 Итоговое     - the inspect begin at once
 
+После автозамены    - the inspector begin at once
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'inspector', 'word': 'inspect', 'order': 1, 'words': ['inspector']}]
+
 49. OK, Нач. Л-штэйн - 13, Итоговый - 0
 Оригинальное - the inspector begin at once
 В строке     - things picked up again at once
 Итоговое     - the inspector begin at once
+
+После автозамены    - the inspector begin at once
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 50. OK, Нач. Л-штэйн - 8, Итоговый - 0
 Оригинальное - the inspector begin at once
 В строке     - then stick to begin at once
 Итоговое     - the inspector begin at once
 
+После автозамены    - the inspector begin at once
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 51. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - this house is very big roger said
 В строке     - this house is a very big roller set
 Итоговое     - this house is a very big rogers said
+
+После автозамены    - this house is a very big roger said
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'order': 6, 'words': ['roger']}]
 
 52. OK, Нач. Л-штэйн - 3, Итоговый - 1
 Оригинальное - this house is very big roger said
 В строке     - this house is very big brother said
 Итоговое     - this house is very big rogers said
 
+После автозамены    - this house is very big roger said
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'order': 5, 'words': ['roger']}]
+
 53. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - your mother is dead and now you're rich
 В строке     - your mother is dead and now your age
 Итоговое     - your mother is dead and now you're rich
+
+После автозамены    - your mother is dead and now you're rich
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 54. OK, Нач. Л-штэйн - 3, Итоговый - 1
 Оригинальное - roger's face was suddenly afraid
 В строке     - rogers face is suddenly afraid
 Итоговое     - rogers face was suddenly afraid
 
+После автозамены    - roger's face was suddenly afraid
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'order': 0, 'words': ["roger's"]}]
+
 55. OK, Нач. Л-штэйн - 17, Итоговый - 8
 Оригинальное - but mr briggs i wanted half the garden too you know for his farm
 В строке     - but mr briggs wanted to have the garden to you know where she's from
 Итоговое     - but mr briggs wanted have the garden to you know for is from
+
+После автозамены    - but mr briggs wanted half the garden too you know for his farm
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'his', 'word': 'is', 'order': 11, 'words': ['his', 'i']}, {'newWord': 'half', 'word': 'have', 'order': 4, 'words': ['half']}, {'newWord': 'farm', 'word': 'from', 'order': 12, 'words': ['farm']}]
 
 56. OK, Нач. Л-штэйн - 17, Итоговый - 5
 Оригинальное - but mr briggs i wanted half the garden too you know for his farm
 В строке     - but mr briggs wanted have they gotten to you know where he's from
 Итоговое     - but mr briggs wanted half the garden to you know for his from
 
+После автозамены    - but mr briggs wanted half the garden too you know for his farm
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'farm', 'word': 'from', 'order': 12, 'words': ['farm']}]
+
 57. OK, Нач. Л-штэйн - 6, Итоговый - 7
 Оригинальное - inspector walsh moved a pencil on the table
 В строке     - inspector will smoke a pencil on the table
 Итоговое     - inspector ables smoke a pencil on the table
+
+После автозамены    - inspector a moved a pencil on the table
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'ables', 'word': 'ables', 'order': 1, 'words': ['table']}, {'newWord': 'a', 'word': 'ables', 'order': 1, 'words': ['table', 'a', 'pencil']}, {'newWord': 'moved', 'word': 'smoke', 'order': 2, 'words': ['moved']}]
 
 58. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes i did again she said no
 В строке     - he said it again she said no
 Итоговое     - yes i did again she said no
 
+После автозамены    - yes i did again she said no
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 59. OK, Нач. Л-штэйн - 4, Итоговый - 1
 Оригинальное - she loved the house and didn't want to sell it
 В строке     - she left the house and didn't want to sell it
 Итоговое     - she love the house and didn't want to sell it
+
+После автозамены    - she loved the house and didn't want to sell it
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'loved', 'word': 'love', 'order': 1, 'words': ['loved']}]
 
 60. OK, Нач. Л-штэйн - 15, Итоговый - 11
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh watch the road your permit
 Итоговое     - inspector walsh watched ro for your ad
 
+После автозамены    - inspector walsh watched roger for your minute
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'ad', 'word': 'ad', 'order': 6, 'words': ['a']}, {'newWord': 'roger', 'word': 'ro', 'order': 3, 'words': ['roger', 'a', 'for']}, {'newWord': 'minute', 'word': 'ad', 'order': 6, 'words': ['watched', 'minute', 'a']}]
+
 61. OK, Нач. Л-штэйн - 12, Итоговый - 7
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh what are the four minute
 Итоговое     - inspector walsh watch order for minute
+
+После автозамены    - inspector walsh watched roger for minute
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh']}, {'newWord': 'roger', 'word': 'order', 'order': 3, 'words': ['roger']}]
 
 62. OK, Нач. Л-штэйн - 14, Итоговый - 9
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector wolf watch roger from it for me
 Итоговое     - inspector watch watch roger for an me
 
+После автозамены    - inspector walsh watched roger for a minute
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'walsh', 'word': 'watch', 'order': 1, 'words': ['watched', 'walsh']}, {'newWord': 'walsh', 'word': 'watch', 'order': 1, 'words': ['watched', 'walsh']}, {'newWord': 'a', 'word': 'an', 'order': 5, 'words': ['a']}, {'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh', 'roger', 'minute']}, {'newWord': 'minute', 'word': 'me', 'order': 6, 'words': ['for', 'minute', 'a']}]
+
 63. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in the arms room
 Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in dians room
+
+После автозамены    - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "diane's", 'word': 'dians', 'order': 13, 'words': ["diane's"]}]
 
 64. OK, Нач. Л-штэйн - 10, Итоговый - 0
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 В строке     - i see we found the empty bottle of sleeping tablets mr clarkson in in indians
 Итоговое     - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 
+После автозамены    - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 65. OK, Нач. Л-штэйн - 6, Итоговый - 2
 Оригинальное - roger's face did not change
 В строке     - produce face did not change
 Итоговое     - roger face did not change
+
+После автозамены    - roger's face did not change
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "roger's", 'word': 'roger', 'order': 0, 'words': ["roger's"]}]
 
 66. OK, Нач. Л-штэйн - 9, Итоговый - 0
 Оригинальное - diane did not kill my mother
 В строке     - diane did not kill my miami my mother
 Итоговое     - diane did not kill my mother
 
+После автозамены    - diane did not kill my mother
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 67. OK, Нач. Л-штэйн - 6, Итоговый - 3
 Оригинальное - diane didn't kill my mother i know that
 В строке     - daniel didn't kill my mother hi i know that
 Итоговое     - diane didn't kill my mother hi i know that
+
+После автозамены    - diane didn't kill my mother hi i know that
+Итоговый Левенштэйн - 3
+Клиенту - []
 
 68. OK, Нач. Л-штэйн - 11, Итоговый - 4
 Оригинальное - very well i would like to see diane next
 В строке     - very well i would love to see that you're next
 Итоговое     - very well i would like to see the next
 
+После автозамены    - very well i would like to see the next
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'the', 'word': 'the', 'order': 7, 'words': ['would', 'to', 'diane']}]
+
 69. OK, Нач. Л-штэйн - 11, Итоговый - 5
 Оригинальное - inspector walsh stood up and put his hands in his pockets
 В строке     - inspector wrote that and put his hands in his pockets
 Итоговое     - inspector will stop up and put his hands in his pockets
+
+После автозамены    - inspector walsh stood up and put his hands in his pockets
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'stood', 'word': 'stop', 'order': 2, 'words': ['stood']}, {'newWord': 'walsh', 'word': 'will', 'order': 1, 'words': ['walsh', 'in', 'his', 'up']}]
 
 70. OK, Нач. Л-штэйн - 13, Итоговый - 6
 Оригинальное - why was roger clarkson afraid
 В строке     - why wasn't your crops and afraid
 Итоговое     - why was roger crops afraid
 
+После автозамены    - why was roger crops afraid
+Итоговый Левенштэйн - 6
+Клиенту - [{'newWord': 'crops', 'word': 'crops', 'order': 3, 'words': ['roger']}]
+
 71. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - why was roger clarkson afraid
 В строке     - why was roger clocks and afraid
 Итоговое     - why was roger clarkson afraid
+
+После автозамены    - why was roger clarkson afraid
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 72. OK, Нач. Л-штэйн - 15, Итоговый - 10
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at 7:40
 Итоговое     - he looked at a section for
 
+После автозамены    - he looked at a sergeant foster
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'foster', 'word': 'for', 'order': 5, 'words': ['foster']}, {'newWord': 'sergeant', 'word': 'section', 'order': 4, 'words': ['sergeant']}]
+
 73. OK, Нач. Л-штэйн - 17, Итоговый - 3
 Оригинальное - he looked at sergeant foster
 В строке     - he look at 7:40
 Итоговое     - he looked at surgeon foster
+
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
 
 74. OK, Нач. Л-штэйн - 15, Итоговый - 5
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at 7:40
 Итоговое     - he looked at sargent for
 
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'order': 3, 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'for', 'order': 4, 'words': ['foster']}]
+
 75. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - he looked at sergeant foster
 В строке     - heat look at sergeant forrester
 Итоговое     - he looked at sergeant forrester
+
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 4, 'words': ['foster']}]
 
 76. OK, Нач. Л-штэйн - 28, Итоговый - 7
 Оригинальное - he looked at sergeant foster
 В строке     - sergeant forrester he looked incheon
 Итоговое     - at looked he sergeant forrester
 
+После автозамены    - at looked at sergeant foster
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'at', 'word': 'at', 'order': 0, 'words': ['at']}, {'newWord': 'he', 'word': 'he', 'order': 2, 'words': ['he']}, {'newWord': 'foster', 'word': 'forrester', 'order': 4, 'words': ['foster']}, {'newWord': 'at', 'word': 'at', 'order': 0, 'words': ['at', 'looked', 'he']}, {'newWord': 'at', 'word': 'he', 'order': 2, 'words': ['he', 'at']}]
+
 77. OK, Нач. Л-штэйн - 13, Итоговый - 0
 Оригинальное - he looked at sergeant foster
 В строке     - he looked at foster sargent
 Итоговое     - he looked at sergeant foster
+
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 78. OK, Нач. Л-штэйн - 4, Итоговый - 0
 Оригинальное - am i late
 В строке     - annihilate
 Итоговое     - am i late
 
+После автозамены    - am i late
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 79. OK, Нач. Л-штэйн - 1, Итоговый - 0
 Оригинальное - no you're on time
 В строке     - now you're on time
 Итоговое     - no you're on time
+
+После автозамены    - no you're on time
+Итоговый Левенштэйн - 0
+Клиенту - []
 
 80. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - are your parents at home
 В строке     - are parents at home
 Итоговое     - are our parents at home
 
+После автозамены    - are your parents at home
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'our', 'order': 1, 'words': ['your']}]
+
 81. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - are they new
 В строке     - parthenia
 Итоговое     - harley then new
+
+После автозамены    - are they new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'are', 'word': 'harley', 'order': 0, 'words': ['are']}, {'newWord': 'they', 'word': 'then', 'order': 1, 'words': ['they']}]
 
 82. OK, Нач. Л-штэйн - 10, Итоговый - 10
 Оригинальное - are they new
 В строке     - auburn u
 Итоговое     - auburn u
 
+После автозамены    - auburn new
+Итоговый Левенштэйн - 7
+Клиенту - [{'newWord': 'new', 'word': 'u', 'order': 1, 'words': ['new', 'are', 'they']}]
+
 83. OK, Нач. Л-штэйн - 10, Итоговый - 10
 Оригинальное - are they new
 В строке     - holiday inn
 Итоговое     - holiday inn
+
+После автозамены    - they new
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'they', 'word': 'holiday', 'order': 0, 'words': ['they']}, {'newWord': 'new', 'word': 'inn', 'order': 1, 'words': ['they', 'new', 'are']}]
 
 84. OK, Нач. Л-штэйн - 7, Итоговый - 1
 Оригинальное - are they new
 В строке     - art venue
 Итоговое     - are the new
 
+После автозамены    - are they new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'they', 'word': 'the', 'order': 1, 'words': ['they']}]
+
 85. OK, Нач. Л-штэйн - 11, Итоговый - 9
 Оригинальное - are they new
 В строке     - heart radio
 Итоговое     - are
+
+После автозамены    - are
+Итоговый Левенштэйн - 9
+Клиенту - []
 
 86. OK, Нач. Л-штэйн - 3, Итоговый - 4
 Оригинальное - is she at home
 В строке     - is head home
 Итоговое     - is he home
 
+После автозамены    - is she home
+Итоговый Левенштэйн - 3
+Клиенту - [{'newWord': 'she', 'word': 'he', 'order': 1, 'words': ['she', 'home']}]
+
 87. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - are your shoes new
 В строке     - rei shoes near
 Итоговое     - are you shoes new
+
+После автозамены    - are your shoes new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
 
 88. OK, Нач. Л-штэйн - 9, Итоговый - 5
 Оригинальное - are your shoes new
 В строке     - oreo shoes
 Итоговое     - are you shoes
 
+После автозамены    - are your shoes
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+
 89. OK, Нач. Л-штэйн - 14, Итоговый - 5
 Оригинальное - are your shoes new
 В строке     - i choose you
 Итоговое     - are you shoes
+
+После автозамены    - are your shoes
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
 
 90. OK, Нач. Л-штэйн - 10, Итоговый - 4
 Оригинальное - are your shoes new
 В строке     - oreo shoes in you
 Итоговое     - are you shoes in
 
+После автозамены    - are your shoes new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}, {'newWord': 'new', 'word': 'in', 'order': 3, 'words': ['new', 'are', 'your', 'shoes']}]
+
 91. OK, Нач. Л-штэйн - 6, Итоговый - 6
 Оригинальное - are your shoes new
 В строке     - are your shoes and you
 Итоговое     - are your shoes and you
+
+После автозамены    - are your shoes new you
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'new', 'word': 'and', 'order': 3, 'words': ['new', 'are', 'your']}]
 
 92. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - are your shoes new
 В строке     - oreo shoes new
 Итоговое     - are you shoes new
 
+После автозамены    - are your shoes new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+
 93. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - are your shoes new
 В строке     - oreo shoes new
 Итоговое     - are you shoes new
+
+После автозамены    - are your shoes new
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
 
 94. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - are your shoes new
 В строке     - oreo shoes new
 Итоговое     - are your shoes new
 
+После автозамены    - are your shoes new
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 95. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - it's red
 В строке     - pizza hut
 Итоговое     - it's rather
+
+После автозамены    - it's red
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'red', 'word': 'rather', 'order': 1, 'words': ['red']}]
 
 96. OK, Нач. Л-штэйн - 8, Итоговый - 10
 Оригинальное - he's twenty four
 В строке     - history for
 Итоговое     - his for
 
+После автозамены    - he's four
+Итоговый Левенштэйн - 7
+Клиенту - [{'newWord': "he's", 'word': 'his', 'order': 0, 'words': ["he's"]}, {'newWord': 'four', 'word': 'for', 'order': 1, 'words': ['four']}]
+
 97. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - how are your parents
 В строке     - how are parents
 Итоговое     - how are our parents
+
+После автозамены    - how are your parents
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'your', 'word': 'our', 'order': 2, 'words': ['your']}]
 
 98. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - who is that man
 В строке     - who is batman
 Итоговое     - who is that man
 
+После автозамены    - who is that man
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 99. OK, Нач. Л-штэйн - 7, Итоговый - 7
 Оригинальное - no i'm not but i'm thirty
 В строке     - no i'm not but i'm just too
 Итоговое     - no i'm not but i'm just too
+
+После автозамены    - no i'm not but i'm but too
+Итоговый Левенштэйн - 6
+Клиенту - [{'newWord': 'but', 'word': 'just', 'order': 5, 'words': ['but', 'not', 'thirty']}, {'newWord': 'too', 'word': 'too', 'order': 6, 'words': ['not', 'but', 'no']}]
 
 100. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - can you phone again later
 В строке     - can a phone again later
 Итоговое     - can you phone again later
 
+После автозамены    - can you phone again later
+Итоговый Левенштэйн - 0
+Клиенту - []
+
 Неправильные проверки [],  всего - 0
-Количество улучшений 90, процент 90
-Средний нач. Л-штейн - 8.21, средний итоговый - 3.33
-Время выполнения 100 проверок - 2.56, 0.026 sec на одну проверку
-Дата -2016-05-18 15:03:45.849000, Python 2.7 
+Количество улучшений - 90, процент - 90, полностью исправленных - 24
+исправленных после автозамены - 71
+Средний нач. Л-штейн - 8.21, средний итоговый - 3.33,
+после автозамены - 1.07
+Средний нач. Л-штейн к словам - 1.23, средний итоговый - 0.47
+Время выполнения 100 проверок - 5.3, 0.053 sec на одну проверку
+Дата -2016-05-20 20:37:20.056000, Python 2.7 
