@@ -132,7 +132,10 @@ def splitWords(orSentWords, comSentWords):
         if val != comSentWords[i-count]:
             if len(comSentWords[i-count]) < 4: continue
             n = comSentWords[i-count].find(val)
-            if n == -1: continue
+            if n == -1:
+                if i+1 < len(orSentWords) and orSentWords[i+1] != comSentWords[i-count]:
+                    n = comSentWords[i-count].find(orSentWords[i+1])
+                if n == -1: continue
             gSentWds1 = [w for w in comSentWords]
 
             if n == 0:
