@@ -17,14 +17,15 @@ def replace_oldWord_to_newWord(user_words, original_words, transriptions_dict, i
     result = []
     unique_or_words = get_unique_words(original_words)
 
-    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict)
+    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words,
+                                              transriptions_dict, inaccuracy_coefficient)
 
     if original_words == user_words:
-        print('Обошлось без фонетики!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         return ' '.join(user_words), result
+
     else:
-        user_words, result = get_new_guess_result(result, user_words, original_words,
-                                                  unique_or_words, transriptions_dict, True)
+        user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words,
+                                                  transriptions_dict, inaccuracy_coefficient, True)
 
     user_words = wordsRunning(original_words, user_words, False)
 
@@ -77,22 +78,23 @@ def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccur
     #transriptions_dict = prepare_transcriptions(user_words + original_words, lang)
     #transriptions_dict = {k: v[0] for k, v in transriptions_dict.items()}
     #-----------------------------------------------
-    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words)
+    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words,
+                                              transriptions_dict, inaccuracy_coefficient)
 
     if original_words == user_words:
         return ' '.join(user_words), result
 
     else:
-        user_words, result = get_new_guess_result(result, user_words, original_words,
-                                                  unique_or_words, transriptions_dict, True)
+        user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words,
+                                                  transriptions_dict, inaccuracy_coefficient, True)
 
     user_words = wordsRunning(original_words, user_words, False)
 
     return ' '.join(user_words), result
 
 
-def get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict = {},
-                         phone = False, inaccuracy_coefficient = 2):
+def get_new_guess_result(result, user_words, original_words, unique_or_words,
+                         transriptions_dict, inaccuracy_coefficient, phone = False):
     similary_words_num = 4
     similarity_coefficient = 0.5
 
@@ -101,10 +103,10 @@ def get_new_guess_result(result, user_words, original_words, unique_or_words, tr
     for key, wrW in wrWds.items():
         or_word = original_words[wrW[2]]
         word = wrW[0]
-        if not phone:
-            newWds = get_close_matches(or_word, unique_or_words, similary_words_num, similarity_coefficient)
-        else:
-            newWds = get_close_phone_matches(or_word, unique_or_words, transriptions_dict, similary_words_num, similarity_coefficient)
+        #if not phone:
+        newWds = get_close_matches(or_word, unique_or_words, similary_words_num, similarity_coefficient)
+        #else:
+            #newWds = get_close_phone_matches(or_word, unique_or_words, transriptions_dict, similary_words_num, similarity_coefficient)
         mb_words = []
         if newWds:
             for i, nw in enumerate(newWds):
