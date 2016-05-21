@@ -1,19 +1,82 @@
 # -*- coding: utf-8 -*-
 
+from subprocess import check_output
+from diff_match_patch import diff_match_patch
+
 from jellyfish import levenshtein_distance as levenshtein
 from difflib import get_close_matches
 from difference import getSentsDifference
 from best_choice import wordsRunning
-from trunk.project.main_apps.audio.text.funcs import prepare_transcriptions
-from trunk.project.utils.text.funcs import int_diff, calc_best_percent, check_limitation, differ
+#-------------------------Активизировать (убрать решетку)
+#from trunk.project.main_apps.audio.text.funcs import prepare_transcriptions
 
-def new_guess_inaccuracy(user_words, original_words, inaccuracy_coefficient = 2, lang = 'en'):
+
+#------------------------------Нужно убрать-------------------------------------------------------
+# нужно для тестирования
+def replace_oldWord_to_newWord(user_words, original_words, transriptions_dict, inaccuracy_coefficient = 2):
     result = []
     unique_or_words = get_unique_words(original_words)
 
-    transriptions_dict = prepare_transcriptions(user_words + original_words, lang)
-    transriptions_dict = {k: v[0] for k, v in transriptions_dict.items()}
+    user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words, transriptions_dict)
 
+    if original_words == user_words:
+        print('Обошлось без фонетики!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+        return ' '.join(user_words), result
+    else:
+        user_words, result = get_new_guess_result(result, user_words, original_words,
+                                                  unique_or_words, transriptions_dict, True)
+
+    user_words = wordsRunning(original_words, user_words, False)
+
+    return ' '.join(user_words), result
+#----------------------------------------------------------------------------------------------------------
+
+
+#------------------------------Нужно убрать-------------------------------------------------------
+# брать из базы транскрипции для слов двух предожений оригинала и пользовательского
+def make_trascriptions_dict(originalSentences, sentss):
+    trascriptions_dict = {}
+    for or_s in originalSentences:
+        for w in or_s.split():
+            if w not in trascriptions_dict:
+                trascriptions_dict[w] = ipa_trahcsription(w)
+
+    for sents in sentss:
+        for s in sents:
+            for w in s.split():
+                if w not in trascriptions_dict:
+                    trascriptions_dict[w] = ipa_trahcsription(w)
+
+    return trascriptions_dict
+#----------------------------------------------------------------------------------------------------------
+
+#------------------------------Нужно переделать-------------------------------------------------------
+# установить http://espeak.sourceforge.net/download.html
+# и прописать путь
+# в случае если нет в базе транскрипции определяет ее
+# перенести в  project.main_apps.audio.text.funcs в функцию prepare_transcriptions
+def ipa_trahcsription(word):
+    transcription = check_output(["C:\Program Files\eSpeak\command_line\espeak.exe", "-q", "--ipa", '-v', 'en', word]).decode('utf-8')
+    #------------------------УБРАТЬ
+    transcription = transcription.replace(u"ˌ", "")
+    transcription = transcription.replace(u"ˈ", "")
+
+    transcription = transcription.replace(u"ð", "t")# нужно для тестирования
+    transcription = transcription.replace("d", "t")# нужно для тестирования
+    #----------------------------------------------
+
+    return transcription
+#-------------------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------- из переменных transriptions_dict УБРАТЬ
+def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccuracy_coefficient = 2, lang = 'en'):
+    result = []
+    unique_or_words = get_unique_words(original_words)
+    #-----------------------------Убрать коммент
+    #transriptions_dict = prepare_transcriptions(user_words + original_words, lang)
+    #transriptions_dict = {k: v[0] for k, v in transriptions_dict.items()}
+    #-----------------------------------------------
     user_words, result = get_new_guess_result(result, user_words, original_words, unique_or_words)
 
     if original_words == user_words:
@@ -128,9 +191,10 @@ def get_close_phone_matches(word, words_list, transriptions_dict, n = 4, cutoff 
 
 def get_transcription(word, trascriptions_dict):
     trascription = trascriptions_dict.get(word)
+    if trascription == None:
+        trascription = ipa_trahcsription(word)
 
     return trascription
-
 
 def get_unique_words(words):
     unique_words = []
@@ -142,6 +206,39 @@ def get_unique_words(words):
 
     return unique_words
 
+
+#------------------------------Можно убрать-------------------------------------------------------
+# есть from project.utils.text.funcs import int_diff
+def int_diff(text1, text2):
+    """
+
+    """
+    diff = diff_match_patch()
+    diffs = diff.diff_main(text2, text1)
+    diff.diff_cleanupEfficiency(diffs)
+    diffs_lev = diff.diff_levenshtein(diffs)
+    return diffs_lev
+
+def calc_best_percent(diff, text1, text2, inaccuracy_coefficient):
+    threshold = float(float(len(text1) + len(text2)) / 2) / inaccuracy_coefficient
+
+    return float(threshold - diff) / threshold
+
+def check_limitation(diff, text1, text2, inaccuracy_coefficient):
+    # Среднее арифмитическое, делим на коэфициент подобранный эмпирическим путем
+    return diff <= float(float(len(text1) + len(text2)) / 2) / inaccuracy_coefficient
+
+def differ(word, original_word, inaccuracy_coefficient):
+    diff = int_diff(word, original_word)
+    # Процент дальности от порога
+    best_percent = calc_best_percent(diff, word, original_word, inaccuracy_coefficient)
+    is_limitation_more_than_errors = check_limitation(diff, word, original_word, inaccuracy_coefficient)
+
+    return {
+        "is_limitation_more_than_errors":   is_limitation_more_than_errors,
+        "best_percent":                     best_percent,
+        "diff":                             diff
+    }
 
 def check_similarity_words(word, original_word, inaccuracy_coefficient):
     is_limitation_more_than_errors = False
@@ -158,3 +255,5 @@ def check_similarity_words(word, original_word, inaccuracy_coefficient):
         "best_percent":                     best_percent,
         "diff":                             diff
     }
+# есть from project.utils.text.funcs import int_diff
+#------------------------------Можно убрать-------------------------------------------------------

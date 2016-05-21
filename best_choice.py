@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #------------------------- надо будет убрать
-#from cleaningText import cleaningText
+from cleaningText import cleaningText
 #-------------------------
 from difference import *
 from words import *
@@ -11,14 +11,14 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     #на основе разпознанных вариантов от гугла
 
     #------------------------- надо будет убрать patternAnd = re.compile(r'&')   l = patternAnd.sub(' and ', l)
-    #originalSentence = cleaningText(originalSentence)
-    #lineSentence = cleaningText(lineSentence)
-    #sents = cleaningText(sents)
+    originalSentence = cleaningText(originalSentence)
+    lineSentence = cleaningText(lineSentence)
+    sents = cleaningText(sents)
     #------------------------- patternAnd = re.compile(r'&')   l = patternAnd.sub(' and ', l)
 
     #------------------------- надо будет убрать
-    #if originalSentence == lineSentence:
-    #    return lineSentence
+    if originalSentence == lineSentence:
+        return lineSentence
     #-------------------------
 
     sentsWds = makeSentsWdsList(sents)

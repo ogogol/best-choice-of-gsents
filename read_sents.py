@@ -60,7 +60,7 @@ import time
 from datetime import datetime
 from jellyfish import levenshtein_distance as levenshtein
 from best_choice import googleSentensBestChoice
-from new_guess_inaccuracy import replace_oldWord_to_newWord
+from new_guess_inaccura import replace_oldWord_to_newWord
 
 def testingAndWriting():
     f = open ('test_result.txt', 'w')
@@ -133,7 +133,7 @@ def testingAndWriting():
     f.close()
     return
 
-from new_guess_inaccuracy import make_trascriptions_dict
+from new_guess_inaccura import make_trascriptions_dict
 
 def testing(full = True):
     originalSentences, lineSentences, sentss, rightAnswers = readTest('test.txt')
@@ -146,6 +146,7 @@ def testing(full = True):
     fineImprovingCount = 0
     improvingCount_after = 0
     resLevenInTheEnd_sum = 0
+    right_cases_after_auto_change = []
     wrongCases = []
     tt0 = time.time()
     for i, orS in enumerate(originalSentences):
@@ -163,8 +164,9 @@ def testing(full = True):
 
         if sourceLevensh > resultLevensh:
             improvingCount += 1
-        if resultLevensh_inTheEnd ==0:
+        if resultLevensh_inTheEnd == 0:
             improvingCount_after += 1
+            right_cases_after_auto_change.append(i+1)
 
         sourceLevensh_sum += sourceLevensh
         sourceLeveWords_sum += sourceLevensh/(len(gSeBeCh.split()))
@@ -206,5 +208,6 @@ def testing(full = True):
     return
 
 testing()
+
 
 
