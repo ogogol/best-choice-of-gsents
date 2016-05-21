@@ -33,19 +33,35 @@ def getWordOrderInWords (n, wd, wds, sentLen):
                 break
     return order
 
+
+def listRightIndex(alist, value):
+    return len(alist) - alist[-1::-1].index(value) -1
+
 def getWordOrder(n, wd, sentWords):
     #возращает порядковый номер слова в предложении и флаг TRUE при удачном поиске, и FALSE наоборот
     isWd = False
     start = max([0, n-4])
     sentWordsLen = len(sentWords)
     end = min([sentWordsLen, n + 2])
-    if wd in sentWords[start:end]:
-        num = sentWords.index(wd, start, end)
-        isWd = True
-    elif n < sentWordsLen:
+    if n < sentWordsLen:
         num = n
     else:
         num = sentWordsLen - 1
+
+    matches = sentWords[start:end].count(wd)
+    if matches == 0:
+        return num, isWd
+    elif matches == 1:
+        isWd = True
+        num = sentWords.index(wd, start, end)
+    else:
+        isWd = True
+        num1 = sentWords.index(wd, start, end)
+        num2 = listRightIndex(sentWords[start:end], wd) + start
+        if abs(n - num1) < abs(n - num2):
+            num = num1
+        else:
+            num = num2
 
     return num, isWd
 

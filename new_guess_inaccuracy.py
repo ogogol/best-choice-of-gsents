@@ -118,7 +118,7 @@ def get_new_guess_result(result, user_words, original_words, unique_or_words, tr
 
                 result.append({
                     'word'      :   wrW[0],
-                    'order'     :   wrW[1],
+                    #'order'     :   wrW[1],
                     'newWord'   :   newWord,
                     'words'     :   mb_words
                 })
@@ -131,9 +131,9 @@ def get_best_newWord(pos, word, original_words, user_words, mb_words):
     newWord = mb_words[0]
     if not mb_words: return ''
 
-    gSentWds1 = [w for w in user_words]
     orSent = ' '.join(original_words)
     user_sent = ' '.join(user_words)
+    gSentWds1 = [w for w in user_words]
     gSentWds1[pos] = mb_words[0]
 
     if len(mb_words) == 1:
@@ -142,7 +142,6 @@ def get_best_newWord(pos, word, original_words, user_words, mb_words):
 
     else:
         gSentWds2 = [w for w in user_words]
-        gSentWds1[pos] = mb_words[0]
         gSentWds2[pos] = mb_words[1]
 
         if levenshtein(unicode(orSent), unicode(' '.join(gSentWds1))) > levenshtein(unicode(orSent), unicode(' '.join(gSentWds2))):

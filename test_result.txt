@@ -75,9 +75,9 @@
 В строке     - my dad came in and went at 1 tomorrow
 Итоговое     - albert came in and went at once to my
 
-После автозамены    - albert came in and went at once to my
-Итоговый Левенштэйн - 3
-Клиенту - [{'newWord': 'my', 'word': 'my', 'order': 8, 'words': ['in', 'at', 'and', 'molly']}]
+После автозамены    - albert came in and went at once to molly
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'molly', 'word': 'my', 'words': ['molly']}]
 
 10. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - she's much worse now albert said
@@ -95,7 +95,7 @@
 
 После автозамены    - albert stopped eating and looked at molly
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'stopped', 'word': 'stop', 'order': 1, 'words': ['stopped']}, {'newWord': 'looked', 'word': 'look', 'order': 4, 'words': ['looked']}]
+Клиенту - [{'newWord': 'stopped', 'word': 'stop', 'words': ['stopped']}, {'newWord': 'looked', 'word': 'look', 'words': ['looked']}]
 
 12. OK, Нач. Л-штэйн - 6, Итоговый - 3
 Оригинальное - but in any case i'd rather be seasick than dead
@@ -104,16 +104,16 @@
 
 После автозамены    - but in any case i'd rather be seasick than dead
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'that', 'word': 'that', 'order': 9, 'words': ['than']}, {'newWord': 'dead', 'word': 'that', 'order': 9, 'words': ['dead', "i'd", 'than', 'but']}]
+Клиенту - [{'newWord': 'dead', 'word': 'that', 'words': ['dead']}]
 
 13. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - we were sitting in my room and we were smoking and talking about how bad we were ill i mean of course
 В строке     - we were sitting in my room and we were smoking and talking about how bad we were no i mean of course
 Итоговое     - we were sitting in my room and we were smoking and talking about how bad we were i i mean of course
 
-После автозамены    - we were sitting in my room and we were smoking and talking about how bad we were i i mean of course
-Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'i', 'word': 'i', 'order': 17, 'words': ['i', 'in']}, {'newWord': 'i', 'word': 'i', 'order': 17, 'words': ['i', 'my', 'in', 'ill']}]
+После автозамены    - we were sitting in my room and we were smoking and talking about how bad we were ill i mean of course
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'ill', 'word': 'i', 'words': ['ill']}]
 
 14. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - after the coffee and sandwiches inspector walsh called roger clarkson to the office
@@ -122,7 +122,7 @@
 
 После автозамены    - after the coffee and sandwiches inspector walsh called roger clarkson to the office
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'called', 'word': 'call', 'order': 7, 'words': ['called']}]
+Клиенту - [{'newWord': 'called', 'word': 'call', 'words': ['called']}]
 
 15. OK, Нач. Л-штэйн - 10, Итоговый - 6
 Оригинальное - the inspector began at once
@@ -131,7 +131,7 @@
 
 После автозамены    - the inspector began at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}, {'newWord': 'inspector', 'word': 'stepto', 'order': 1, 'words': ['inspector', 'the']}]
+Клиенту - [{'newWord': 'inspector', 'word': 'stepto', 'words': ['inspector']}, {'newWord': 'began', 'word': 'begin', 'words': ['began']}]
 
 16. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - the inspector began at once
@@ -140,16 +140,16 @@
 
 После автозамены    - the inspector began at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'began', 'word': 'again', 'order': 2, 'words': ['began']}]
+Клиенту - [{'newWord': 'began', 'word': 'again', 'words': ['began']}]
 
 17. OK, Нач. Л-штэйн - 12, Итоговый - 8
 Оригинальное - but mr briggs wanted half the garden too you know for his farm
 В строке     - but mr briggs wanted have they gotten to you know for his phone
 Итоговое     - but mr briggs wanted have the garden to you know for his phone
 
-После автозамены    - but mr briggs wanted half the garden too you know for his know
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'half', 'word': 'have', 'order': 4, 'words': ['half']}, {'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'know', 'word': 'phone', 'order': 12, 'words': ['know', 'the', 'garden', 'for']}]
+После автозамены    - but mr briggs wanted half the garden too you know for his farm
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'farm', 'word': 'phone', 'words': ['farm']}, {'newWord': 'half', 'word': 'have', 'words': ['half']}, {'newWord': 'too', 'word': 'to', 'words': ['too']}]
 
 18. OK, Нач. Л-штэйн - 13, Итоговый - 6
 Оригинальное - inspector walsh watched roger for a minute
@@ -158,7 +158,7 @@
 
 После автозамены    - inspector walsh watched roger for minute
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'minute', 'word': 'me', 'order': 5, 'words': ['for', 'minute', 'a']}]
+Клиенту - [{'newWord': 'minute', 'word': 'me', 'words': ['minute']}]
 
 19. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - inspector walsh watched roger for a minute
@@ -167,7 +167,7 @@
 
 После автозамены    - inspector walsh watched roger for a minute
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh']}]
+Клиенту - [{'newWord': 'watched', 'word': 'watch', 'words': ['watched']}]
 
 20. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
@@ -176,7 +176,7 @@
 
 После автозамены    - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "diane's", 'word': 'dians', 'order': 13, 'words': ["diane's"]}]
+Клиенту - [{'newWord': "diane's", 'word': 'dians', 'words': ["diane's"]}]
 
 21. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - roger's face did not change
@@ -185,7 +185,7 @@
 
 После автозамены    - roger's face did not change
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'order': 0, 'words': ["roger's"]}]
+Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'words': ["roger's"]}]
 
 22. OK, Нач. Л-штэйн - 5, Итоговый - 4
 Оригинальное - diane did not kill my mother i know that 
@@ -194,7 +194,7 @@
 
 После автозамены    - diane did not kill my mother i know that
 Итоговый Левенштэйн - 1
-Клиенту - [{'newWord': 'diane', 'word': 'indiana', 'order': 0, 'words': ['diane']}]
+Клиенту - [{'newWord': 'diane', 'word': 'indiana', 'words': ['diane']}]
 
 23. OK, Нач. Л-штэйн - 11, Итоговый - 0
 Оригинальное - why was roger clarkson afraid
@@ -212,7 +212,7 @@
 
 После автозамены    - he looked at sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'words': ['sergeant']}]
 
 25. OK, Нач. Л-штэйн - 15, Итоговый - 3
 Оригинальное - he looked at sergeant foster
@@ -221,7 +221,7 @@
 
 После автозамены    - he looked at sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'words': ['sergeant']}]
 
 26. OK, Нач. Л-штэйн - 7, Итоговый - 5
 Оригинальное - he looked at sergeant foster
@@ -230,7 +230,7 @@
 
 После автозамены    - he looked at a sergeant foster
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 5, 'words': ['foster']}]
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'words': ['foster']}]
 
 27. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - sergeant foster wrote it down yes inspector
@@ -248,7 +248,7 @@
 
 После автозамены    - a good day for tennis sergeant
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': "sodon't", 'order': 5, 'words': ['sergeant', 'good']}]
+Клиенту - [{'newWord': 'sergeant', 'word': "sodon't", 'words': ['sergeant']}]
 
 29. OK, Нач. Л-штэйн - 3, Итоговый - 2
 Оригинальное - a good day for tennis sergeant
@@ -257,7 +257,7 @@
 
 После автозамены    - a good day for tennis sergeant
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'order': 5, 'words': ['sergeant']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'words': ['sergeant']}]
 
 30. OK, Нач. Л-штэйн - 12, Итоговый - 5
 Оригинальное - sergeant foster laughed
@@ -266,16 +266,16 @@
 
 После автозамены    - sergeant foster laughed
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'laughed', 'word': 'law', 'order': 2, 'words': ['laughed']}]
+Клиенту - [{'newWord': 'laughed', 'word': 'law', 'words': ['laughed']}]
 
 31. OK, Нач. Л-штэйн - 16, Итоговый - 5
 Оригинальное - she looked at sergeant foster and smiled
 В строке     - chick look at the surgeon foster and smith
 Итоговое     - she looked at the urgent foster and smiled
 
-После автозамены    - she looked at she urgent foster and smiled
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'she', 'word': 'the', 'order': 3, 'words': ['she']}, {'newWord': 'urgent', 'word': 'urgent', 'order': 4, 'words': ['sergeant']}, {'newWord': 'she', 'word': 'she', 'order': 0, 'words': ['she', 'at', 'and']}, {'newWord': 'urgent', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'and']}]
+После автозамены    - she looked at the urgent foster and smiled
+Итоговый Левенштэйн - 5
+Клиенту - [{'newWord': 'the', 'word': 'the', 'words': ['sergeant']}, {'newWord': 'urgent', 'word': 'urgent', 'words': ['foster']}, {'newWord': 'the', 'word': 'the', 'words': ['sergeant', 'smiled']}, {'newWord': 'urgent', 'word': 'urgent', 'words': ['foster']}]
 
 32. OK, Нач. Л-штэйн - 4, Итоговый - 2
 Оригинальное - sergeant foster's face went red
@@ -284,7 +284,7 @@
 
 После автозамены    - sergeant foster's face went red
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'went', 'word': 'when', 'order': 3, 'words': ['went']}]
+Клиенту - [{'newWord': 'went', 'word': 'when', 'words': ['went']}]
 
 33. OK, Нач. Л-штэйн - 18, Итоговый - 14
 Оригинальное - sergeant foster's face went red
@@ -293,7 +293,7 @@
 
 После автозамены    - sergeant foster's face went
 Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': "foster's", 'word': 'foster', 'order': 1, 'words': ["foster's"]}, {'newWord': 'went', 'word': 'when', 'order': 3, 'words': ['went']}, {'newWord': 'sergeant', 'word': 'surgeon', 'order': 0, 'words': ['sergeant']}, {'newWord': 'face', 'word': 'freeze', 'order': 2, 'words': ["foster's", 'face']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'words': ['sergeant']}, {'newWord': "foster's", 'word': 'foster', 'words': ["foster's"]}, {'newWord': 'face', 'word': 'freeze', 'words': ['face']}, {'newWord': 'went', 'word': 'when', 'words': ['went']}]
 
 34. OK, Нач. Л-штэйн - 5, Итоговый - 2
 Оригинальное - sergeant foster's face went red
@@ -302,7 +302,7 @@
 
 После автозамены    - sergeant foster's face went red
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "foster's", 'word': 'foster', 'order': 1, 'words': ["foster's"]}]
+Клиенту - [{'newWord': "foster's", 'word': 'foster', 'words': ["foster's"]}]
 
 35. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - yes a fast and exciting player is sergeant foster
@@ -311,7 +311,7 @@
 
 После автозамены    - yes a fast and exciting player is sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'foster', 'word': 'poster', 'order': 8, 'words': ['foster', 'player']}]
+Клиенту - [{'newWord': 'foster', 'word': 'poster', 'words': ['foster', 'fast']}]
 
 36. OK, Нач. Л-штэйн - 9, Итоговый - 6
 Оригинальное - yes a fast and exciting player is sergeant foster
@@ -320,7 +320,7 @@
 
 После автозамены    - yes a fast and exciting player is sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 8, 'words': ['foster']}, {'newWord': 'a', 'word': 'at', 'order': 1, 'words': ['fast', 'a']}, {'newWord': 'fast', 'word': 'first', 'order': 2, 'words': ['fast']}]
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'words': ['foster', 'fast']}, {'newWord': 'a', 'word': 'at', 'words': ['a']}, {'newWord': 'fast', 'word': 'first', 'words': ['fast', 'foster']}]
 
 37. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - yes a fast and exciting player is sergeant foster
@@ -329,7 +329,7 @@
 
 После автозамены    - yes a fast and exciting player is sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 8, 'words': ['foster']}, {'newWord': 'a', 'word': 'at', 'order': 1, 'words': ['fast', 'a']}]
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'words': ['foster', 'fast']}, {'newWord': 'a', 'word': 'at', 'words': ['a']}]
 
 38. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes a fast and exciting player is sergeant foster
@@ -347,7 +347,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'redder', 'word': 'rather', 'order': 10, 'words': ['redder', 'foster']}, {'newWord': 'sergeant', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'went']}, {'newWord': 'foster', 'word': 'four', 'order': 5, 'words': ['foster']}]
+Клиенту - [{'newWord': 'redder', 'word': 'rather', 'words': ['redder']}, {'newWord': 'sergeant', 'word': 'urgent', 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'four', 'words': ['foster']}]
 
 40. OK, Нач. Л-штэйн - 9, Итоговый - 3
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -356,7 +356,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'redder', 'word': 'rather', 'order': 10, 'words': ['redder', 'foster']}]
+Клиенту - [{'newWord': 'redder', 'word': 'rather', 'words': ['redder']}]
 
 41. OK, Нач. Л-штэйн - 6, Итоговый - 4
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -365,7 +365,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'redder', 'word': 'weather', 'order': 10, 'words': ['redder', 'went', 'foster', 'at']}]
+Клиенту - [{'newWord': 'redder', 'word': 'weather', 'words': ['redder']}]
 
 42. OK, Нач. Л-штэйн - 5, Итоговый - 5
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -374,7 +374,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'foster', 'word': 'further', 'order': 10, 'words': ['foster']}, {'newWord': 'redder', 'word': 'foster', 'order': 10, 'words': ['foster', 'redder', 'face']}]
+Клиенту - [{'newWord': 'redder', 'word': 'further', 'words': ['redder']}]
 
 43. OK, Нач. Л-штэйн - 3, Итоговый - 3
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -383,7 +383,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'redder', 'word': 'red', 'order': 10, 'words': ['redder']}]
+Клиенту - [{'newWord': 'redder', 'word': 'red', 'words': ['redder']}]
 
 44. OK, Нач. Л-штэйн - 26, Итоговый - 8
 Оригинальное - diane smiled again at sergeant foster and his face went redder
@@ -392,7 +392,7 @@
 
 После автозамены    - diane smiled again at sergeant foster and his face went redder
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'urgent', 'order': 4, 'words': ['sergeant', 'went']}, {'newWord': 'foster', 'word': 'forester', 'order': 5, 'words': ['foster', 'redder']}, {'newWord': 'redder', 'word': 'read', 'order': 10, 'words': ['redder', 'at', 'and', 'went']}]
+Клиенту - [{'newWord': 'redder', 'word': 'read', 'words': ['redder']}, {'newWord': 'sergeant', 'word': 'urgent', 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'forester', 'words': ['foster']}]
 
 45. OK, Нач. Л-штэйн - 9, Итоговый - 1
 Оригинальное - the inspector began at once
@@ -401,7 +401,7 @@
 
 После автозамены    - the inspector began at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'words': ['began']}]
 
 46. OK, Нач. Л-штэйн - 10, Итоговый - 1
 Оригинальное - the inspector began at once
@@ -410,7 +410,7 @@
 
 После автозамены    - the inspector began at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'words': ['began']}]
 
 47. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - the inspector began at once
@@ -419,7 +419,7 @@
 
 После автозамены    - the inspector began at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'began', 'word': 'begin', 'order': 2, 'words': ['began']}]
+Клиенту - [{'newWord': 'began', 'word': 'begin', 'words': ['began']}]
 
 48. OK, Нач. Л-штэйн - 8, Итоговый - 2
 Оригинальное - the inspector begin at once
@@ -428,7 +428,7 @@
 
 После автозамены    - the inspector begin at once
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'inspector', 'word': 'inspect', 'order': 1, 'words': ['inspector']}]
+Клиенту - [{'newWord': 'inspector', 'word': 'inspect', 'words': ['inspector']}]
 
 49. OK, Нач. Л-штэйн - 13, Итоговый - 0
 Оригинальное - the inspector begin at once
@@ -455,7 +455,7 @@
 
 После автозамены    - this house is a very big roger said
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'order': 6, 'words': ['roger']}]
+Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'words': ['roger']}]
 
 52. OK, Нач. Л-штэйн - 3, Итоговый - 1
 Оригинальное - this house is very big roger said
@@ -464,7 +464,7 @@
 
 После автозамены    - this house is very big roger said
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'order': 5, 'words': ['roger']}]
+Клиенту - [{'newWord': 'roger', 'word': 'rogers', 'words': ['roger']}]
 
 53. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - your mother is dead and now you're rich
@@ -482,7 +482,7 @@
 
 После автозамены    - roger's face was suddenly afraid
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'order': 0, 'words': ["roger's"]}]
+Клиенту - [{'newWord': "roger's", 'word': 'rogers', 'words': ["roger's"]}]
 
 55. OK, Нач. Л-штэйн - 17, Итоговый - 8
 Оригинальное - but mr briggs i wanted half the garden too you know for his farm
@@ -491,7 +491,7 @@
 
 После автозамены    - but mr briggs wanted half the garden too you know for his farm
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'his', 'word': 'is', 'order': 11, 'words': ['his', 'i']}, {'newWord': 'half', 'word': 'have', 'order': 4, 'words': ['half']}, {'newWord': 'farm', 'word': 'from', 'order': 12, 'words': ['farm']}]
+Клиенту - [{'newWord': 'too', 'word': 'to', 'words': ['too']}, {'newWord': 'his', 'word': 'is', 'words': ['his']}, {'newWord': 'half', 'word': 'have', 'words': ['half']}, {'newWord': 'farm', 'word': 'from', 'words': ['farm']}]
 
 56. OK, Нач. Л-штэйн - 17, Итоговый - 5
 Оригинальное - but mr briggs i wanted half the garden too you know for his farm
@@ -500,16 +500,16 @@
 
 После автозамены    - but mr briggs wanted half the garden too you know for his farm
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'too', 'word': 'to', 'order': 7, 'words': ['too']}, {'newWord': 'farm', 'word': 'from', 'order': 12, 'words': ['farm']}]
+Клиенту - [{'newWord': 'too', 'word': 'to', 'words': ['too']}, {'newWord': 'farm', 'word': 'from', 'words': ['farm']}]
 
 57. OK, Нач. Л-штэйн - 6, Итоговый - 7
 Оригинальное - inspector walsh moved a pencil on the table
 В строке     - inspector will smoke a pencil on the table
 Итоговое     - inspector ables smoke a pencil on the table
 
-После автозамены    - inspector a moved a pencil on the table
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'ables', 'word': 'ables', 'order': 1, 'words': ['table']}, {'newWord': 'a', 'word': 'ables', 'order': 1, 'words': ['table', 'a', 'pencil']}, {'newWord': 'moved', 'word': 'smoke', 'order': 2, 'words': ['moved']}]
+После автозамены    - inspector walsh moved a pencil on the table
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'walsh', 'word': 'ables', 'words': ['walsh']}, {'newWord': 'moved', 'word': 'smoke', 'words': ['moved']}]
 
 58. OK, Нач. Л-штэйн - 6, Итоговый - 0
 Оригинальное - yes i did again she said no
@@ -527,16 +527,16 @@
 
 После автозамены    - she loved the house and didn't want to sell it
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'loved', 'word': 'love', 'order': 1, 'words': ['loved']}]
+Клиенту - [{'newWord': 'loved', 'word': 'love', 'words': ['loved']}]
 
 60. OK, Нач. Л-штэйн - 15, Итоговый - 11
 Оригинальное - inspector walsh watched roger for a minute
 В строке     - inspector walsh watch the road your permit
 Итоговое     - inspector walsh watched ro for your ad
 
-После автозамены    - inspector walsh watched roger for your minute
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'ad', 'word': 'ad', 'order': 6, 'words': ['a']}, {'newWord': 'roger', 'word': 'ro', 'order': 3, 'words': ['roger', 'a', 'for']}, {'newWord': 'minute', 'word': 'ad', 'order': 6, 'words': ['watched', 'minute', 'a']}]
+После автозамены    - inspector walsh watched roger for your ad
+Итоговый Левенштэйн - 8
+Клиенту - [{'newWord': 'roger', 'word': 'ro', 'words': ['roger']}, {'newWord': 'ad', 'word': 'ad', 'words': ['a']}, {'newWord': 'ad', 'word': 'ad', 'words': ['a', 'for']}]
 
 61. OK, Нач. Л-штэйн - 12, Итоговый - 7
 Оригинальное - inspector walsh watched roger for a minute
@@ -545,7 +545,7 @@
 
 После автозамены    - inspector walsh watched roger for minute
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh']}, {'newWord': 'roger', 'word': 'order', 'order': 3, 'words': ['roger']}]
+Клиенту - [{'newWord': 'watched', 'word': 'watch', 'words': ['watched']}, {'newWord': 'order', 'word': 'order', 'words': ['watched']}, {'newWord': 'roger', 'word': 'order', 'words': ['roger', 'watched', 'walsh']}]
 
 62. OK, Нач. Л-штэйн - 14, Итоговый - 9
 Оригинальное - inspector walsh watched roger for a minute
@@ -554,7 +554,7 @@
 
 После автозамены    - inspector walsh watched roger for a minute
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'walsh', 'word': 'watch', 'order': 1, 'words': ['watched', 'walsh']}, {'newWord': 'walsh', 'word': 'watch', 'order': 1, 'words': ['watched', 'walsh']}, {'newWord': 'a', 'word': 'an', 'order': 5, 'words': ['a']}, {'newWord': 'watched', 'word': 'watch', 'order': 2, 'words': ['watched', 'walsh', 'roger', 'minute']}, {'newWord': 'minute', 'word': 'me', 'order': 6, 'words': ['for', 'minute', 'a']}]
+Клиенту - [{'newWord': 'walsh', 'word': 'watch', 'words': ['walsh']}, {'newWord': 'watched', 'word': 'watch', 'words': ['watched']}, {'newWord': 'a', 'word': 'an', 'words': ['a']}, {'newWord': 'minute', 'word': 'me', 'words': ['minute']}]
 
 63. OK, Нач. Л-штэйн - 7, Итоговый - 2
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
@@ -563,7 +563,7 @@
 
 После автозамены    - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "diane's", 'word': 'dians', 'order': 13, 'words': ["diane's"]}]
+Клиенту - [{'newWord': "diane's", 'word': 'dians', 'words': ["diane's"]}]
 
 64. OK, Нач. Л-штэйн - 10, Итоговый - 0
 Оригинальное - i see we found the empty bottle of sleeping tablets mr clarkson in diane's room
@@ -581,7 +581,7 @@
 
 После автозамены    - roger's face did not change
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': "roger's", 'word': 'roger', 'order': 0, 'words': ["roger's"]}]
+Клиенту - [{'newWord': "roger's", 'word': 'roger', 'words': ["roger's"]}]
 
 66. OK, Нач. Л-штэйн - 9, Итоговый - 0
 Оригинальное - diane did not kill my mother
@@ -606,9 +606,9 @@
 В строке     - very well i would love to see that you're next
 Итоговое     - very well i would like to see the next
 
-После автозамены    - very well i would like to see the next
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'the', 'word': 'the', 'order': 7, 'words': ['would', 'to', 'diane']}]
+После автозамены    - very well i would like to see diane next
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'diane', 'word': 'the', 'words': ['diane']}]
 
 69. OK, Нач. Л-штэйн - 11, Итоговый - 5
 Оригинальное - inspector walsh stood up and put his hands in his pockets
@@ -617,16 +617,16 @@
 
 После автозамены    - inspector walsh stood up and put his hands in his pockets
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'stood', 'word': 'stop', 'order': 2, 'words': ['stood']}, {'newWord': 'walsh', 'word': 'will', 'order': 1, 'words': ['walsh', 'in', 'his', 'up']}]
+Клиенту - [{'newWord': 'walsh', 'word': 'will', 'words': ['walsh']}, {'newWord': 'stood', 'word': 'stop', 'words': ['stood']}]
 
 70. OK, Нач. Л-штэйн - 13, Итоговый - 6
 Оригинальное - why was roger clarkson afraid
 В строке     - why wasn't your crops and afraid
 Итоговое     - why was roger crops afraid
 
-После автозамены    - why was roger crops afraid
-Итоговый Левенштэйн - 6
-Клиенту - [{'newWord': 'crops', 'word': 'crops', 'order': 3, 'words': ['roger']}]
+После автозамены    - why was roger clarkson afraid
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'clarkson', 'word': 'crops', 'words': ['clarkson']}]
 
 71. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - why was roger clarkson afraid
@@ -644,7 +644,7 @@
 
 После автозамены    - he looked at a sergeant foster
 Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'foster', 'word': 'for', 'order': 5, 'words': ['foster']}, {'newWord': 'sergeant', 'word': 'section', 'order': 4, 'words': ['sergeant']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'section', 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'for', 'words': ['foster']}]
 
 73. OK, Нач. Л-штэйн - 17, Итоговый - 3
 Оригинальное - he looked at sergeant foster
@@ -653,7 +653,7 @@
 
 После автозамены    - he looked at sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'order': 3, 'words': ['sergeant', 'foster']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'surgeon', 'words': ['sergeant']}]
 
 74. OK, Нач. Л-штэйн - 15, Итоговый - 5
 Оригинальное - he looked at sergeant foster
@@ -662,7 +662,7 @@
 
 После автозамены    - he looked at sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'order': 3, 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'for', 'order': 4, 'words': ['foster']}]
+Клиенту - [{'newWord': 'sergeant', 'word': 'sargent', 'words': ['sergeant']}, {'newWord': 'foster', 'word': 'for', 'words': ['foster']}]
 
 75. OK, Нач. Л-штэйн - 7, Итоговый - 3
 Оригинальное - he looked at sergeant foster
@@ -671,16 +671,16 @@
 
 После автозамены    - he looked at sergeant foster
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'order': 4, 'words': ['foster']}]
+Клиенту - [{'newWord': 'foster', 'word': 'forrester', 'words': ['foster']}]
 
 76. OK, Нач. Л-штэйн - 28, Итоговый - 7
 Оригинальное - he looked at sergeant foster
 В строке     - sergeant forrester he looked incheon
 Итоговое     - at looked he sergeant forrester
 
-После автозамены    - at looked at sergeant foster
-Итоговый Левенштэйн - 2
-Клиенту - [{'newWord': 'at', 'word': 'at', 'order': 0, 'words': ['at']}, {'newWord': 'he', 'word': 'he', 'order': 2, 'words': ['he']}, {'newWord': 'foster', 'word': 'forrester', 'order': 4, 'words': ['foster']}, {'newWord': 'at', 'word': 'at', 'order': 0, 'words': ['at', 'looked', 'he']}, {'newWord': 'at', 'word': 'he', 'order': 2, 'words': ['he', 'at']}]
+После автозамены    - he looked at sergeant foster
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'he', 'word': 'at', 'words': ['he']}, {'newWord': 'at', 'word': 'he', 'words': ['at']}, {'newWord': 'foster', 'word': 'forrester', 'words': ['foster']}]
 
 77. OK, Нач. Л-штэйн - 13, Итоговый - 0
 Оригинальное - he looked at sergeant foster
@@ -716,7 +716,7 @@
 
 После автозамены    - are your parents at home
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'our', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'our', 'words': ['your']}]
 
 81. OK, Нач. Л-штэйн - 7, Итоговый - 4
 Оригинальное - are they new
@@ -725,25 +725,25 @@
 
 После автозамены    - are they new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'are', 'word': 'harley', 'order': 0, 'words': ['are']}, {'newWord': 'they', 'word': 'then', 'order': 1, 'words': ['they']}]
+Клиенту - [{'newWord': 'are', 'word': 'harley', 'words': ['are']}, {'newWord': 'they', 'word': 'then', 'words': ['they']}]
 
 82. OK, Нач. Л-штэйн - 10, Итоговый - 10
 Оригинальное - are they new
 В строке     - auburn u
 Итоговое     - auburn u
 
-После автозамены    - auburn new
-Итоговый Левенштэйн - 7
-Клиенту - [{'newWord': 'new', 'word': 'u', 'order': 1, 'words': ['new', 'are', 'they']}]
+После автозамены    - are they
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'are', 'word': 'auburn', 'words': ['are']}, {'newWord': 'they', 'word': 'u', 'words': ['they']}]
 
 83. OK, Нач. Л-штэйн - 10, Итоговый - 10
 Оригинальное - are they new
 В строке     - holiday inn
 Итоговое     - holiday inn
 
-После автозамены    - they new
-Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'they', 'word': 'holiday', 'order': 0, 'words': ['they']}, {'newWord': 'new', 'word': 'inn', 'order': 1, 'words': ['they', 'new', 'are']}]
+После автозамены    - are new
+Итоговый Левенштэйн - 5
+Клиенту - [{'newWord': 'are', 'word': 'holiday', 'words': ['are']}, {'newWord': 'new', 'word': 'inn', 'words': ['new']}]
 
 84. OK, Нач. Л-штэйн - 7, Итоговый - 1
 Оригинальное - are they new
@@ -752,7 +752,7 @@
 
 После автозамены    - are they new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'they', 'word': 'the', 'order': 1, 'words': ['they']}]
+Клиенту - [{'newWord': 'they', 'word': 'the', 'words': ['they']}]
 
 85. OK, Нач. Л-штэйн - 11, Итоговый - 9
 Оригинальное - are they new
@@ -770,7 +770,7 @@
 
 После автозамены    - is she home
 Итоговый Левенштэйн - 3
-Клиенту - [{'newWord': 'she', 'word': 'he', 'order': 1, 'words': ['she', 'home']}]
+Клиенту - [{'newWord': 'she', 'word': 'he', 'words': ['she']}]
 
 87. OK, Нач. Л-штэйн - 8, Итоговый - 1
 Оригинальное - are your shoes new
@@ -779,7 +779,7 @@
 
 После автозамены    - are your shoes new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}]
 
 88. OK, Нач. Л-штэйн - 9, Итоговый - 5
 Оригинальное - are your shoes new
@@ -788,7 +788,7 @@
 
 После автозамены    - are your shoes
 Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}]
 
 89. OK, Нач. Л-штэйн - 14, Итоговый - 5
 Оригинальное - are your shoes new
@@ -797,7 +797,7 @@
 
 После автозамены    - are your shoes
 Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}]
 
 90. OK, Нач. Л-штэйн - 10, Итоговый - 4
 Оригинальное - are your shoes new
@@ -806,7 +806,7 @@
 
 После автозамены    - are your shoes new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}, {'newWord': 'new', 'word': 'in', 'order': 3, 'words': ['new', 'are', 'your', 'shoes']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}, {'newWord': 'new', 'word': 'in', 'words': ['new']}]
 
 91. OK, Нач. Л-штэйн - 6, Итоговый - 6
 Оригинальное - are your shoes new
@@ -815,7 +815,7 @@
 
 После автозамены    - are your shoes new you
 Итоговый Левенштэйн - 4
-Клиенту - [{'newWord': 'new', 'word': 'and', 'order': 3, 'words': ['new', 'are', 'your']}]
+Клиенту - [{'newWord': 'new', 'word': 'and', 'words': ['new']}]
 
 92. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - are your shoes new
@@ -824,7 +824,7 @@
 
 После автозамены    - are your shoes new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}]
 
 93. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - are your shoes new
@@ -833,7 +833,7 @@
 
 После автозамены    - are your shoes new
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'you', 'order': 1, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'you', 'words': ['your']}]
 
 94. OK, Нач. Л-штэйн - 5, Итоговый - 0
 Оригинальное - are your shoes new
@@ -851,7 +851,7 @@
 
 После автозамены    - it's red
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'red', 'word': 'rather', 'order': 1, 'words': ['red']}]
+Клиенту - [{'newWord': 'red', 'word': 'rather', 'words': ['red']}]
 
 96. OK, Нач. Л-штэйн - 8, Итоговый - 10
 Оригинальное - he's twenty four
@@ -860,7 +860,7 @@
 
 После автозамены    - he's four
 Итоговый Левенштэйн - 7
-Клиенту - [{'newWord': "he's", 'word': 'his', 'order': 0, 'words': ["he's"]}, {'newWord': 'four', 'word': 'for', 'order': 1, 'words': ['four']}]
+Клиенту - [{'newWord': "he's", 'word': 'his', 'words': ["he's"]}, {'newWord': 'four', 'word': 'for', 'words': ['four']}]
 
 97. OK, Нач. Л-штэйн - 5, Итоговый - 1
 Оригинальное - how are your parents
@@ -869,7 +869,7 @@
 
 После автозамены    - how are your parents
 Итоговый Левенштэйн - 0
-Клиенту - [{'newWord': 'your', 'word': 'our', 'order': 2, 'words': ['your']}]
+Клиенту - [{'newWord': 'your', 'word': 'our', 'words': ['your']}]
 
 98. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - who is that man
@@ -885,9 +885,9 @@
 В строке     - no i'm not but i'm just too
 Итоговое     - no i'm not but i'm just too
 
-После автозамены    - no i'm not but i'm but too
-Итоговый Левенштэйн - 6
-Клиенту - [{'newWord': 'but', 'word': 'just', 'order': 5, 'words': ['but', 'not', 'thirty']}, {'newWord': 'too', 'word': 'too', 'order': 6, 'words': ['not', 'but', 'no']}]
+После автозамены    - no i'm not but i'm thirty too
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': 'thirty', 'word': 'just', 'words': ['thirty']}, {'newWord': 'too', 'word': 'too', 'words': ['thirty']}]
 
 100. OK, Нач. Л-штэйн - 3, Итоговый - 0
 Оригинальное - can you phone again later
@@ -898,11 +898,110 @@
 Итоговый Левенштэйн - 0
 Клиенту - []
 
+101. OK, Нач. Л-штэйн - 15, Итоговый - 10
+Оригинальное - they are australian
+В строке     - derrick williams
+Итоговое     - the are three
+
+После автозамены    - they are australian
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'they', 'word': 'the', 'words': ['they']}, {'newWord': 'australian', 'word': 'three', 'words': ['australian']}]
+
+102. OK, Нач. Л-штэйн - 7, Итоговый - 4
+Оригинальное - it's sunny today but it isn't warm
+В строке     - it's sunny today but it isn't tomorrow
+Итоговое     - it's sunny today but it isn't too
+
+После автозамены    - it's sunny today but it isn't warm
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'warm', 'word': 'too', 'words': ['warm']}]
+
+103. OK, Нач. Л-штэйн - 7, Итоговый - 5
+Оригинальное - look there's chris
+В строке     - look that's crazy
+Итоговое     - look that's this
+
+После автозамены    - look there's chris
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': "there's", 'word': "that's", 'words': ["there's"]}, {'newWord': 'chris', 'word': 'this', 'words': ['chris']}]
+
+104. OK, Нач. Л-штэйн - 11, Итоговый - 10
+Оригинальное - here's your key
+В строке     - karaoke
+Итоговое     - kids you
+
+После автозамены    - here's your
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': "here's", 'word': 'kids', 'words': ["here's"]}, {'newWord': 'your', 'word': 'you', 'words': ['your']}]
+
+105. OK, Нач. Л-штэйн - 10, Итоговый - 7
+Оригинальное - here's your key
+В строке     - hennessey ok
+Итоговое     - heresy okay
+
+После автозамены    - here's your
+Итоговый Левенштэйн - 4
+Клиенту - [{'newWord': "here's", 'word': 'heresy', 'words': ["here's"]}, {'newWord': 'your', 'word': 'okay', 'words': ['your']}]
+
+106. OK, Нач. Л-штэйн - 8, Итоговый - 1
+Оригинальное - i'm in a beautiful room in an old house
+В строке     - alan the beautiful room in an old house
+Итоговое     - i'm in an beautiful room in an old house
+
+После автозамены    - i'm in a beautiful room in an old house
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'a', 'word': 'an', 'words': ['a', 'an']}]
+
+107. OK, Нач. Л-штэйн - 3, Итоговый - 3
+Оригинальное - there's a bed an expensive chair and a beautiful table
+В строке     - there's a big and expensive chair and a beautiful table
+Итоговое     - there's a big and expensive chair and a beautiful table
+
+После автозамены    - there's a bed an expensive chair and a beautiful table
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'bed', 'word': 'big', 'words': ['bed']}, {'newWord': 'an', 'word': 'and', 'words': ['an', 'and', 'a']}]
+
+108. OK, Нач. Л-штэйн - 2, Итоговый - 2
+Оригинальное - there's a bed an expensive chair and a beautiful table
+В строке     - there's a bed inexpensive chair and a beautiful table
+Итоговое     - there's a bed inexpensive chair and a beautiful table
+
+После автозамены    - there's a bed inexpensive chair and a beautiful table
+Итоговый Левенштэйн - 2
+Клиенту - []
+
+109. OK, Нач. Л-штэйн - 3, Итоговый - 1
+Оригинальное - there's a bed an expensive chair and a beautiful table
+В строке     - there's a big and expensive chair and a beautiful table
+Итоговое     - there's a bed and expensive chair and a beautiful table
+
+После автозамены    - there's a bed an expensive chair and a beautiful table
+Итоговый Левенштэйн - 0
+Клиенту - [{'newWord': 'an', 'word': 'and', 'words': ['an', 'and', 'a']}]
+
+110. OK, Нач. Л-штэйн - 2, Итоговый - 0
+Оригинальное - there's a bed an expensive chair and a beautiful table
+В строке     - there's a bad and expensive chair and a beautiful table
+Итоговое     - there's a bed an expensive chair and a beautiful table
+
+После автозамены    - there's a bed an expensive chair and a beautiful table
+Итоговый Левенштэйн - 0
+Клиенту - []
+
+111. OK, Нач. Л-штэйн - 4, Итоговый - 3
+Оригинальное - there's a bed an expensive chair and a beautiful table
+В строке     - there's a bat inexpensive chair and a beautiful table
+Итоговое     - there's a bad inexpensive chair and a beautiful table
+
+После автозамены    - there's a bed inexpensive chair and a beautiful table
+Итоговый Левенштэйн - 2
+Клиенту - [{'newWord': 'bed', 'word': 'bad', 'words': ['bed']}]
+
 Неправильные проверки [],  всего - 0
-Количество улучшений - 90, процент - 90, полностью исправленных - 24
-исправленных после автозамены - 71
-Средний нач. Л-штейн - 8.21, средний итоговый - 3.33,
-после автозамены - 1.07
-Средний нач. Л-штейн к словам - 1.23, средний итоговый - 0.47
-Время выполнения 100 проверок - 5.3, 0.053 sec на одну проверку
-Дата -2016-05-20 20:37:20.056000, Python 2.7 
+Количество улучшений - 99, процент - 89, полностью исправленных - 25
+исправленных после автозамены - 85
+Средний нач. Л-штейн - 8.05, средний итоговый - 3.41,
+после автозамены - 0.86
+Средний нач. Л-штейн к словам - 1.27, средний итоговый - 0.53
+Время выполнения 111 проверок - 3.65, 0.033 sec на одну проверку
+Дата -2016-05-21 13:36:32.687000, Python 2.7 
