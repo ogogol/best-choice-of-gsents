@@ -41,34 +41,41 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
 
     return googleSentence
 
-def delWordsRunning(oneOrCouple, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords):
+def delWordsRunning(oneOrCouple, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords, full_check = True):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
     #разбита на две функции эта и wordsRunning
     if len(orSentWdsRunning) < len(gSentWdsRunning):
         gSentWds1 = [w for w in googleSentenceWords]
         count = 0
         for i in gSentWdsRunning:
-            del gSentWds1[i - count]
-            if oneOrCouple > 1:
+            if full_check:
                 del gSentWds1[i - count]
-            gSentWds1, googleSentenceWords = addWordOrNotChoice(' '.join(originalSentenceWords), gSentWds1, googleSentenceWords)
-            count += 1
+                if oneOrCouple > 1:
+                    del gSentWds1[i - count]
+                gSentWds1, googleSentenceWords = addWordOrNotChoice(' '.join(originalSentenceWords), gSentWds1, googleSentenceWords)
+                count += 1
+            else:
+                del googleSentenceWords[i - count]
+                if oneOrCouple > 1:
+                    del googleSentenceWords[i - count]
 
     return googleSentenceWords
 
 
-def wordsRunning(originalSentenceWords, googleSentenceWords):
+def wordsRunning(originalSentenceWords, googleSentenceWords, full_check = True):
     #удаляет лишний дубль в предложении, если такового нет в оригинальном
     #разбита на две функции эта и delWordsRunning
     gSentWdsRunning = [i for i in twoWordsRunning(googleSentenceWords)]
     if gSentWdsRunning:
         orSentWdsRunning = [i for i in twoWordsRunning(originalSentenceWords)]
-        googleSentenceWords = delWordsRunning(1, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords)
+        googleSentenceWords = delWordsRunning(1, orSentWdsRunning, originalSentenceWords,
+                                              gSentWdsRunning, googleSentenceWords, full_check)
 
     gSentWdsRunning = [i for i in twoCoupleWordsRunning(googleSentenceWords)]
     if gSentWdsRunning:
         orSentWdsRunning = [i for i in twoCoupleWordsRunning(originalSentenceWords)]
-        googleSentenceWords = delWordsRunning(2, orSentWdsRunning, originalSentenceWords, gSentWdsRunning, googleSentenceWords)
+        googleSentenceWords = delWordsRunning(2, orSentWdsRunning, originalSentenceWords,
+                                              gSentWdsRunning, googleSentenceWords, full_check)
 
     return googleSentenceWords
 

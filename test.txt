@@ -399,3 +399,47 @@ can you phone again later
 can a phone again later
 ["can", "can I", "can you", "can I buy", "can a phone", "can I find a", "can, I find a", "California", "can a phone again", "can a phone again they", "can a phone again late", "can a phone again later", "can a phone again, later", "can a phone again later"]
 can you phone again later
+They are Australian
+Derrick Williams
+["the", "there", "there are", "there's", "there are three", "there's really", "Derek William", "Derrick Williams"]
+the are three
+it's sunny today but it isn't warm
+it's sunny today but it isn't tomorrow
+["it", "it's", "it's a", "it's on", "it's sunny", "it's sunny the", "it's sunny today", "it's, sunny today", "it's sunny, today by", "it's sunny, today but", "it's sunny, today buddy", "it's sunny, today but it", "it's sunny today, but it", "it's sunny today, but it is", "it's sunny today, but it isn't", "it's sunny today, but it isn't too", "it's sunny today but it, isn't too", "it's sunny today but it, isn't tomorrow", "it's sunny today but it isn't, tomorrow", "it's sunny today but it isn't tomorrow"]
+it's sunny today but it isn't too
+look there's Chris
+look that's crazy
+all_speech_words_suggestions ["the", "look", "look, up the", "look, this", "look, that's", "look, that's great", "look, that's crazy", "look that's crazy"]
+look that's this
+Here's your key
+karaoke
+["you", "kiss", "kids", "Kizi", "kids you", "kids York", "kids Yorkie", "kids, Yorkie", "karaoke"]
+kids you
+Here's your key
+Hennessey ok
+["hey", "Harry", "Harris", "heresy", "Harrison", "heresy of", "heresy okay", "Hennessey ok"]
+heresy okay
+I'm in a beautiful room in an old house
+Alan the beautiful room in an old house
+["I", "I'm", "how to", "Allen", "Island", "Arlington", "Ellentube you", "Island Beauty", "and the Beautiful", "and the Beautiful Girl", "and the Beautiful, room", "and the Beautiful, around", "and the Beautiful, room in", "and the Beautiful, Girl in the", "and the Beautiful, room in an", "and the Beautiful, room in an all", "and the Beautiful, room in an old", "and the Beautiful, room in an old house", "and the Beautiful room in an, old house", "and the Beautiful room in an old, house", "Alan the beautiful room in an old house"]
+i'm in an beautiful room in an old house
+there's a bed an expensive chair and a beautiful table
+there's a bed and expensive chair an and a beautiful table
+["the", "there", "there's", "there is", "there is a", "there is a boy", "there is a great", "there is, a great", "there is a, great", "there is a great", "there is a, bit and", "there is a bit and", "there is a bit and, spur", "there is a bit and, explain", "there is a bit, in Spanish", "there is a bit, expensive", "there is a bit expensive", "there is a bit expensive, to", "there is a bit expensive, chair", "there is a big and expensive chair", "there is a big and expensive chair, and", "there is a big and expensive chair, and it", "there is a big and expensive chair, and you", "there is a big and expensive chair, and if you", "there is a big and expensive chair, and a Butte", "there is a big and expensive chair, and, a beauty", "there is a big and expensive chair, and, a beautiful", "there is a big and expensive chair, and, a beautiful day", "there is a big and expensive chair, and a, beautiful time", "there is a big and expensive chair, and a, beautiful typo", "there is a big and expensive chair, and a beautiful, typo", "there is a big and expensive chair, and a beautiful, table", "there is a big and expensive chair, and a beautiful table"]
+there's a bed and expensive chair an and a beautiful table
+there's a bed an expensive chair and a beautiful table
+there's an bed ar ar inexpensive chair and a beautiful table
+["the", "there's", "there's a", "there's an", "there's a bear", "there's a bad", "there's, a bad", "there's a bed", "there's a bed, and", "there's a bed, and the", "there's a bed, and it", "there's a bed, and it's", "there's a bed, and next", "there's a bed, and it's been", "there's a bed, and explain", "there's a bed, inexpensive", "there's a bed, inexpensive to", "there's a bed, inexpensive chair", "there's a bed, inexpensive, chair", "there's a bed, inexpensive chair", "there's a bed, inexpensive chair, and", "there's a bed, inexpensive chair, and ever", "there's a bed, inexpensive chair, and a Beat", "there's a bed, inexpensive chair, and a Butte", "there's a bed, inexpensive chair, and a beauty", "there's a bed, inexpensive chair, and a beautiful", "there's a bed, inexpensive chair and, a beautiful", "there's a bed, inexpensive chair and a, beautiful", "there's a bed, inexpensive chair and a beautiful", "there's a bed, inexpensive chair and a beautiful, day", "there's a bed, inexpensive chair and a beautiful, time", "there's a bed, inexpensive chair and a beautiful, table", "there's a bed, inexpensive chair and a beautiful table"]
+there's ar bed a ar inexpensive chair and a beautiful table
+there's a bed an expensive chair and a beautiful table
+there is a big and expensive chair and a beautiful table
+["the", "there's", "there is", "there is a", "there is an", "there is a big", "there is a bear", "there is a bed", "there is, a bed", "there is a, bed", "there is a bed", "there is a bed, and", "there is a, bit and spur", "there is a, bet and spin", "there is a, bed in Spanish", "there is a, big and expensive", "there is a, big and expensive shoe", "there is a, big and expensive chair", "there is a big and expensive, chair", "there is a big and expensive chair", "there is a big and expensive chair, and", "there is a big and expensive chair and", "there is a big and expensive chair and, Abby", "there is a big and expensive chair and, a Beat", "there is a big and expensive chair and, a Butte", "there is a big and expensive chair and, a beauty", "there is a big and expensive chair and, a beautiful", "there is a big and expensive chair and, a beautiful day", "there is a big and expensive chair and a, beautiful day", "there is a big and expensive chair and a, beautiful time", "there is a big and expensive chair and a beautiful, caribou", "there is a big and expensive chair and a beautiful, table", "there is a big and expensive chair and a beautiful table"]
+there's a bed and expensive chair and a beautiful table
+there's a bed an expensive chair and a beautiful table
+there's a bed an expensive chair an an and a beautiful table
+["the", "let me", "living", "let me see", "Riverside", "living sober", "what is a bad", "what is a bed and", "what is a, bed and", "what is a, bad and it's", "what is a, better next", "let me submit an expense", "let me submit an expensive", "let me submit an expensive chair", "let me submit an, expensive chair", "let me submit an expensive, chair", "there is a bad and expensive chair", "there is a bad and expensive chair, and", "there is a bad and expensive chair, and I", "there is a bad and expensive chair, and I'm", "there is a bad and expensive chair, and I do", "there is a bad and expensive chair, and a Beat", "there is a bad and expensive chair, and a Butte", "there is a bad and expensive chair, and a beauty", "there is a bad and expensive chair, and a beautiful", "there is a bad and expensive chair, and, a beautiful", "there is a bad and expensive chair, and, a beautiful day", "there is a bad and expensive chair, and a, beautiful table", "there is a bad and expensive chair, and a beautiful, table", "there is a bad and expensive chair, and a beautiful table"]
+there's a bed an expensive chair an a beautiful table
+there's a bed an expensive chair and a beautiful table
+there's a a bed bed inexpensive chair and a beautiful table
+["the", "there", "Dairy", "there is", "there is a", "Duracell", "there is a bad", "there was a bit", "there is a bat", "there is a bat, and", "there is a bat, and it", "there is a bat, Annex", "there is a bat, next", "there is a bat, nxp", "there is a bat, and explain", "there is a bat, an expense", "there is a bat, inexpensive", "there is a bat, inexpensive to", "there is a bat, inexpensive chair", "there is a bat, inexpensive, chair", "there is a bat, inexpensive, chair and", "there is a bat, inexpensive chair, and", "there is a bat, inexpensive chair, and a", "there is a bat, inexpensive chair, and I'm", "there is a bat, inexpensive chair, and Abby", "there is a bat, inexpensive chair, and a Beat", "there is a bat, inexpensive chair, and a Butte", "there is a bat, inexpensive chair, and a beauty", "there is a bat, inexpensive chair, and a beautiful", "there is a bat, inexpensive chair and, a beautiful", "there is a bat, inexpensive chair and, a beautiful day", "there is a bat, inexpensive chair and, a beautiful baby", "there is a bat, inexpensive chair and a, beautiful baby", "there is a bat, inexpensive chair and a, beautiful table", "there is a bat, inexpensive chair and a beautiful, table", "there is a bat, inexpensive chair and a beautiful table"]
+there's a bed inexpensive chair and a beautiful table

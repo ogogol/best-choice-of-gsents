@@ -5,8 +5,11 @@ from jellyfish import levenshtein_distance as levenshtein
 from difflib import get_close_matches
 from diff_match_patch import diff_match_patch
 from difference import getSentsDifference
+from best_choice import wordsRunning
 #-------------------------Активизировать (убрать решетку)
 #from project.main_apps.audio.text.funcs import prepare_transcriptions
+
+
 
 #------------------------------Нужно убрать-------------------------------------------------------
 # нужно для тестирования
@@ -22,6 +25,8 @@ def replace_oldWord_to_newWord(user_words, original_words, transriptions_dict, i
     else:
         user_words, result = get_new_guess_result(result, user_words, original_words,
                                                   unique_or_words, transriptions_dict, True)
+
+    user_words = wordsRunning(original_words, user_words, False)
 
     return ' '.join(user_words), result
 #----------------------------------------------------------------------------------------------------------
@@ -80,6 +85,8 @@ def new_guess_inaccuracy(user_words, original_words, transriptions_dict, inaccur
         user_words, result = get_new_guess_result(result, user_words, original_words,
                                                   unique_or_words, transriptions_dict, True)
 
+    user_words = wordsRunning(original_words, user_words, False)
+
     return ' '.join(user_words), result
 
 
@@ -90,16 +97,16 @@ def get_new_guess_result(result, user_words, original_words, unique_or_words, tr
 
     for key, wrW in wrWds.items():
         if not phone:
-            newWds = get_close_matches(wrW[0], unique_or_words, 4, 0.5)
+            newWds = get_close_matches(original_words[wrW[2]], unique_or_words, 4, 0.5)
         else:
-            newWds = get_close_phone_matches(wrW[0], unique_or_words, transriptions_dict, 4, 0.5)
+            newWds = get_close_phone_matches(original_words[wrW[2]], unique_or_words, transriptions_dict, 4, 0.5)
         mb_words = []
         if newWds:
             for i, nw in enumerate(newWds):
                 if not phone:
-                    returned_dict = check_similarity_words(wrW[0], nw, inaccuracy_coefficient)
+                    returned_dict = check_similarity_words(original_words[wrW[2]], nw, inaccuracy_coefficient)
                 else:
-                    returned_dict = check_similarity_words(get_transcription(wrW[0], transriptions_dict),
+                    returned_dict = check_similarity_words(get_transcription(original_words[wrW[2]], transriptions_dict),
                                                            get_transcription(nw, transriptions_dict),
                                                            inaccuracy_coefficient)
                 if returned_dict["is_limitation_more_than_errors"]  == True:
