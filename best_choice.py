@@ -143,6 +143,7 @@ def correctMissedWords(wordsDict, wds, originalSentenceWords, googleSentenceWord
     :param googleSentenceWords: string
     :return: googleSentenceWords list
     '''
+    if len(wordsDict) > 2: return googleSentenceWords
     gSentWds1 = [w for w in googleSentenceWords]
     gSentWds2 = [w for w in googleSentenceWords]
     orSent = ' '.join(originalSentenceWords)

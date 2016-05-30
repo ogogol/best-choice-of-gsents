@@ -141,11 +141,11 @@ def splitWords(orSentWords, comSentWords):
             if n == 0:
                 f_halfW = val
                 s_halfW = comSentWords[i-count][len(val):]
+                if len(s_halfW) < 2: continue
             else:
                 f_halfW = comSentWords[i-count][:n]
                 s_halfW = comSentWords[i-count][n:]
-
-            if min(len(f_halfW),len(s_halfW)) < 2: continue
+                if min(len(f_halfW),len(s_halfW)) < 2: continue
 
             comSentWords[i-count] = f_halfW
             comSentWords.insert(i+1-count, s_halfW)
@@ -270,4 +270,40 @@ def makeWordsList(orSentWds, lineSentWds, sentWds):
                 words.append([value,])
 
     return words
+'''
+import re
+def en_convert_dollars(text):
+    text = re.split(ur"([\$£][\d,]+)\.(\d{2})", text)
+    text_list = [t for t in text if t != '']
+    if text_list:
+        bucks = text_list[0]
+        s_ending = ''
+        if bucks[len(bucks)-1] != '1': s_ending = 's'
 
+        text = re.sub(ur"\$(\d{1,3},?)+",
+                      lambda m: "%s dollar%s" %
+                                (m.group(0).replace(u"$", u"").replace(u",", u""), s_ending),
+                      bucks)
+        text = re.sub(ur"£(\d{1,3},?)+",
+                      lambda m: "%s pound%s" %
+                                (m.group(0).replace(u"£", u"").replace(u",", u""), s_ending),
+                      text)
+
+        if len(text_list) > 1:
+            cents = text_list[1]
+            root = 'cent'
+            s_ending = ''
+            if cents[1] != '1': s_ending = 's'
+            if cents[0] == '0': cents = cents[1]
+            if 'pound' in text:
+                root = 'pence'
+                s_ending = ''
+            if text == '0 dollars' or text == '0 pounds':
+                text = ''
+            text = "%s %s %s%s" % (text, cents, root, s_ending)
+
+    return text
+
+text = u'$1'
+print(en_convert_dollars(text))
+'''

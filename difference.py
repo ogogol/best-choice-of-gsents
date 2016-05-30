@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
+from difflib import get_close_matches
 from difflib import Differ
 
 patternSentSplitWords = re.compile(r'[+-]\s{2,7}|\s{3,7}')
@@ -80,7 +81,7 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
     excessWds = {}; missedWds = {}; wrongWds = {}; rightWds = {}
     count = 0
     lts = ''
-    or_lts = ''
+    previous_orWords = {}# для правильного определения оригинального слова близкого к неправильному
     for i, cW in enumerate(comparedWords):
         wd = ''.join(patternLetter.findall(cW))
         wdLen = len(wd)
@@ -113,18 +114,25 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
 
             if not isOrWd:
                 or_W = ''.join(patternLetter.findall(patternMinusSpaceLetter.sub('', cW)))
-                orSent_num, isOrWd = getWordOrder(orSent_count, or_W, orSentWords)
 
             if isWd:
+                previous_orWords[or_W] = orSent_count
+                close_or_W = get_close_matches((lts + wrW), previous_orWords.keys())
+                if close_or_W:
+                    orSent_num, isOrWd = getWordOrder(previous_orWords.get(close_or_W[0]), close_or_W[0], orSentWords)
+
                 if lts != '' and isOrWd == True:# если произошло неправильное разбиение,
                     #  то последнее слово, находящееся в оригинальном предложении добавляем в список пропущенных слов
                     missedWds[i-count+1] = [orSentWords[orSent_num], orSent_num, orSent_num]
-                    orSent_num -= 1
-                    or_lts = ''
+                    if sent_count < len(comSentWords)-1:
+                        orSent_num = max(0, orSent_num-1)
 
                 wrongWds[i-count] = [lts + wrW, sent_num, orSent_num]
+                previous_orWords = {}
                 lts = ''
+
             else: #неправильное разбиение слов типа indiana разбито на 3 слова in dia na, складываем обратно
+                previous_orWords[or_W] = orSent_num
                 count += 1
                 lts += wrW
                 continue
