@@ -124,7 +124,7 @@ def separateComparedWords(comparedWords, orSentWords, comSentWords, wds):
                 if lts != '' and isOrWd == True:# если произошло неправильное разбиение,
                     #  то последнее слово, находящееся в оригинальном предложении добавляем в список пропущенных слов
                     missedWds[i-count+1] = [orSentWords[orSent_num], orSent_num, orSent_num]
-                    if sent_count < len(comSentWords)-1:
+                    if len(comSentWords) + 2 >= len(orSentWords):
                         orSent_num = max(0, orSent_num-1)
 
                 wrongWds[i-count] = [lts + wrW, sent_num, orSent_num]
