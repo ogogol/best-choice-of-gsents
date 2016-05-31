@@ -25,8 +25,12 @@ def googleSentensBestChoice(originalSentence, lineSentence, sents):
     orSentWds = originalSentence.split()
     lineSentWds = lineSentence.split()
 
-    correctedSentsWds = correctSents(lineSentWds, sentsWds)
-    correctedSents = [' '.join(s) for s in correctedSentsWds]
+    correctedSentsWds = sentsWds
+    correctedSents = sents
+
+    if lineSentWds < orSentWds:
+        correctedSentsWds = correctSents(lineSentWds, sentsWds)
+        correctedSents = [' '.join(s) for s in correctedSentsWds]
 
     similarSent = getSimilarSent(originalSentence, lineSentence, correctedSents) # выбираем лучшее предложение из последних
     if originalSentence == similarSent:
